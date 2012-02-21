@@ -1,8 +1,8 @@
 Source: mysql-workbench
 Section: database
 Priority: optional
-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
-Uploaders: Dmitry Smirnov <onlyjob@member.fsf.org>
+Maintainer: Dmitry Smirnov <onlyjob@member.fsf.org>
+Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
 Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
  doxygen, gettext,
  libboost-dev,
