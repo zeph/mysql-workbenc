@@ -1,0 +1,84 @@
+Source: mysql-workbench
+Section: database
+Priority: optional
+Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@member.fsf.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
+ doxygen, gettext,
+ libboost-dev,
+ libcairo2-dev,
+ libfreetype6-dev,
+ libctemplate-dev,
+ libgl1-mesa-dev,
+ libglib2.0-dev, 
+ libgnome-keyring-dev,
+ libgtkmm-2.4-dev,
+ liblua5.1-0-dev,
+ libpng12-dev,
+ libmysqlclient-dev,
+ libpcre3-dev,
+ libpixman-1-dev, 
+ libsqlite3-dev,
+ libtinyxml-dev,
+ libxml2-dev,
+ libzip-dev,
+ python-all-dev,
+ uuid-dev,
+ xdg-utils,
+# libmysqlcppconn-dev,
+Build-Depends-Indep: bison, flex, swig
+Standards-Version: 3.9.2
+Homepage: http://dev.mysql.com/workbench/
+VCS-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mysql-workbench.git
+VCS-Git: git://anonscm.debian.org/collab-maint/mysql-workbench.git
+
+Package: mysql-workbench
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
+ mysql-workbench-data (= ${source:Version}),
+ python-paramiko, python-pysqlite2, python-all, mysql-client
+Recommends: ttf-bitstream-vera
+Suggests: gnome-keyring
+Description: MySQL Workbench - a visual database modeling, administration and queuing tool
+ MySQL Workbench is a modeling tool that allow to design
+ and generate MySQL databases graphically. It also has administration
+ and query development modules where you can manage MySQL server instances
+ and execute SQL queries.
+
+Package: mysql-workbench-data
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MySQL Workbench -- architecture independent data
+ MySQL Workbench is a modeling tool that allow to design
+ and generate MySQL databases graphically. It also has administration
+ and query development modules where you can manage MySQL server instances
+ and execute SQL queries.
+ .
+ This package provides architecture independent files
+
+#Package: mysql-workbench-dbg
+#Section: debug
+#Priority: extra
+#Architecture: any
+#Depends: mysql-workbench (= ${binary:Version}), ${misc:Depends}
+#Description: MySQL Workbench -- debugging symbols
+# MySQL Workbench is a modeling tool that allow to design
+# and generate MySQL databases graphically. It also has administration
+# and query development modules where you can manage MySQL server instances
+# and execute SQL queries.
+# .
+# This package provides debugging symbols
+
+#Package: mysql-workbench-docs
+#Architecture: all
+#Depends: ${misc:Depends}, libjs-jquery
+#Recommends: yelp
+#Suggests: www-browser
+#Section: doc
+#Description: MySQL Workbench -- Documentation for developers
+# MySQL Workbench is a modeling tool that allow to design
+# and generate MySQL databases graphically. It also has administration
+# and query development modules where you can manage MySQL server instances
+# and execute SQL queries.
+# .
+# This package provides documentation for developers

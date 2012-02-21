@@ -1,0 +1,62 @@
+Last-Update: 2012-02-21
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: no
+Description: fix mysql-workbench launcher
+ This patch correcting mysql-workbench wrapper/launcher
+ in order to use the right paths to main executable
+ and to plugins/modules.
+
+
+--- a/frontend/linux/workbench/mysql-workbench.in
++++ b/frontend/linux/workbench/mysql-workbench.in
+@@ -10,10 +10,10 @@
+ program_path="$0"
+ 
+ bindirname=`dirname $program_path`
+-basedirname=$(cd "$bindirname/..";pwd)
++basedirname=/
+ 
+-libdir=$(basename #libdir#)
+-wblibdir="$basedirname/$libdir/mysql-workbench"
++libdir=#libdir#
++wblibdir="$libdir/mysql-workbench"
+ 
+ # if libcairo and pixman are in the wb libraries dir, force them to be preloaded
+ if test -f $wblibdir/libcairo.so.2; then
+@@ -38,26 +38,26 @@
+ export LD_LIBRARY_PATH="$wblibdir"
+ fi
+ 
+-export MWB_DATA_DIR="$basedirname/share/mysql-workbench"
+-export MWB_LIBRARY_DIR="$basedirname/share/mysql-workbench/libraries"
+-export MWB_MODULE_DIR="$basedirname/$libdir/mysql-workbench/modules"
+-export MWB_PLUGIN_DIR="$basedirname/$libdir/mysql-workbench/plugins"
++export MWB_DATA_DIR="/usr/share/mysql-workbench"
++export MWB_LIBRARY_DIR="${MWB_DATA_DIR}/libraries"
++export MWB_MODULE_DIR="$wblibdir/modules"
++export MWB_PLUGIN_DIR="$wblibdir"
+ 
+-export DBC_DRIVER_PATH="$basedirname/$libdir/mysql-workbench"
++export DBC_DRIVER_PATH="$wblibdir"
+ 
+ # List of commands provided by mysql-utilities program, used to tell the user what are the available utilities
+ export MYSQL_UTILITIES_COMMANDS="#utilities_cmds#"
+ 
+ if test "$PYTHONPATH" != ""; then
+-export PYTHONPATH="$PYTHONPATH:$basedirname/share/mysql-workbench/python"
++export PYTHONPATH="$PYTHONPATH:/usr/share/mysql-workbench/python"
+ else
+-export PYTHONPATH="$basedirname/share/mysql-workbench/python"
++export PYTHONPATH="/usr/share/mysql-workbench/python"
+ fi
+-export PATH="$PATH:$basedirname/share/mysql-workbench/python"
++export PATH="$PATH:/usr/share/mysql-workbench/python"
+ 
+ 
+ if type -p catchsegv > /dev/null; then
+-catchsegv $bindirname/mysql-workbench-bin "$@"
++catchsegv $wblibdir/bin/mysql-workbench-bin "$@"
+ else
+-$bindirname/mysql-workbench-bin "$@"
++$wblibdir/bin/mysql-workbench-bin "$@"
+ fi

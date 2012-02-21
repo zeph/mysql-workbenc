@@ -1,0 +1,10 @@
+# Run the "uscan" command
+# to check for upstream updates and more.
+# See uscan(1) for format
+
+# Compulsory line, this is a version 3 file
+version=3
+
+opts=dversionmangle=s/\+dfsg// \
+http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools/%5Bpage=0%5D \
+ (?:.*)?/mysql-workbench-gpl-([\d\.]+)-src\.tar\.(?:gz|bz2|xz)

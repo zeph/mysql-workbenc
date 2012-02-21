@@ -1,0 +1,8 @@
+Document: mysql-workbench
+Title: MySQL Workbench developer's documentation
+Abstract: This document describes what MySQL Workbench is, and how it can be used.
+Section: Data Management
+
+Format: HTML
+Index: /usr/share/doc/mysql-workbench-docs/html/index.html
+Files: /usr/share/doc/mysql-workbench-docs/html/*

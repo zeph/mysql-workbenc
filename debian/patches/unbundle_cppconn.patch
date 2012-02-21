@@ -1,0 +1,194 @@
+Last-Update: 2012-02-20
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: not-needed
+Description: disable building bundled cppconn
+ To use libmysqlcppconn-dev instead
+ Warning: unbundling cppconn causing FTBFS:
+ ##
+ sqlide/recordset_cdbc_storage.cpp:255:40: error:
+  'class sql::ResultSetMetaData' has no member named 'isNumeric'
+ ##
+ sqlide/wb_sql_editor_form.cpp:1373:53: error:
+  'class sql::mysql::MySQL_Connection’ has no member named 'getLastStatementInfo'
+ ##
+
+--- a/configure.in
++++ b/configure.in
+@@ -319,6 +319,13 @@
+ AC_CHECK_LIB(GL, glNewList, CAIRO_LIBS="$CAIRO_LIBS -lGL", AC_MSG_ERROR([OpenGL library not found]))
+ 
+ 
++# check for libmysqlcppconn
++AC_CHECK_HEADER(cppconn/connection.h, [], AC_MSG_ERROR([cppconn headers not found]))
++CPPCONN_CFLAGS="-I${includedir}/cppconn"
++CPPCONN_LIBS="-lmysqlcppconn"
++AC_SUBST(CPPCONN_CFLAGS)
++AC_SUBST(CPPCONN_LIBS)
++
+ # check if ctemplate is installed in system, otherwise use the bundled one
+ AC_CHECK_HEADER(ctemplate/template.h, ac_system_ctemplate=yes, ac_system_ctemplate=no)
+ 
+@@ -433,8 +440,6 @@
+ res/sqlidedata/Makefile
+ ext/Makefile
+ ext/scintilla/gtk/Makefile
+-ext/cppconn/Makefile
+-ext/cppconn/driver/Makefile
+ ext/vsqlite++/Makefile
+ ext/vsqlite++/src/sqlite/Makefile
+ backend/Makefile
+--- a/backend/wbprivate/Makefile.am
++++ b/backend/wbprivate/Makefile.am
+@@ -10,7 +10,8 @@
+   -I$(top_srcdir)/backend/wbpublic -I$(top_srcdir)/generated -I$(top_srcdir)/library/canvas/src\
+   -I$(top_srcdir)/backend/wbprivate/workbench \
+   -I$(top_srcdir)/backend/wbpublic/grt \
+-  -I$(top_srcdir)/ext/cppconn/ -I$(top_srcdir)/library/dbc/src\
++  @CPPCONN_CFLAGS@/..\
++  -I$(top_srcdir)/library/dbc/src\
+   -I$(top_srcdir)/ext/scintilla/include\
+   -I$(top_srcdir)/ext/vsqlite++/include\
+   -I$(top_srcdir)/ext/vsqlite\
+--- a/backend/wbpublic/Makefile.am
++++ b/backend/wbpublic/Makefile.am
+@@ -14,7 +14,7 @@
+ 	-I$(top_srcdir)/library/forms\
+ 	-I$(top_srcdir)/library/forms/mforms/\
+ 	-I$(top_srcdir)/library/canvas/src\
+-	-I$(top_srcdir)/ext/cppconn\
++	@CPPCONN_CFLAGS@\
+ 	-I$(top_srcdir)/library/dbc/src\
+ 	-I$(top_srcdir)/ext/vsqlite++/include\
+ 	-I$(top_srcdir)/backend/wbpublic -I$(top_srcdir)/generated\
+@@ -159,4 +159,4 @@
+ #stdafx.h.gch: stdafx.h
+ #	$(CXXCOMPILE) $<
+ 
+-libwbpublic_la_LIBADD=../../library/canvas/src/libmdcanvas.la ../../library/forms/libmforms.la ../../library/dbc/libcdbc.la ../../ext/vsqlite++/src/sqlite/libvsqlitepp.la @CTEMPLATE_LIBS@
++libwbpublic_la_LIBADD=../../library/canvas/src/libmdcanvas.la ../../library/forms/libmforms.la ../../library/dbc/libcdbc.la ../../ext/vsqlite++/src/sqlite/libvsqlitepp.la @CTEMPLATE_LIBS@ @CPPCONN_LIBS@
+--- a/frontend/linux/sqlide/Makefile.am
++++ b/frontend/linux/sqlide/Makefile.am
+@@ -16,7 +16,7 @@
+ -I$(top_srcdir)/library/grt/src\
+ -I$(top_srcdir)/library/base\
+ -I$(top_srcdir)/library/dbc/src\
+--I$(top_srcdir)/ext/cppconn\
++@CPPCONN_CFLAGS@\
+ -I$(top_srcdir)/ext/vsqlite++/include\
+ -I$(top_srcdir)/ext/scintilla/include\
+ @GRT_CFLAGS@ @CAIRO_CFLAGS@ @GLIB_CFLAGS@ @SIGC_CFLAGS@ @GNOME_CFLAGS@
+--- a/frontend/linux/workbench/Makefile.am
++++ b/frontend/linux/workbench/Makefile.am
+@@ -31,7 +31,7 @@
+ 	-I$(top_srcdir)/modules/wb.model/src\
+ 	-I$(top_srcdir)/modules/interfaces\
+ 	-I$(top_srcdir)/ext\
+-	-I$(top_srcdir)/ext/cppconn\
++	@CPPCONN_CFLAGS@\
+ 	-I$(top_srcdir)/modules\
+   -I$(top_srcdir)/ext/vsqlite++/include\
+   -I$(top_srcdir)/ext/scintilla/include\
+@@ -47,12 +47,12 @@
+ 	$(top_srcdir)/library/base/libwbbase.la\
+ 	$(top_srcdir)/library/grt/src/libgrt.la\
+ 	$(top_srcdir)/library/dbc/libcdbc.la\
+-	$(top_srcdir)/ext/cppconn/driver/mysqlcppconn.la\
+ 	$(top_srcdir)/ext/scintilla/gtk/libwbscintilla.la\
+ 	$(top_srcdir)/library/canvas/src/libmdcanvasgtk.la\
+ 	$(top_srcdir)/library/canvas/src/libmdcanvas.la\
+ 	@CTEMPLATE_LIBS@\
+ 	@TINYXML_LIBS@\
++	@CPPCONN_LIBS@\
+ 	@GNOME_LIBS@ @GRT_LIBS@ @PCRE_LIBS@ @GLIB_LIBS@ @CAIRO_LIBS@ @ZIP_LIBS@ @MYSQL_LIBS@ @SQLITE3_LIBS@\
+ 	-lX11
+ 
+--- a/library/dbc/Makefile.am
++++ b/library/dbc/Makefile.am
+@@ -12,6 +12,6 @@
+ -I$(top_srcdir)/library/grt/src\
+ -I$(top_srcdir)/library/base\
+ -I$(top_srcdir)/ext\
+--I$(top_srcdir)/ext/cppconn
++@CPPCONN_CFLAGS@
+ 
+ 
+--- a/modules/db.mysql.query/Makefile.am
++++ b/modules/db.mysql.query/Makefile.am
+@@ -6,7 +6,7 @@
+ INCLUDES=-I$(top_srcdir)/generated -I$(top_srcdir)/library/grt/src \
+   -I$(top_srcdir)/library/base\
+   -I$(top_srcdir)/library/dbc/src\
+-  -I$(top_srcdir)/ext/cppconn\
++  @CPPCONN_CFLAGS@\
+   @GRT_CFLAGS@ @GLIB_CFLAGS@ @SIGC_CFLAGS@
+ 
+ 
+--- a/plugins/db.mysql.diff.reporting/frontend/Makefile.am
++++ b/plugins/db.mysql.diff.reporting/frontend/Makefile.am
+@@ -10,7 +10,7 @@
+     -I$(top_srcdir)/ext\
+     -I$(top_srcdir)/modules/db.mysql/src\
+     -I$(top_srcdir)/library/dbc/src\
+-    -I$(top_srcdir)/ext/cppconn\
++    @CPPCONN_CFLAGS@\
+     -I$(top_srcdir)/modules/interfaces\
+     -I$(top_srcdir)/modules/\
+     -I$(top_srcdir)/library/grt/src/diff\
+@@ -23,7 +23,7 @@
+ 
+ 
+ db_mysql_diff_reporting_wbp_la_LDFLAGS=-module
+-db_mysql_diff_reporting_wbp_la_LIBADD=$(top_srcdir)/library/grt/src/libgrt.la $(top_srcdir)/library/forms/libmforms.la @GLIB_LIBS@
++db_mysql_diff_reporting_wbp_la_LIBADD=$(top_srcdir)/library/grt/src/libgrt.la $(top_srcdir)/library/forms/libmforms.la @GLIB_LIBS@ @CPPCONN_LIBS@
+ 
+ 
+ db_mysql_diff_reporting_wbp_la_SOURCES=\
+--- a/plugins/db.mysql/frontend/Makefile.am
++++ b/plugins/db.mysql/frontend/Makefile.am
+@@ -10,7 +10,7 @@
+     -I$(top_srcdir)/modules/db.mysql/src\
+     -I$(top_srcdir)/library/dbc/src\
+     -I$(top_srcdir)/library/forms/mforms\
+-    -I$(top_srcdir)/ext/cppconn\
++    @CPPCONN_CFLAGS@\
+     -I$(top_srcdir)/modules/interfaces\
+     -I$(top_srcdir)/modules/\
+     -I$(top_srcdir)/library/grt/src/diff\
+--- a/plugins/wb.model.snippets/Makefile.am
++++ b/plugins/wb.model.snippets/Makefile.am
+@@ -10,7 +10,7 @@
+     -I$(top_srcdir)/ext\
+     -I$(top_srcdir)/modules/db.mysql/src\
+     -I$(top_srcdir)/library/dbc/src\
+-    -I$(top_srcdir)/ext/cppconn\
++    @CPPCONN_CFLAGS@\
+     -I$(top_srcdir)/modules/interfaces\
+     -I$(top_srcdir)/modules/\
+     -I$(top_srcdir)/library/grt/src/diff\
+--- a/ext/Makefile.am
++++ b/ext/Makefile.am
+@@ -1,5 +1,5 @@
+ 
+-SUBDIRS=scintilla/gtk cppconn vsqlite++
++SUBDIRS=scintilla/gtk vsqlite++
+ 
+ if BUNDLE_UTILITIES
+ all-am:
+--- a/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
++++ b/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
+@@ -42,7 +42,7 @@
+ // this doesn't belong here, but there's no other workaround for having access to mysql_info
+ // because of that we also need to link wbprivate directly to the connector, making their
+ // dynamic loading pretty much useless
+-#include <cppconn/../driver/mysql_connection.h>
++#include <cppconn/../mysql_connection.h>
+ 
+ #include "base/boost_smart_ptr_helpers.h"
+ 
+@@ -2152,4 +2152,4 @@
+ void SqlEditorForm::table_details_arrived(const wb::LiveSchemaTree::SchemaNode &schema_node, const wb::LiveSchemaTree::ObjectNode *obj_node, wb::LiveSchemaTree::ObjectType obj_type, wb::LiveSchemaTree::TableNode *table_node)
+ {
+   *table_node = *obj_node;
+-}
+\ No newline at end of file
++}

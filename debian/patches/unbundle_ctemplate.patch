@@ -1,0 +1,21 @@
+Last-Update: 2012-02-20
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: not-needed
+Description: disable building bundled ctemplate
+ To use libctemplate-dev instead
+
+
+--- a/ext/Makefile.am
++++ b/ext/Makefile.am
+@@ -1,10 +1,5 @@
+ 
+-if BUILD_CTEMPLATE
+-else
+-ctemplate_dirs=ctemplate 
+-endif
+-
+-SUBDIRS=scintilla/gtk cppconn vsqlite++ $(ctemplate_dirs)
++SUBDIRS=scintilla/gtk cppconn vsqlite++
+ 
+ if BUNDLE_UTILITIES
+ all-am:

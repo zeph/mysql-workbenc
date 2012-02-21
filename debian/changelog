@@ -1,0 +1,5 @@
+mysql-workbench (5.2.37+dfsg-1) unstable; urgency=low
+
+  * first Debian release (Closes: #604174 ITP)
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Mon, 20 Feb 2012 02:53:27 +1100

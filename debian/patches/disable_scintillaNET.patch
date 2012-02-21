@@ -1,0 +1,24 @@
+Last-Update: 2012-02-20
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: not-needed
+Description: remove ScintillaNET from build system
+
+
+--- a/frontend/linux/workbench/Makefile.am
++++ b/frontend/linux/workbench/Makefile.am
+@@ -11,14 +11,7 @@
+   res/find.glade\
+   res/diagram_size_form.glade\
+   res/input_dialog.glade\
+-  workbench.rc\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/python.xml\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/lua.xml\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/mysql.xml\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/default.xml\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/LexerStyleNames/python.txt\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/LexerStyleNames/mysql.txt\
+-  $(top_srcdir)/frontend/windows/ScintillaNET/Configuration/Builtin/LexerStyleNames/lua.txt
++  workbench.rc
+ 
+ #BUILT_SOURCES=precompiled.h.gch
+ 

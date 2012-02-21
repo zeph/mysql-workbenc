@@ -1,0 +1,6 @@
+automake-1.11.2.patch
+launcher.patch
+disable_scintillaNET.patch
+unbundle_ctemplate.patch
+unbundle_tinyxml.patch
+##unbundle_cppconn.patch
