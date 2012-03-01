@@ -1,4 +1,4 @@
-ï»¿Format: http://dep.debian.net/deps/dep5
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MySQL Workbench
 Source: https://www.mysql.com/downloads/workbench/
 Copyright:  © 2000, 2004-2005, 2007-2011 Oracle and/or its affiliates.
