@@ -26,7 +26,7 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
  uuid-dev,
  xdg-utils,
 # libmysqlcppconn-dev,
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: http://dev.mysql.com/workbench/
 VCS-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mysql-workbench.git
 VCS-Git: git://anonscm.debian.org/collab-maint/mysql-workbench.git
