@@ -70,7 +70,7 @@ backend/wbpublic/grtui/confirm_save_dialog.cpp: GPL (v2)
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtui/grt_wizard_form.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtui/wizard_object_filter_page.h: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -127,7 +127,7 @@ backend/wbpublic/grtui/grtdb_object_filter.h: GPL (v2)
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtui/binary_data_editor.h: GPL (v2) 
-  [Copyright: 2010, 2011,Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2010, 2012,Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtui/grtdb_connect_panel.h: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -289,7 +289,7 @@ backend/wbpublic/grtdb/db_object_filter.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtdb/editor_table.cpp: GPL (v2) GENERATED FILE
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtdb/editor_schema.cpp: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -316,7 +316,7 @@ backend/wbpublic/grtdb/editor_view.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtdb/diff_dbobjectmatch.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/grtdb/editor_user.h: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -372,7 +372,7 @@ backend/wbpublic/objimpl/db/db_DatabaseObject.cpp: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/objimpl/db/db_Column.cpp: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/objimpl/db.query/db_query_Resultset.h: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -384,7 +384,7 @@ backend/wbpublic/objimpl/db.query/db_query_QueryBuffer.h: GPL (v2)
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/objimpl/db.query/db_query_Resultset.cpp: GPL (v2) 
-  [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2010, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/objimpl/db.query/db_query_EditableResultset.h: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -490,7 +490,7 @@ backend/wbpublic/wbcanvas/badge_figure.cpp: GPL (v2)
 
 
 backend/wbpublic/wbcanvas/workbench_physical_model_impl.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/wbcanvas/model_layer_impl.h: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -511,7 +511,7 @@ backend/wbpublic/wbcanvas/model_object_impl.h: GPL (v2)
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/wbcanvas/workbench_physical_model_impl.h: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/wbcanvas/model_figure_impl.cpp: GPL (v2) 
   [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -598,7 +598,7 @@ backend/wbpublic/sqlide/recordset_data_storage.cpp: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/sqlide/recordset_be.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/sqlide/recordset_table_inserts_storage.cpp: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -607,7 +607,7 @@ backend/wbpublic/sqlide/table_inserts_loader_be.cpp: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/sqlide/recordset_be.h: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbpublic/sqlide/sqlide.h: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -828,7 +828,7 @@ backend/wbprivate/workbench/wb_command_ui.h: GPL (v2)
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_tunnel.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/starter_popup.h: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -843,7 +843,7 @@ backend/wbprivate/workbench/wb_model_file.cpp: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_context.h: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 backend/wbprivate/workbench/webbrowser_view.h: GPL (v2) 
@@ -853,11 +853,11 @@ backend/wbprivate/workbench/wb_command_ui.cpp: GPL (v2)
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_module.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 backend/wbprivate/workbench/wb_context.cpp: GPL (v2) GENERATED FILE
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/webbrowser_view.cpp: GPL (v2) 
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
@@ -866,7 +866,7 @@ backend/wbprivate/workbench/home_screen.cpp: GPL (v2)
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_context_ui.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_tunnel.h: GPL (v2) 
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -917,13 +917,13 @@ backend/wbprivate/workbench/wb_context_ui_home.h: GPL (v2)
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_context_ui_home.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_history_tree.cpp: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wb_context_ui.h: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/workbench/wmi.h: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -1042,16 +1042,16 @@ backend/wbprivate/sqlide/wb_sql_editor_snippets.cpp: GPL (v2)
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_buffer.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_live_schema_tree.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_form_ui.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_form.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_snippets.h: GPL (v2) 
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -1063,7 +1063,7 @@ backend/wbprivate/sqlide/wb_context_sqlide.h: GPL (v2)
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_form.h: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/db_sql_editor_history_be.cpp: GPL (v2) 
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -1090,7 +1090,7 @@ backend/wbprivate/sqlide/query_side_palette.cpp: GPL (v2)
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_context_sqlide.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/db_sql_editor_log.h: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -1099,13 +1099,30 @@ backend/wbprivate/sqlide/query_side_palette.h: GPL (v2)
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
 
 backend/wbprivate/sqlide/wb_sql_editor_tree_controller.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+build/debian/copyright: zlib/libpng PSF (v2) BSL (v1) MPL (v1.1) BSD (3 clause) ISC MIT/X11 (BSD like) GPL (unversioned/unknown version) GPL (v2 or later) (with incorrect FSF address) LGPL (v2 or later) (with incorrect FSF address) GENERATED FILE
+  [Copyright: disclaimer" for the library, if necessary. Here is / interest in his contributions to SQLite / HOLDERS AND CONTRIBUTORS / licensing status of the Python Cryptography / 1996-2001 Internet Software Consortium / interest in the program / 2002 by Brian Quinlan. All rights reserved / law: / 1996 - 2006, Daniel Stenberg,  / statement and / interest / 2008, 2010, Oracle and/or its affiliates. All rights reserved / 2006 Vinzenz Feenstra vinzenz.feenstra@virtuosic-bytes.com / interest in the / the licenses granted in Sections 2.2(a) and 2.2(b) are / 2009, Andrey Gliznetsov (a.gliznetsov@gmail.com) / OWNER OR CONTRIBUTORS BE LIABLE FOR / 2001, 2002, 2003 Python Software / HOLDERS AND CONTRIBUTORS "AS IS" / the library, and / 1997-2006 University of Cambridge / the software, and / notices, you must include the notice for the Library among / 1989, 1991 Free Software Foundation, Inc. / HOLDERS AND CONTRIBUTORS "AS IS" AND / ______ / interest in / holder who places the Library under this License may add / b/ / disclaimer" for the library, if / 2004 - 2006 Daniel Stenberg / HOLDERS AND/OR OTHER PARTIES PROVIDE THE LIBRARY "AS / 2007 Weifen Luo (email: weifenluo@yahoo.com) / ¬ 2004 David Reveman, Peter Nilsson / statements in the code base all matched the / holder shall not / the / 2000-2002 Lee Thomason / HOLDERS AND/OR / OWNER OR CONTRIBUTORS BE / holder saying it may be distributed / holder / year name of author / holder or other authorized / 1998-2006 by Neil Hodgson / holder who places the Program under this License / HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER / OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT / 1998-2003 Daniel Veillard. All Rights Reserved / HOLDERS OR / 1991 Free Software Foundation, Inc / notices in the Software and this entire statement / HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE / statement and warranty disclaimer / 1995, 1996, 1997, 1998, 1999 Kungliga Tekniska Högskolan / the licenses granted in this Section 2.1(a) and (b) are / law: that is to say, a work containing the Library or a / holder or / 1991 - 1995, Stichting Mathematisch Centrum Amsterdam / 1994-2008 Lua.org, PUC-Rio / HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR / law: that is to say, a work / 1998-2002 by Neil Hodgson / HOLDERS AND/OR OTHER PARTIES / 2006, Google Inc / HOLDERS BE LIABLE FOR ANY CLAIM / Representations / notices, you must include the / 1991, 1999 Free Software Foundation, Inc / HOLDERS / HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY / disclaimer" for the program, if / law, and, to the extent such / holder or other authorized party]
 
 
 
@@ -2300,6 +2317,9 @@ frontend/common/user_defined_type_editor.cpp: GPL (v2)
 frontend/common/plugin_manager_window.h: GPL (v2) 
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
 
+frontend/common/bug_report_form.cpp: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
+
 frontend/common/output_view.h: GPL (v2) 
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
@@ -2314,6 +2334,9 @@ frontend/common/edit_table_data_wizard.h: GPL (v2)
 
 frontend/common/select_option_dialog.h: GPL (v2) 
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+
+frontend/common/bug_report_form.h: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
 
 frontend/common/grt_plugin_wizard.h: GPL (v2) 
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -2546,6 +2569,22 @@ images/icons/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
 
 
+images/icons/linux/Makefile.in: GENERATED FILE
+  [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
+
+images/icons/linux/128x128/Makefile.in: GENERATED FILE
+  [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
+
+
+images/icons/linux/48x48/Makefile.in: GENERATED FILE
+  [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
+
+
+
+images/icons/linux/16x16/Makefile.in: GENERATED FILE
+  [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
+
+
 images/readme: UNKNOWN
   [Copyright: 2007-2010 by Oracle and/or its affiliates. All rights reserved]
 
@@ -2583,7 +2622,7 @@ library/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
 
 library/base/string_utilities.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/base/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
@@ -2592,7 +2631,7 @@ library/base/base/boost_smart_ptr_helpers.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/base/base/string_utilities.h: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/base/base/notifications.h: GPL (v2) 
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
@@ -2671,7 +2710,7 @@ library/base/file_functions.cpp: GPL (v2)
   [Copyright: 2005, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/base/log_impl.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/base/threaded_timer.cpp: GPL (v2) 
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -2718,6 +2757,8 @@ library/canvas/src/Makefile.in: GENERATED FILE
 library/canvas/src/mdc_line_segment_handle.cpp: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
+library/canvas/src/mdc_canvas_view_opengl.h: GPL (v2) 
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/canvas/src/mdc_vertex_handle.cpp: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -2775,7 +2816,7 @@ library/canvas/src/mdc_icon_text.cpp: GPL (v2)
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/canvas/src/mdc_canvas_view_windows.h: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/canvas/src/mdc_algorithms.h: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -2909,10 +2950,12 @@ library/canvas/src/mdc_canvas_view.h: GPL (v2)
 library/canvas/src/mdc_box_handle.cpp: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
 
+library/canvas/src/mdc_canvas_view_opengl.cpp: GPL (v2) 
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 library/canvas/src/mdc_canvas_view_windows.cpp: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
@@ -2970,7 +3013,7 @@ library/dbc/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
 
 library/dbc/src/driver_manager.cpp: GPL (v2) 
-  [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 library/dbc/src/cppdbc_public_interface.h: GPL (v2) 
@@ -3061,7 +3104,7 @@ library/forms/fs_object_selector.cpp: GPL (v2)
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/treeview.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/webbrowser.cpp: GPL (v2) 
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -3110,7 +3153,7 @@ library/forms/winforms/wf_radiobutton.h: GPL (v2)
   [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/wf_toolbar.h: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/wf_code_editor.h: GPL (v2) 
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -3128,7 +3171,7 @@ library/forms/winforms/src/wf_base.cpp: GPL (v2)
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_toolbar.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_app.cpp: GPL (v2) 
   [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -3146,7 +3189,7 @@ library/forms/winforms/src/wf_selector.cpp: GPL (v2)
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_textbox.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_appview.cpp: GPL (v2) 
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -3155,7 +3198,7 @@ library/forms/winforms/src/wf_form.cpp: GPL (v2)
   [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_label.cpp: GPL (v2) 
-  [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_listbox.cpp: GPL (v2) 
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3170,10 +3213,10 @@ library/forms/winforms/src/wf_grttreeview.cpp: GPL (v2)
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_hypertext.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012 Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_treeview.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_webbrowser.cpp: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3188,19 +3231,19 @@ library/forms/winforms/src/wf_utilities.cpp: GPL (v2)
   [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_view.cpp: GPL (v2) 
-  [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_menubar.cpp: GPL (v2) 
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_wizard.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_code_editor.cpp: GPL (v2) 
-  [Copyright: 2010, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2010, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_filechooser.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/src/wf_popup.cpp: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3233,7 +3276,7 @@ library/forms/winforms/AssemblyInfo.cpp: GPL (v2)
   [Copyright: Oracle Corporation 2010")]; / 2009, 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/wf_treeview.h: GPL (v2) 
-  [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/winforms/wf_textbox.h: GPL (v2) 
   [Copyright: 2008, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -3567,7 +3610,7 @@ library/forms/mforms/listbox.h: GPL (v2)
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/mforms/treeview.h: GPL (v2) 
-  [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/mforms/sectionbox.h: GPL (v2) 
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3715,7 +3758,7 @@ library/forms/gtk/src/lf_scrollpanel.cpp: GPL (v2)
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_treeview.cpp: GPL (v2) 
-  [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_splitter.cpp: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3733,7 +3776,7 @@ library/forms/gtk/src/lf_menubar.cpp: GPL (v2)
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_hypertext.cpp: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_label.cpp: GPL (v2) 
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3743,7 +3786,7 @@ library/forms/gtk/src/lf_wizard.cpp: GPL (v2)
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_utilities.cpp: GPL (v2) 
-  [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/src/lf_selector.cpp: GPL (v2) 
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -3786,7 +3829,7 @@ library/forms/gtk/lf_scrollpanel.h: GPL (v2)
 
 
 library/forms/gtk/lf_treeview.h: GPL (v2) 
-  [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2008, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/forms/gtk/lf_tabview.h: GPL (v2) 
   [Copyright: 2008, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -4205,7 +4248,7 @@ library/grt/src/grtpp_module_cpp.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/grt/src/grtpp_grt.cpp: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/grt/src/grtpp_value.h: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -4332,7 +4375,7 @@ library/grt/src/grtpp_module_python.cpp: GPL (v2)
   [Copyright: && PyTuple_Size == 2) / 2009, 2010, Oracle and/or its affiliates. All rights reserved]
 
 library/grt/src/python_context.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 library/grt/src/grtpp_shell_python_help.h: GPL (v2) 
   [Copyright: 2010, Oracle and/or its affiliates. All rights reserved]
@@ -4481,14 +4524,14 @@ modules/db.mysql/src/db_mysql_diffsqlgen.h: *No copyright* GENERATED FILE
 
 
 modules/db.mysql/src/db_mysql_diffsqlgen.cpp: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
 
 
 modules/db.mysql/src/module_db_mysql.cpp: GPL (v2) GENERATED FILE
-  [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
@@ -4517,6 +4560,8 @@ modules/db.mysql.sqlide/Makefile.in: GENERATED FILE
 
 
 
+modules/db.mysql.sqlide/src/mysql_sql_editor_be.cpp: GPL (v2) 
+  [Copyright: 2010, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
@@ -4558,7 +4603,6 @@ modules/wb.model/Makefile.in: GENERATED FILE
 
 
 
-
 modules/wb.model/src/wb_model.cpp: GPL (v2) 
   [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
 
@@ -4571,7 +4615,7 @@ modules/wb.model/src/reporting_template_variables.h: UNKNOWN
   [Copyright: 2009 Sun Microsystems Inc. All rights reserved]
 
 modules/wb.model/src/reporting.cpp: GPL (v2) GENERATED FILE
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 
@@ -4641,7 +4685,7 @@ modules/db.mysql.sqlparser/src/mysql_sql_parser.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 modules/db.mysql.sqlparser/src/mysql_sql_parser.cpp: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 modules/db.mysql.sqlparser/src/mysql_sql_statement_decomposer.cpp: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -4683,7 +4727,7 @@ modules/db.mysql.sqlparser/src/mysql_invalid_sql_parser.h: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 modules/db.mysql.sqlparser/src/mysql_sql_specifics.cpp: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 modules/db.mysql.sqlparser/src/stdafx.h: GPL (v2) 
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
@@ -4781,6 +4825,7 @@ modules/db.checks/register_plugin.cpp: UNKNOWN
   [Copyright: 2009 Sun Microsystems Inc. All rights reserved]
 
 modules/README: *No copyright* GENERATED FILE
+
 
 plugins/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
@@ -4995,7 +5040,7 @@ plugins/wb.admin/gen-opt/new/mysqld.xml: *No copyright* GENERATED FILE
 
 
 plugins/wb.admin/frontend/wb_admin_logs.py: GPL (v2) 
-  [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/frontend/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
@@ -5038,7 +5083,7 @@ plugins/wb.admin/frontend/wba_ssh_ui.py: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/frontend/wb_admin_connections.py: GPL (v2) 
-  [Copyright: 2009, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 plugins/wb.admin/backend/wb_admin_config_file_be.py: GPL (v2) 
@@ -5071,10 +5116,10 @@ plugins/wb.admin/backend/wb_server_control.py: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/backend/wb_admin_control.py: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/backend/wb_server_management.py: GPL (v2) 
-  [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2007, 2012, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/backend/wb_admin_security_be.py: GPL (v2) 
   [Copyright: 2007, 2011, Oracle and/or its affiliates. All rights reserved]
@@ -5086,7 +5131,7 @@ plugins/wb.admin/backend/wb_admin_variable_list.py: GPL (v2)
   [Copyright: 2007, 2010, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.admin/backend/wb_log_reader.py: GPL (v2) 
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2011, 2012, Oracle and/or its affiliates. All rights reserved]
 
 
 plugins/wb.printing/backend/wb_module_printing.cpp: GPL (v2) 
@@ -5101,9 +5146,22 @@ plugins/wb.printing/linux/Makefile.in: GENERATED FILE
 
 
 
-plugins/wb.updater/backend/wb_updater_grt.py: UNKNOWN
-  [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]
 
+plugins/wb.bugreport/Makefile.in: GENERATED FILE
+  [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
+
+plugins/wb.bugreport/MySQLGetRequestResult.py: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
+
+plugins/wb.bugreport/wb_bug_report_grt.py: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
+
+
+plugins/wb.bugreport/HTMLLookup.py: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
+
+plugins/wb.bugreport/HTMLGetData.py: GPL (v2) 
+  [Copyright: 2012, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.model.reporting/frontend/Makefile.in: GENERATED FILE
   [Copyright: 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002]
@@ -5135,7 +5193,7 @@ plugins/wb.model.snippets/merge_model.cpp: GPL (v2)
 
 
 plugins/wb.model.snippets/schema_select_form.h: GPL (v2) 
-  [Copyright: 2009, 2011, Oracle and/or its affiliates. All rights reserved]
+  [Copyright: 2009, 2012, Oracle and/or its affiliates. All rights reserved]
 
 plugins/wb.model.snippets/stdafx.h: GPL (v2) 
   [Copyright: 2011, Oracle and/or its affiliates. All rights reserved]

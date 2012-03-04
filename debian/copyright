@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MySQL Workbench
 Source: https://www.mysql.com/downloads/workbench/
-Copyright:  © 2000, 2004-2005, 2007-2011 Oracle and/or its affiliates.
+Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 
 
@@ -12,7 +12,7 @@ License: GPL-2+
 
 
 Files: *
-Copyright:  © 2000, 2004-2005, 2007-2011 Oracle and/or its affiliates.
+Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -27,7 +27,7 @@ Comment:
 
 
 Files: images/*
-Copyright:  © 2000, 2004-2005, 2007-2011 Oracle and/or its affiliates.
+Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: CC-BY-3.0
 Comment:
  Please note that trademark restrictions do apply to selected images.
@@ -178,6 +178,8 @@ Copyright:  © 2000-2003 MySQL AB
             © 1998      Theppitak Karoonboonyanan <thep@links.nectec.or.th>
 License: GPL-2+
 Comment:
+ relicensed by Oracle from a less restrictive license, which follows:
+ .
  Permission to use, copy, modify, distribute and sell this software
  and its documentation for any purpose is hereby granted without fee,
  provided that the above copyright notice appear in all copies.
