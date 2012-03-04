@@ -82,7 +82,6 @@ get-orig-source: $(PACKAGE)-$(VER)
 	find $(PACKAGE)-$(VER) -depth -type d -name 'windows' -exec $(RM) -r {} \; -printf 'removing %p\n'
 	cd $(PACKAGE)-$(VER) \
 	&& $(RM) -r -v \
-             build/debian \
              build/msi \
              build/res \
              build/zip \

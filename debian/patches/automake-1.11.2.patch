@@ -52,3 +52,15 @@ Description: fix FTBFS with automake 1.11.2
    mysqldoclib.py\
    wb_doclib_grt.py
  
+--- a/plugins/wb.bugreport/Makefile.am
++++ b/plugins/wb.bugreport/Makefile.am
+@@ -1,7 +1,7 @@
+ 
+-pkglibdir=$(libdir)/@PACKAGE@/modules
++pkgmodulesdir=$(libdir)/@PACKAGE@/modules
+ 
+-pkglib_DATA=\
++pkgmodules_DATA=\
+   HTMLGetData.py\
+   HTMLLookup.py\
+   MySQLGetRequestResult.py\
