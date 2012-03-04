@@ -3,4 +3,5 @@ launcher.patch
 disable_scintillaNET.patch
 unbundle_ctemplate.patch
 unbundle_tinyxml.patch
+unbundle_connector-python.patch
 ##unbundle_cppconn.patch

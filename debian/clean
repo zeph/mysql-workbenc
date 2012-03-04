@@ -1,0 +1,3 @@
+debian/*.xpm
+library/forms/swig/mforms.py
+library/forms/swig/mforms_wrap.*

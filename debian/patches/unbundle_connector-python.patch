@@ -1,0 +1,26 @@
+Last-Update: 2012-03-04
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: not-needed
+Description: disable building bundled connector-python
+ To use 'python-mysql.connector' instead
+
+
+--- a/ext/Makefile.am
++++ b/ext/Makefile.am
+@@ -1,14 +1,13 @@
+ 
+ SUBDIRS=scintilla/gtk cppconn vsqlite++
+ 
++.PHONY: install-utils
++
+ if BUNDLE_UTILITIES
+ all-am:
+ 	(cd mysql-utilities;python setup.py build)
+-	(cd connector-python;python setup.py build)
+ 
+ install-utils:
+ 	(cd mysql-utilities; mkdir -p $(pkgdatadir)/python; python setup.py install --skip-profile --root=$(DESTDIR) $(EXTRA_ARGS) --install-lib=$(pkgdatadir)/python --install-scripts=$(pkgdatadir)/python)
+ 
+-install-connector:
+-	(cd connector-python; mkdir -p $(pkgdatadir)/python; python setup.py install --root=$(DESTDIR) $(EXTRA_ARGS) --install-lib=$(pkgdatadir)/python)
+ endif

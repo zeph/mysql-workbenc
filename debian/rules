@@ -17,10 +17,6 @@ $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
 %:
 	dh $@ --parallel --with autoreconf,python2
 
-override_dh_auto_clean:
-	-dh_auto_clean
-	$(RM) -v library/forms/swig/mforms.py library/forms/swig/mforms_wrap.* debian/*.xpm
-
 override_dh_autoreconf:
 	#NOCONFIGURE="1" ./autogen.sh
 	dh_autoreconf
@@ -44,8 +40,6 @@ override_dh_auto_build:
 	convert images/icons/MySQLWorkbench-32.png debian/mysql-workbench.xpm
 	# generate documentation for mysql-workbench-docs package
 	#cd doc && ./DoxygenRun.sh
-	# remove embedded jquery (link to libjs-jquery will be used)
-	$(RM) -v doc/ntv/html/jquery.js
 	# build all the rest
 	dh_auto_build
 
@@ -53,7 +47,7 @@ override_dh_auto_install:
 	dh_auto_install --destdir=$(CURDIR)/debian/tmp
 	# install python extras
 	dh_auto_install --destdir=$(CURDIR)/debian/$(PACKAGE) \
-        -- -C ext install-utils install-connector
+        -- -C ext install-utils
 	# .desktop to unix line endings
 	sed -i 's/\r//g' debian/tmp/usr/share/applications/*.desktop
 	# remove *.la files
@@ -64,9 +58,8 @@ override_dh_auto_install:
 	# wipe empty dirs if any
 	find $(CURDIR)/debian/tmp -type d -empty -delete
 	# install link to launcher to /usr/bin/
-	dh_link -p$(PACKAGE) \
-        usr/lib/$(PACKAGE)/bin/mysql-workbench \
-        usr/bin/mysql-workbench
+	dh_link -p$(PACKAGE) usr/lib/$(PACKAGE)/bin/mysql-workbench \
+            usr/bin/mysql-workbench
 
 override_dh_compress:
 	dh_compress --exclude=.mwb
@@ -96,11 +89,15 @@ get-orig-source: $(PACKAGE)-$(VER)
              ext/scintilla/cocoa \
              ext/scintilla/win32 \
              ext/cppconn/win \
+             ext/connector-python \
              ext/ctemplate \
              ext/tinyxml \
+             ext/python \
+             ext/HTMLRenderer \
              frontend/mac \
              library/base.windows \
              library/forms/cocoa \
+             library/sql-parser/yy_purify-tool/dist/*.jar \
              MySQLWorkbench.xcodeproj \
              res/fonts \
              tools/utils_wrapper
@@ -115,7 +112,7 @@ get-orig-source: $(PACKAGE)-$(VER)
 	$(RM) -r $(PACKAGE)-$(VER)
 
 $(PACKAGE)-$(VER):
-	uscan --noconf --verbose --force-download --rename --repack --destdir=. --download-current-version
+	uscan --noconf --verbose --force-download --rename --repack --destdir=. --download-version $(VER)
 	mkdir $(PACKAGE)-$(VER) \
 	&& tar xf $(PACKAGE)_$(VER).orig.tar.gz --directory $(PACKAGE)-$(VER) --strip-components 1 \
 	|| $(RM) -r $(PACKAGE)-$(VER)
