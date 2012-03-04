@@ -4,11 +4,13 @@ Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@member.fsf.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
 Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
- doxygen, gettext, bison, flex, swig,
+ bison, flex, swig,
+ doxygen,
+ gettext,
  libboost-dev,
  libcairo2-dev,
- libfreetype6-dev,
  libctemplate-dev,
+ libfreetype6-dev,
  libgl1-mesa-dev,
  libglib2.0-dev, 
  libgnome-keyring-dev,
@@ -46,7 +48,7 @@ Description: MySQL Workbench - a visual database modeling, administration and qu
 
 Package: mysql-workbench-data
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: MySQL Workbench -- architecture independent data
  MySQL Workbench is a modeling tool that allow to design
  and generate MySQL databases graphically. It also has administration
