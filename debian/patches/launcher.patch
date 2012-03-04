@@ -1,4 +1,4 @@
-Last-Update: 2012-02-21
+Last-Update: 2012-03-05
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: no
 Description: fix mysql-workbench launcher
@@ -42,15 +42,18 @@ Description: fix mysql-workbench launcher
  # List of commands provided by mysql-utilities program, used to tell the user what are the available utilities
  export MYSQL_UTILITIES_COMMANDS="#utilities_cmds#"
  
- if test "$PYTHONPATH" != ""; then
+-if test "$PYTHONPATH" != ""; then
 -export PYTHONPATH="$PYTHONPATH:$basedirname/share/mysql-workbench/python"
-+export PYTHONPATH="$PYTHONPATH:/usr/share/mysql-workbench/python"
- else
+-else
 -export PYTHONPATH="$basedirname/share/mysql-workbench/python"
-+export PYTHONPATH="/usr/share/mysql-workbench/python"
- fi
+-fi
 -export PATH="$PATH:$basedirname/share/mysql-workbench/python"
-+export PATH="$PATH:/usr/share/mysql-workbench/python"
++#if test "$PYTHONPATH" != ""; then
++#export PYTHONPATH="$PYTHONPATH:/usr/share/mysql-workbench/python"
++#else
++#export PYTHONPATH="/usr/share/mysql-workbench/python"
++#fi
++#export PATH="$PATH:/usr/share/mysql-workbench/python"
  
  
  if type -p catchsegv > /dev/null; then

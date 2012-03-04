@@ -25,7 +25,6 @@ override_dh_auto_configure:
 	dh_auto_configure -- --libdir=/usr/lib \
 		--exec-prefix=/usr/lib/$(PACKAGE) \
 		--enable-grt-generation \
-		--enable-mysql-utilities \
 		--enable-dependency-tracking
 		#--with-commondirname
 
@@ -45,9 +44,6 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install --destdir=$(CURDIR)/debian/tmp
-	# install python extras
-	dh_auto_install --destdir=$(CURDIR)/debian/$(PACKAGE) \
-        -- -C ext install-utils
 	# .desktop to unix line endings
 	sed -i 's/\r//g' debian/tmp/usr/share/applications/*.desktop
 	# remove *.la files
@@ -93,6 +89,7 @@ get-orig-source: $(PACKAGE)-$(VER)
              ext/tinyxml \
              ext/python \
              ext/HTMLRenderer \
+             ext/mysql-utilities \
              frontend/mac \
              library/base.windows \
              library/forms/cocoa \
