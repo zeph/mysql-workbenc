@@ -8,9 +8,9 @@ PACKAGE := mysql-workbench
 
 # parallel build by default on linux
 ifeq ($(DEB_HOST_ARCH_OS),linux)
-	ifeq ($(findstring parallel=,$(DEB_BUILD_OPTIONS)),)
-		export DEB_BUILD_OPTIONS+=parallel=$(shell grep -c ^processor /proc/cpuinfo)
-	endif
+    ifeq ($(findstring parallel=,$(DEB_BUILD_OPTIONS)),)
+        export DEB_BUILD_OPTIONS+=parallel=$(shell ls /sys/devices/system/cpu/ | grep -c 'cpu[0-9]\+')
+    endif
 endif
 $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
 
