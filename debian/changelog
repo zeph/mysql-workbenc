@@ -1,3 +1,10 @@
+mysql-workbench (5.2.38+dfsg-2) unstable; urgency=low
+
+  * patch to fix FTBFS with glib 2.32
+    (Closes: #665584 I:"individual glib headers no longer supported")
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Tue, 27 Mar 2012 21:57:45 +1100
+
 mysql-workbench (5.2.38+dfsg-1) unstable; urgency=low
 
   * first Debian release (Closes: #604174 ITP)
