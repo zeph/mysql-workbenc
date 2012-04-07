@@ -13,6 +13,7 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
     endif
 endif
 $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all,-bindnow
 
 %:
 	dh $@ --parallel --with autoreconf,python2
