@@ -1,0 +1,17 @@
+Last-Update: 2012-04-07
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Forwarded: not-needed
+Description: correct path to ifconfig
+
+
+--- a/plugins/wb.admin/backend/wb_server_control.py
++++ b/plugins/wb.admin/backend/wb_server_control.py
+@@ -32,7 +32,7 @@
+ 
+ #-------------------------------------------------------------------------------
+ def get_local_ip_list():
+-    cmd    = "/bin/sh -c ifconfig"
++    cmd    = "/bin/sh -c /sbin/ifconfig"
+     regexp = "inet addr:([0-9a-f:\.]+)"
+ 
+     if hasattr(sys, 'getwindowsversion'):
