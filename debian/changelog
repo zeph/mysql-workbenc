@@ -1,3 +1,14 @@
+mysql-workbench (5.2.38+dfsg-3) unstable; urgency=low
+
+  * native server administration profile (Closes: #667714 I:"Creating new
+    server instance profile fails...")
+  * patch to fix ifconfig invocation
+  * d-rules:
+    + better CPU number detection
+    + build with all but 'bindnow' hardening
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Fri, 06 Apr 2012 23:00:35 +1000
+
 mysql-workbench (5.2.38+dfsg-2) unstable; urgency=low
 
   * patch to fix FTBFS with glib 2.32
