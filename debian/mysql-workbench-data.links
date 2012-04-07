@@ -1,2 +1,3 @@
 usr/share/doc/mysql-workbench-data/examples	usr/share/doc/mysql-workbench/examples
 usr/share/man/man1/mysql-workbench.1		usr/share/man/man1/mysql-workbench-bin.1
+usr/share/mysql-workbench/mysql.profiles/Ubuntu_Linux_(Vendor_Package).xml	usr/share/mysql-workbench/mysql.profiles/Debian_GNU+Linux.xml
