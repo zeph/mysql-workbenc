@@ -1,18 +1,18 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MySQL Workbench
 Source: https://www.mysql.com/downloads/workbench/
-Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 
 
 Files: debian/*
-Copyright:  © 2012 Dmitry Smirnov <onlyjob@member.fsf.org>
-            © 2012 Mateusz Kijowski <mateusz.kijowski@gmail.com>
+Copyright: 2012 Dmitry Smirnov <onlyjob@member.fsf.org>
+           2012 Mateusz Kijowski <mateusz.kijowski@gmail.com>
 License: GPL-2+
 
 
 Files: *
-Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -27,7 +27,7 @@ Comment:
 
 
 Files: images/*
-Copyright:  © 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: CC-BY-3.0
 Comment:
  Please note that trademark restrictions do apply to selected images.
@@ -40,7 +40,7 @@ Files:
  plugins/wb.model.editors/backend/wb_editor_layer.h
  plugins/wb.model.tagging/backend/wb_tag_editor.cpp
  plugins/wb.model.tagging/backend/wb_tag_editor.h
-Copyright:  © 2009 Sun Microsystems Inc.
+Copyright: 2009 Sun Microsystems Inc.
 License: GPL-2
 
 
@@ -51,7 +51,7 @@ Files:
  library/canvas/src/mdc_area_group.h
  library/canvas/src/mdc_canvas_view_macosx.cpp
  library/canvas/src/mdc_canvas_view_macosx.h
-Copyright:  © 2000-2007 MySQL AB
+Copyright: 2000-2007 MySQL AB
 License: GPL-2
 
 
@@ -60,22 +60,22 @@ Files:
  library/sql-parser/*
  modules/wb.mysql.import/src/stream_conv.h
  modules/wb.mysql.import/src/wb_mysql_import_dbd4.h
-Copyright:  © 2000-2004      MySQL AB
-            © 2000           MySQL Finland AB
-            © 2000           TCX DataKonsult AB
-            © 1997-1998,2001 Jan Pazdziora <adelton@fi.muni.cz>
-            © Abandoned 1997 Zarko Mocnik <zarko.mocnik@dem.si>
+Copyright: 2000-2004      MySQL AB
+           2000           MySQL Finland AB
+           2000           TCX DataKonsult AB
+           1997-1998,2001 Jan Pazdziora <adelton@fi.muni.cz>
+           Abandoned 1997 Zarko Mocnik <zarko.mocnik@dem.si>
 License: GPL-2+
 
 
 Files: library/sql-parser/source/ctype-tis620.cpp
-Copyright:  © 2000-2003 MySQL AB
-            © 2001      Apisilp Trunganont <apisilp@pantip.inet.co.th>
-            © 2001      Korakot Chaovavanich <korakot@iname.com>
-            © 1998-1999 Pruet Boonma <pruet@eng.cmu.ac.th>
-            © 1989,1991 Samphan Raruenrom <samphan@thai.com>
-            © 2003      Sathit Jittanupat <jsat66@hotmail.com,jsat66@yahoo.com>
-            © 1998      Theppitak Karoonboonyanan <thep@links.nectec.or.th>
+Copyright: 2000-2003 MySQL AB
+           2001      Apisilp Trunganont <apisilp@pantip.inet.co.th>
+           2001      Korakot Chaovavanich <korakot@iname.com>
+           1998-1999 Pruet Boonma <pruet@eng.cmu.ac.th>
+           1989,1991 Samphan Raruenrom <samphan@thai.com>
+           2003      Sathit Jittanupat <jsat66@hotmail.com,jsat66@yahoo.com>
+           1998      Theppitak Karoonboonyanan <thep@links.nectec.or.th>
 License: GPL-2+
 Comment:
  relicensed by Oracle from a less restrictive license, which follows:
@@ -91,7 +91,7 @@ Comment:
 
 
 Files: library/sql-parser/source/mysql_version.h
-Copyright:  © Abandoned 1996, 1999, 2001, MySQL AB
+Copyright: Abandoned 1996, 1999, 2001, MySQL AB
 License: public domain
  This file is public domain and comes with NO WARRANTY of any kind
 
@@ -100,7 +100,7 @@ License: public domain
 Files:
  library/base/base/file_utilities.h
  library/base/file_utilities.cpp
-Copyright:  © 2010-2011 Oracle and/or its affiliates.
+Copyright: 2010-2011 Oracle and/or its affiliates.
 License: LGPL-2+
 
 
@@ -112,15 +112,15 @@ Files:
  library/sql-parser/source/ctype-eucjpms.cpp
  library/sql-parser/source/ctype-ujis.cpp
  library/sql-parser/source/ctype-bin.cpp
-Copyright:  © 2000, 2002, 2004 MySQL AB
-            © 2002             tommy@valley.ne.jp
+Copyright: 2000, 2002, 2004 MySQL AB
+           2002             tommy@valley.ne.jp
 License: LGPL-2+
 
 
 Files:
  res/scripts/shell/mysql_system_status.vbs
  res/scripts/shell/mysql_system_status_rmt.vbs
-Copyright:  © 2009, Sun Microsystems, Inc
+Copyright: 2009, Sun Microsystems, Inc
 License: LGPL-2+
 
 
@@ -128,7 +128,7 @@ License: LGPL-2+
 Files:
  library/sql-parser/source/linux/myx_sql_parser.cpp
  library/sql-parser/source/linux/myx_sql_parser.tab.hh
-Copyright:  © 1984, 1989-1990, 2000-2006 Free Software Foundation, Inc.
+Copyright: 1984, 1989-1990, 2000-2006 Free Software Foundation, Inc.
 License: GPL-3+ or GPL-2
 Comment:
  As a special exception, you may create a larger work that contains
@@ -144,52 +144,51 @@ Comment:
 
 
 Files: ext/scintilla/*
-Copyright:
-            © 1998-2011 Neil Hodgson <neilh@scintilla.org>
-            © 1998-2001 Neil Hodgson <neilh@hare.net.au>
-            © 2003-2005 Angelo Mandato <angelo@spaceblue.com>
-            © 1998-2001 Andre Arpin <arpin@kingston.net>
-            © 2009      Andreas Rumpf
-            © 2001      Clemens Wyss <wys@helbling.ch>
-            © 2007      Cristian Adam <cristian.adam@gmx.net>
-            © 2006      Fabien Proriol
-            © 2004      Herr Pfarrer <rpfarrer@yahoo.de>
-            © 2009      James Moffatt
-            © 2010      Martial Demolins <mdemolins(a)gmail.com>
-            © 2004      Manfred Becker <manfred@becker-trdf.de>
-            © 2003      Marius Gheorghe <mgheorghe@cabletest.com>
-            © 2007      Istvan Szollosi <szteven@gmail.com>
-            © 2003      Kein-Hong Man <mkh@pl.jaring.my>
-            © 2005      Pascal Hurni <pascal_hurni@fastmail.fm>
-            © 2003      Patrizio Bekerle (patrizio@bekerle.com)
-            © 2001      Praveen Ambekar <ambekarpraveen@yahoo.com>
-            © 2005      Randy Butler
-            © 2005-2009 Robert Roessler <robertr@rftp.com>
-            © 2003-2004 Ron Schofield <ron@schofieldcomputer.com>
-            © 1990-2007 Scientific Toolworks, Inc
-            © 2003      Sean O'Dell <sean@celsoft.com>
-            © 2002      Sergey Koshcheyev <sergey.k@seznam.cz>
-            © 2001      Simon Steele <ss@pnotepad.org>
-            © 2008      Tim Gerundt <tim@gerundt.de>
-            © 2001      Vamsi Potluru <vamsi@who.net>
-            © 2006      Waldemar Augustyn <waldemar@wdmsys.com>
-            © 2010      Xavi <jarabal@gmail.com> (Harbour)
-            © 2006-2007 Yuval Papish <Yuval@YuvCom.com>
-            © 2009      Yuzhou Xin
+Copyright: 1998-2011 Neil Hodgson <neilh@scintilla.org>
+           1998-2001 Neil Hodgson <neilh@hare.net.au>
+           2003-2005 Angelo Mandato <angelo@spaceblue.com>
+           1998-2001 Andre Arpin <arpin@kingston.net>
+           2009      Andreas Rumpf
+           2001      Clemens Wyss <wys@helbling.ch>
+           2007      Cristian Adam <cristian.adam@gmx.net>
+           2006      Fabien Proriol
+           2004      Herr Pfarrer <rpfarrer@yahoo.de>
+           2009      James Moffatt
+           2010      Martial Demolins <mdemolins(a)gmail.com>
+           2004      Manfred Becker <manfred@becker-trdf.de>
+           2003      Marius Gheorghe <mgheorghe@cabletest.com>
+           2007      Istvan Szollosi <szteven@gmail.com>
+           2003      Kein-Hong Man <mkh@pl.jaring.my>
+           2005      Pascal Hurni <pascal_hurni@fastmail.fm>
+           2003      Patrizio Bekerle (patrizio@bekerle.com)
+           2001      Praveen Ambekar <ambekarpraveen@yahoo.com>
+           2005      Randy Butler
+           2005-2009 Robert Roessler <robertr@rftp.com>
+           2003-2004 Ron Schofield <ron@schofieldcomputer.com>
+           1990-2007 Scientific Toolworks, Inc
+           2003      Sean O'Dell <sean@celsoft.com>
+           2002      Sergey Koshcheyev <sergey.k@seznam.cz>
+           2001      Simon Steele <ss@pnotepad.org>
+           2008      Tim Gerundt <tim@gerundt.de>
+           2001      Vamsi Potluru <vamsi@who.net>
+           2006      Waldemar Augustyn <waldemar@wdmsys.com>
+           2010      Xavi <jarabal@gmail.com> (Harbour)
+           2006-2007 Yuval Papish <Yuval@YuvCom.com>
+           2009      Yuzhou Xin
 License: License for Scintilla and SciTE
- Permission to use, copy, modify, and distribute this software and its 
- documentation for any purpose and without fee is hereby granted, 
- provided that the above copyright notice appear in all copies and that 
- both that copyright notice and this permission notice appear in 
- supporting documentation. 
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted,
+ provided that the above copyright notice appear in all copies and that
+ both that copyright notice and this permission notice appear in
+ supporting documentation.
  .
- NEIL HODGSON DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS 
- SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY 
- AND FITNESS, IN NO EVENT SHALL NEIL HODGSON BE LIABLE FOR ANY 
- SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES 
- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, 
- WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER 
- TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE 
+ NEIL HODGSON DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+ SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS, IN NO EVENT SHALL NEIL HODGSON BE LIABLE FOR ANY
+ SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
  OR PERFORMANCE OF THIS SOFTWARE.
 
 
@@ -198,45 +197,45 @@ Files:
  ext/scintilla/lexlib/StyleContext.cxx
  ext/scintilla/lexlib/StyleContext.h
  ext/scintilla/src/RESearch.h
-Copyright: © 1998-2004 Neil Hodgson <neilh@scintilla.org>
+Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public domain
  This file is in the public domain
 
 
 
 Files: ext/vsqlite++/*
-Copyright:  © 2006 Vinzenz Feenstra <vinzenz.feenstra@virtuosic-bytes.com>
+Copyright: 2006 Vinzenz Feenstra <vinzenz.feenstra@virtuosic-bytes.com>
 License: BSD (3 clause)
- Redistribution and use in source and binary forms, with or without modification, 
+ Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
  .
- * Redistributions of source code must retain the above copyright notice, 
+ * Redistributions of source code must retain the above copyright notice,
    this list of conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, 
-   this list of conditions and the following disclaimer in the documentation 
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
    and/or other materials provided with the distribution.
- * Neither the name of virtuosic bytes nor the names of its contributors may 
-   be used to endorse or promote products derived from this software without 
+ * Neither the name of virtuosic bytes nor the names of its contributors may
+   be used to endorse or promote products derived from this software without
    specific prior written permission.
  .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
- AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
- ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
- LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
- INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
- CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
- POSSIBILITY OF SUCH DAMAGE.                                                             
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
 
 
 
 Files:
  ext/vsqlite++/include/sqlite/private/private_accessor.hpp
  ext/vsqlite++/include/sqlite/private/result_construct_params_private.hpp
-Copyright:  © 2006 Vinzenz Feenstra vinzenz.feenstra@virtuosic-bytes.com
+Copyright: 2006 Vinzenz Feenstra vinzenz.feenstra@virtuosic-bytes.com
 License: MIT/X11 (BSD like)
 
 
