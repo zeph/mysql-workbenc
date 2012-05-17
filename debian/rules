@@ -98,15 +98,9 @@ get-orig-source: $(PACKAGE)-$(VER)
              MySQLWorkbench.xcodeproj \
              res/fonts \
              tools/utils_wrapper
-	@echo "Packing and scanning for copyright changes..."
+	@echo "Packing..."
 	tar cJf "$(PACKAGE)_$(VER)+dfsg.orig.tar.xz" "$(PACKAGE)-$(VER)" \
-	&& cd $(PACKAGE)-$(VER) \
-	&& licensecheck --recursive --copyright --check='.*' --ignore='\.(jpg|ico|icns|mwb|sqlite|png)\Z|^debian/' --lines="99999" * \
-	| grep -v '\*No copyright\* UNKNOWN' > ../$(COPHINTS).new
-	DIF=$$(diff -U0 $(COPHINTS) $(COPHINTS).new) \
-	; [ "$$?" -eq 0 ] && $(RM) $(COPHINTS).new \
-	|| echo "$${DIF}" | tee $(COPHINTS).diff
-	$(RM) -r $(PACKAGE)-$(VER)
+	&& $(RM) -r $(PACKAGE)-$(VER)
 
 $(PACKAGE)-$(VER):
 	uscan --noconf --verbose --force-download --rename --repack --destdir=. --download-version $(VER)
