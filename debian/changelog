@@ -1,3 +1,18 @@
+mysql-workbench (5.2.40+dfsg-1) unstable; urgency=low
+
+  * New upstream release [May 2012]
+  * source compression to .xz
+  * dropped glib-single-include.patch (applied upstream).
+  * dropped '©' characters from debian/copyright.
+  * dropped copyright.hints file.
+  * native server administration profile renamed to "Debian".
+    (Closes: #671050)
+
+  [ Mateusz Kijowski ]
+  * debian/copyright cleanup
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 17 May 2012 22:59:56 +1000
+
 mysql-workbench (5.2.38+dfsg-3) unstable; urgency=low
 
   * native server administration profile (Closes: #667714 I:"Creating new
