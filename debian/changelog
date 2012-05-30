@@ -7,6 +7,7 @@ mysql-workbench (5.2.40+dfsg-1) unstable; urgency=low
   * dropped copyright.hints file.
   * native server administration profile renamed to "Debian".
     (Closes: #671050)
+  * dropped unnecessary 'python-all' from Depends (Closes: #674768)
 
   [ Mateusz Kijowski ]
   * debian/copyright cleanup

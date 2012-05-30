@@ -12,14 +12,14 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
  libctemplate-dev,
  libfreetype6-dev,
  libgl1-mesa-dev,
- libglib2.0-dev, 
+ libglib2.0-dev,
  libgnome-keyring-dev,
  libgtkmm-2.4-dev,
  liblua5.1-0-dev,
  libpng12-dev,
  libmysqlclient-dev,
  libpcre3-dev,
- libpixman-1-dev, 
+ libpixman-1-dev,
  libsqlite3-dev,
  libtinyxml-dev,
  libxml2-dev,
@@ -37,7 +37,7 @@ Package: mysql-workbench
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
  mysql-workbench-data (= ${source:Version}), mysql-client,
- python-mysql.connector, python-paramiko, python-pysqlite2, python-all, python-pexpect
+ python-mysql.connector, python-paramiko, python-pysqlite2, python-pexpect
 Recommends: ttf-bitstream-vera, mysql-utilities,
 Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
