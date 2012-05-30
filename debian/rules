@@ -16,7 +16,7 @@ $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all,-bindnow
 
 %:
-	dh $@ --parallel --with autoreconf,python2
+	dh $@ --parallel --max-parallel=4 --with autoreconf,python2
 
 override_dh_autoreconf:
 	#NOCONFIGURE="1" ./autogen.sh
@@ -41,10 +41,10 @@ override_dh_auto_build:
 	# generate documentation for mysql-workbench-docs package
 	#cd doc && ./DoxygenRun.sh
 	# build all the rest
-	dh_auto_build
+	dh_auto_build --max-parallel=4
 
 override_dh_auto_install:
-	dh_auto_install --destdir=$(CURDIR)/debian/tmp
+	dh_auto_install --max-parallel=4 --destdir=$(CURDIR)/debian/tmp
 	# .desktop to unix line endings
 	sed -i 's/\r//g' debian/tmp/usr/share/applications/*.desktop
 	# remove *.la files
@@ -69,7 +69,6 @@ override_dh_makeshlibs:
 #	dh_strip --dbg-package=$(PACKAGE)-dbg
 
 
-COPHINTS := debian/copyright.hints
 VER = $(shell dpkg-parsechangelog | perl -ne 'print $$1 if m/Version:\s*([\d\.]+)/')
 get-orig-source: $(PACKAGE)-$(VER)
 	@echo "Clean-up..."

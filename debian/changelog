@@ -8,6 +8,7 @@ mysql-workbench (5.2.40+dfsg-1) unstable; urgency=low
   * native server administration profile renamed to "Debian".
     (Closes: #671050)
   * dropped unnecessary 'python-all' from Depends (Closes: #674768)
+  * limit parallel build to 4 due to FTBFS with 8 CPUs.
 
   [ Mateusz Kijowski ]
   * debian/copyright cleanup
