@@ -4,12 +4,10 @@ Source: https://www.mysql.com/downloads/workbench/
 Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 
-
 Files: debian/*
 Copyright: 2012 Dmitry Smirnov <onlyjob@member.fsf.org>
            2012 Mateusz Kijowski <mateusz.kijowski@gmail.com>
 License: GPL-2+
-
 
 Files: *
 Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
@@ -25,13 +23,11 @@ Comment:
  .
  See list of contributors in file AUTHORS
 
-
 Files: images/*
 Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: CC-BY-3.0
 Comment:
  Please note that trademark restrictions do apply to selected images.
-
 
 Files:
  modules/db.checks/*
@@ -43,7 +39,6 @@ Files:
 Copyright: 2009 Sun Microsystems Inc.
 License: GPL-2
 
-
 Files:
  library/sql-parser/include/lex.h
  library/sql-parser/source/myx_unicode_scanner.cpp
@@ -53,8 +48,6 @@ Files:
  library/canvas/src/mdc_canvas_view_macosx.h
 Copyright: 2000-2007 MySQL AB
 License: GPL-2
-
-
 
 Files:
  library/sql-parser/*
@@ -66,7 +59,6 @@ Copyright: 2000-2004      MySQL AB
            1997-1998,2001 Jan Pazdziora <adelton@fi.muni.cz>
            Abandoned 1997 Zarko Mocnik <zarko.mocnik@dem.si>
 License: GPL-2+
-
 
 Files: library/sql-parser/source/ctype-tis620.cpp
 Copyright: 2000-2003 MySQL AB
@@ -88,21 +80,16 @@ Comment:
  about the suitability of this software for any purpose.  It is provided
  "as is" without express or implied warranty.
 
-
-
 Files: library/sql-parser/source/mysql_version.h
 Copyright: Abandoned 1996, 1999, 2001, MySQL AB
 License: public domain
  This file is public domain and comes with NO WARRANTY of any kind
 
-
-
 Files:
  library/base/base/file_utilities.h
  library/base/file_utilities.cpp
-Copyright: 2010-2011 Oracle and/or its affiliates.
+Copyright: 2010-2012 Oracle and/or its affiliates.
 License: LGPL-2+
-
 
 Files:
  library/sql-parser/source/ctype-uca.cpp
@@ -112,18 +99,15 @@ Files:
  library/sql-parser/source/ctype-eucjpms.cpp
  library/sql-parser/source/ctype-ujis.cpp
  library/sql-parser/source/ctype-bin.cpp
-Copyright: 2000, 2002, 2004 MySQL AB
-           2002             tommy@valley.ne.jp
+Copyright: 2000,2002,2004 MySQL AB
+           2002           tommy@valley.ne.jp
 License: LGPL-2+
-
 
 Files:
  res/scripts/shell/mysql_system_status.vbs
  res/scripts/shell/mysql_system_status_rmt.vbs
 Copyright: 2009, Sun Microsystems, Inc
 License: LGPL-2+
-
-
 
 Files:
  library/sql-parser/source/linux/myx_sql_parser.cpp
@@ -140,8 +124,6 @@ Comment:
  special exception, which will cause the skeleton and the resulting
  Bison output files to be licensed under the GNU General Public
  License without this special exception.
-
-
 
 Files: ext/scintilla/*
 Copyright: 1998-2011 Neil Hodgson <neilh@scintilla.org>
@@ -191,8 +173,6 @@ License: License for Scintilla and SciTE
  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
  OR PERFORMANCE OF THIS SOFTWARE.
 
-
-
 Files:
  ext/scintilla/lexlib/StyleContext.cxx
  ext/scintilla/lexlib/StyleContext.h
@@ -200,8 +180,6 @@ Files:
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public domain
  This file is in the public domain
-
-
 
 Files: ext/vsqlite++/*
 Copyright: 2006 Vinzenz Feenstra <vinzenz.feenstra@virtuosic-bytes.com>
@@ -230,15 +208,11 @@ License: BSD (3 clause)
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
 
-
-
 Files:
  ext/vsqlite++/include/sqlite/private/private_accessor.hpp
  ext/vsqlite++/include/sqlite/private/result_construct_params_private.hpp
 Copyright: 2006 Vinzenz Feenstra vinzenz.feenstra@virtuosic-bytes.com
 License: MIT/X11 (BSD like)
-
-
 
 License: MIT/X11 (BSD like)
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -259,8 +233,6 @@ License: MIT/X11 (BSD like)
  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
  USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-
 License: LGPL-2+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
@@ -276,8 +248,6 @@ License: LGPL-2+
  Public License version 2 can be found in
  "/usr/share/common-licenses/LGPL-2".
 
-
-
 License: GPL-2
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License version 2
@@ -290,8 +260,6 @@ License: GPL-2
  .
  On Debian systems, the complete text of the GNU General
  Public License 2 can be found in "/usr/share/common-licenses/GPL-2".
-
-
 
 License: GPL-2+
  This program is free software: you can redistribute it and/or modify
@@ -310,8 +278,6 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General Public License
  version 2 can be found in `/usr/share/common-licenses/GPL-2'.
 
-
-
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -325,8 +291,6 @@ License: GPL-3+
  .
  On Debian systems, the complete text of the GNU General
  Public License 3 can be found in "/usr/share/common-licenses/GPL-3".
-
-
 
 License: CC-BY-3.0
  Creative Commons

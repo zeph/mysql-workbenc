@@ -1,9 +1,8 @@
-Last-Update: 2012-02-20
+Last-Update: 2012-08-05
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: not-needed
 Description: disable building bundled tinyxml
  To use libtinyxml-dev instead
-
 
 --- a/backend/wbprivate/Makefile.am
 +++ b/backend/wbprivate/Makefile.am
@@ -16,7 +15,7 @@ Description: disable building bundled tinyxml
  
  libwbprivate_a_SOURCES=\
  	model/canvas_floater.cpp\
-@@ -76,11 +76,7 @@
+@@ -78,11 +78,7 @@
    $(top_srcdir)/frontend/common/grt_python_debugger.cpp\
    $(top_srcdir)/frontend/common/plugin_manager_window.cpp\
    $(top_srcdir)/frontend/common/plugin_install_window.cpp\
@@ -31,7 +30,7 @@ Description: disable building bundled tinyxml
  #stdafx.h.gch: workbench/stdafx.h
 --- a/configure.in
 +++ b/configure.in
-@@ -101,6 +101,10 @@
+@@ -99,6 +99,10 @@
      AM_GLIB_GNU_GETTEXT
  fi
  
@@ -44,7 +43,7 @@ Description: disable building bundled tinyxml
      PKG_CHECK_MODULES(ZIP, [libzip])
 --- a/library/forms/Makefile.am
 +++ b/library/forms/Makefile.am
-@@ -86,7 +86,7 @@
+@@ -91,7 +91,7 @@
  -I$(top_srcdir)/ext/vsqlite\
  -I$(top_srcdir)/library/\
  -I$(top_srcdir)/ext\
@@ -76,9 +75,9 @@ Description: disable building bundled tinyxml
 +	src/wb_mysql_import_dbd4.cpp
 --- a/frontend/linux/workbench/Makefile.am
 +++ b/frontend/linux/workbench/Makefile.am
-@@ -52,6 +52,7 @@
- 	$(top_srcdir)/library/canvas/src/libmdcanvasgtk.la\
+@@ -60,6 +60,7 @@
  	$(top_srcdir)/library/canvas/src/libmdcanvas.la\
+ 	$(top_srcdir)/library/mysql55-parser/libmysql55parser.la\
  	@CTEMPLATE_LIBS@\
 +	@TINYXML_LIBS@\
  	@GNOME_LIBS@ @GRT_LIBS@ @PCRE_LIBS@ @GLIB_LIBS@ @CAIRO_LIBS@ @ZIP_LIBS@ @MYSQL_LIBS@ @SQLITE3_LIBS@\

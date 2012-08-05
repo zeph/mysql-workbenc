@@ -1,6 +1,8 @@
-mysql-workbench (5.2.40+dfsg-2) UNRELEASED; urgency=low
+mysql-workbench (5.2.41+dfsg-1) UNRELEASED; urgency=low
 
-  * Build-Depends on libtinyxml-dev (>= 2.6.2)
+  * New upstream release [July 2012]
+  * 'libiodbc2-dev' to Build-Depends
+  * Build-Depends on 'libtinyxml-dev (>= 2.6.2)'
     to avoid FTBFS with older versions (Closes: #675336)
 
  -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 31 May 2012 23:49:30 +1000

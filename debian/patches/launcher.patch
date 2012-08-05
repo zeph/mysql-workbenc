@@ -6,7 +6,6 @@ Description: fix mysql-workbench launcher
  in order to use the right paths to main executable
  and to plugins/modules.
 
-
 --- a/frontend/linux/workbench/mysql-workbench.in
 +++ b/frontend/linux/workbench/mysql-workbench.in
 @@ -10,10 +10,10 @@

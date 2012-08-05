@@ -81,6 +81,8 @@ get-orig-source: $(PACKAGE)-$(VER)
              build/msi \
              build/res \
              build/zip \
+             ext/Aga.Controls \
+        0000-ext/antlr-runtime \
              ext/scintilla/cocoa \
              ext/scintilla/win32 \
              ext/cppconn/win \
