@@ -6,5 +6,5 @@
 version=3
 
 opts=dversionmangle=s/\+dfsg// \
-http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools/%5Bpage=0%5D \
- (?:.*)?/mysql-workbench-gpl-([\d\.]+)-src\.tar\.(?:gz|bz2|xz)
+http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
+/mysql-workbench-gpl-([\d\.]+)-src\.tar\.(?:gz|bz2|xz)
