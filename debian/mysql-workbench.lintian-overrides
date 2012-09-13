@@ -1,0 +1,6 @@
+## false-positives:
+hardening-no-fortify-functions usr/lib/mysql-workbench/db.mysql.wbp.so.0.0.0
+hardening-no-fortify-functions usr/lib/mysql-workbench/liblinux_utilities.so.0.0.0
+hardening-no-fortify-functions usr/lib/mysql-workbench/libvsqlitepp.so.0.0.0
+hardening-no-fortify-functions usr/lib/mysql-workbench/modules/wb.model.grt.so.0.0.0
+hardening-no-fortify-functions usr/lib/mysql-workbench/modules/wb.mysql.import.grt.so.0.0.0

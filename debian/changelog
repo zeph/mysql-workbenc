@@ -11,6 +11,7 @@ mysql-workbench (5.2.42+dfsg-1) UNRELEASED; urgency=low
       the bundled version is removed.
   * debian/watch is updated to reflect mirror changes.
   * xz compression for binary packages.
+  * lintian-overrides for hardening false-positives.
   * TODO: unbundle antlr when possible.
 
  -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 31 May 2012 23:49:30 +1000
