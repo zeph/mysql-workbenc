@@ -87,7 +87,7 @@ get-orig-source: $(PACKAGE)-$(VER)
         0000-ext/antlr-runtime \
              ext/scintilla/cocoa \
              ext/scintilla/win32 \
-             ext/cppconn/win \
+             ext/cppconn \
              ext/connector-python \
              ext/ctemplate \
              ext/tinyxml \

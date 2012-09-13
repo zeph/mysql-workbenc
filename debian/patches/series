@@ -5,5 +5,5 @@ launcher.patch
 unbundle_ctemplate.patch
 unbundle_tinyxml.patch
 unbundle_connector-python.patch
-##unbundle_cppconn.patch
+unbundle_cppconn.patch
 #unbindle_antlr.patch
