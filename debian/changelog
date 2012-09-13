@@ -1,12 +1,17 @@
-mysql-workbench (5.2.41+dfsg-1) UNRELEASED; urgency=low
+mysql-workbench (5.2.42+dfsg-1) UNRELEASED; urgency=low
 
-  * New upstream release [July 2012]
-    (Closes: #682691)
-  * 'libiodbc2-dev' to Build-Depends
-  * Build-Depends on 'libtinyxml-dev (>= 2.6.2)'
-    to avoid FTBFS with older versions (Closes: #675336)
-  * debian/watch update to reflect mirror changes.
+  * New upstream release [August 2012]
+    (Closes: #682691) "Freeze on quit application".
+  * Build-Depends:
+    + added "libiodbc2-dev".
+    + added "libtinyxml-dev (>= 2.6.2)"
+      to avoid FTBFS with older versions (Closes: #675336).
+    + added "libmysqlcppconn-dev (>= 1.1.1)"
+      thanks to availability of new libmysqlcppconn
+      the bundled version is removed.
+  * debian/watch is updated to reflect mirror changes.
   * xz compression for binary packages.
+  * TODO: unbundle antlr when possible.
 
  -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 31 May 2012 23:49:30 +1000
 
