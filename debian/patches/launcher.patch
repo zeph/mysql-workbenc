@@ -1,4 +1,4 @@
-Last-Update: 2012-03-05
+Last-Update: 2012-09-13
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: no
 Description: fix mysql-workbench launcher
@@ -8,21 +8,23 @@ Description: fix mysql-workbench launcher
 
 --- a/frontend/linux/workbench/mysql-workbench.in
 +++ b/frontend/linux/workbench/mysql-workbench.in
-@@ -10,10 +10,10 @@
- program_path="$0"
+@@ -7,14 +7,7 @@
+ # force disable the Mac style single menu hack in Ubuntu Unity
+ UBUNTU_MENUPROXY=0
  
- bindirname=`dirname $program_path`
+-program_path="$0"
+-
+-bindirname=`dirname $program_path`
 -basedirname=$(cd "$bindirname/..";pwd)
-+basedirname=/
- 
+-
 -libdir=$(basename #libdir#)
+-libexecdir=$(basename #libexecdir#)
 -wblibdir="$basedirname/$libdir/mysql-workbench"
-+libdir=#libdir#
-+wblibdir="$libdir/mysql-workbench"
++wblibdir="#libdir#/mysql-workbench"
  
  # if libcairo and pixman are in the wb libraries dir, force them to be preloaded
  if test -f $wblibdir/libcairo.so.2; then
-@@ -38,26 +38,26 @@
+@@ -39,27 +32,26 @@
  export LD_LIBRARY_PATH="$wblibdir"
  fi
  
@@ -30,12 +32,12 @@ Description: fix mysql-workbench launcher
 -export MWB_LIBRARY_DIR="$basedirname/share/mysql-workbench/libraries"
 -export MWB_MODULE_DIR="$basedirname/$libdir/mysql-workbench/modules"
 -export MWB_PLUGIN_DIR="$basedirname/$libdir/mysql-workbench/plugins"
-+export MWB_DATA_DIR="/usr/share/mysql-workbench"
+-
+-export DBC_DRIVER_PATH="$basedirname/$libdir/mysql-workbench"
++export MWB_DATA_DIR="#prefix#/share/mysql-workbench"
 +export MWB_LIBRARY_DIR="${MWB_DATA_DIR}/libraries"
 +export MWB_MODULE_DIR="$wblibdir/modules"
 +export MWB_PLUGIN_DIR="$wblibdir"
- 
--export DBC_DRIVER_PATH="$basedirname/$libdir/mysql-workbench"
 +export DBC_DRIVER_PATH="$wblibdir"
  
  # List of commands provided by mysql-utilities program, used to tell the user what are the available utilities
@@ -48,17 +50,30 @@ Description: fix mysql-workbench launcher
 -fi
 -export PATH="$PATH:$basedirname/share/mysql-workbench/python"
 +#if test "$PYTHONPATH" != ""; then
-+#export PYTHONPATH="$PYTHONPATH:/usr/share/mysql-workbench/python"
++#export PYTHONPATH="$PYTHONPATH:#prefix#/share/mysql-workbench/python"
 +#else
-+#export PYTHONPATH="/usr/share/mysql-workbench/python"
++#export PYTHONPATH="#prefix#/share/mysql-workbench/python"
 +#fi
-+#export PATH="$PATH:/usr/share/mysql-workbench/python"
++#export PATH="$PATH:#prefix#/share/mysql-workbench/python"
  
+-export MWB_BASE_DIR="$basedirname"
++export MWB_BASE_DIR="#prefix#"
  
  if type -p catchsegv > /dev/null; then
--catchsegv $bindirname/mysql-workbench-bin "$@"
-+catchsegv $wblibdir/bin/mysql-workbench-bin "$@"
+-catchsegv $basedirname/$libexecdir/mysql-workbench-bin "$@"
++catchsegv #libexecdir#/mysql-workbench-bin "$@"
  else
--$bindirname/mysql-workbench-bin "$@"
-+$wblibdir/bin/mysql-workbench-bin "$@"
+-$basedirname/$libexecdir/mysql-workbench-bin "$@"
++#libexecdir#/mysql-workbench-bin "$@"
  fi
+--- a/frontend/linux/workbench/Makefile.am
++++ b/frontend/linux/workbench/Makefile.am
+@@ -68,7 +68,7 @@
+ 
+ 
+ mysql-workbench: mysql-workbench.in
+-	sed -e "s@#libdir#@$(libdir)@" -e "s@#libexecdir#@$(libexecdir)@" -e "s@#utilities_cmds#@@MYSQL_UTILITIES_PROGRAMS@@" $< > $@
++	sed -e "s@#prefix#@$(prefix)@" -e "s@#libdir#@$(libdir)@" -e "s@#libexecdir#@$(libexecdir)@" -e "s@#utilities_cmds#@@MYSQL_UTILITIES_PROGRAMS@@" $< > $@
+ 	chmod +x $@
+ 
+ 
