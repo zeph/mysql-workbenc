@@ -21,7 +21,7 @@ Description: disable building bundled cppconn
  # check if ctemplate is installed in system, otherwise use the bundled one
  AC_CHECK_HEADER(ctemplate/template.h, ac_system_ctemplate=yes, ac_system_ctemplate=no)
  
-@@ -492,8 +499,6 @@
+@@ -491,8 +498,6 @@
  res/sqlidedata/Makefile
  ext/Makefile
  ext/scintilla/gtk/Makefile
@@ -140,10 +140,12 @@ Description: disable building bundled cppconn
  #include <boost/scoped_ptr.hpp>
 --- a/ext/Makefile.am
 +++ b/ext/Makefile.am
-@@ -1,5 +1,5 @@
+@@ -7,7 +7,7 @@
+ antlr_dirs=antlr-runtime
+ endif
  
--SUBDIRS=scintilla/gtk cppconn vsqlite++ antlr-runtime
-+SUBDIRS=scintilla/gtk vsqlite++ antlr-runtime
+-SUBDIRS=scintilla/gtk cppconn vsqlite++ $(antlr_dirs) $(ctemplate_dirs)
++SUBDIRS=scintilla/gtk vsqlite++ $(antlr_dirs) $(ctemplate_dirs)
  
  .PHONY: install-utils
  
