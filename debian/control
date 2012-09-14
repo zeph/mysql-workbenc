@@ -3,33 +3,33 @@ Section: database
 Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@member.fsf.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick,
- bison, flex, swig,
- doxygen,
- gettext,
-# libantlr3c-dev,
- libboost-dev,
- libcairo2-dev,
- libctemplate-dev,
- libfreetype6-dev,
- libgl1-mesa-dev,
- libglib2.0-dev,
- libgnome-keyring-dev,
- libgtkmm-2.4-dev,
- libiodbc2-dev,
- liblua5.1-0-dev,
- libmysqlcppconn-dev (>= 1.1.1),
- libpng12-dev,
- libmysqlclient-dev,
- libpcre3-dev,
- libpixman-1-dev,
- libsqlite3-dev,
- libtinyxml-dev (>= 2.6.2),
- libxml2-dev,
- libzip-dev,
- python-all-dev,
- uuid-dev,
- xdg-utils,
+Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
+ ,bison ,flex ,swig
+ ,doxygen
+ ,gettext
+# ,libantlr3c-dev
+ ,libboost-dev
+ ,libcairo2-dev
+ ,libctemplate-dev
+ ,libfreetype6-dev
+ ,libgl1-mesa-dev
+ ,libglib2.0-dev
+ ,libgnome-keyring-dev
+ ,libgtkmm-2.4-dev
+ ,libiodbc2-dev
+ ,liblua5.1-0-dev
+ ,libmysqlcppconn-dev (>= 1.1.1)
+ ,libpng12-dev
+ ,libmysqlclient-dev
+ ,libpcre3-dev
+ ,libpixman-1-dev
+ ,libsqlite3-dev
+ ,libtinyxml-dev (>= 2.6.2)
+ ,libxml2-dev
+ ,libzip-dev
+ ,python-all-dev
+ ,uuid-dev
+ ,xdg-utils
 Standards-Version: 3.9.3
 Homepage: http://dev.mysql.com/workbench/
 VCS-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mysql-workbench.git
@@ -37,10 +37,14 @@ VCS-Git: git://anonscm.debian.org/collab-maint/mysql-workbench.git
 
 Package: mysql-workbench
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends},
- mysql-workbench-data (= ${source:Version}), mysql-client,
- python-mysql.connector, python-paramiko, python-pysqlite2, python-pexpect
-Recommends: ttf-bitstream-vera, mysql-utilities,
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+ ,mysql-workbench-data (= ${source:Version})
+ ,mysql-client
+ ,python-mysql.connector
+ ,python-paramiko
+ ,python-pysqlite2
+ ,python-pexpect
+Recommends: ttf-bitstream-vera, mysql-utilities
 Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
  MySQL Workbench is a modeling tool that allow to design
