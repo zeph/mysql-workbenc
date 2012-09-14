@@ -1,6 +1,6 @@
 mysql-workbench (5.2.43+dfsg-1~exp0) experimental; urgency=low
 
-  * New upstream release [August 2012]
+  * New upstream release [September 2012]
     (Closes: #682691) "Freeze on quit application".
   * Build-Depends:
     + added "libiodbc2-dev".
@@ -14,9 +14,11 @@ mysql-workbench (5.2.43+dfsg-1~exp0) experimental; urgency=low
   * lintian-overrides for hardening false-positives.
   * added TODO.Debian: unbundle antlr when possible.
   * dropped obsolete patches [automake-1.11.2,disable_scintillaNET]
-  * updated unbundle_cppconn.patch
-  * debian/rules: minor update to remove cppconn from dfsg-repackaged
-    archive.
+  * updated remaining patches for new release.
+  * debian/rules:
+    + get-orig-source to remove cppconn from dfsg-repackaged archive.
+    + --as-needed to minimise needless linking (backport-friendly).
+  * updated man page: argument list refreshed and alphabetised.
 
  -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 31 May 2012 23:49:30 +1000
 
