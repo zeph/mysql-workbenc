@@ -13,6 +13,7 @@ mysql-workbench (5.2.43+dfsg-1~exp0) experimental; urgency=low
   * xz compression for binary packages.
   * lintian-overrides for hardening false-positives.
   * added TODO.Debian: unbundle antlr when possible.
+  * added README.Debian with note about outdated ChangeLog.
   * dropped obsolete patches [automake-1.11.2,disable_scintillaNET]
   * updated remaining patches for new release.
   * debian/rules:
