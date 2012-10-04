@@ -1,3 +1,12 @@
+mysql-workbench (5.2.44+dfsg-1~exp0) experimental; urgency=low
+
+  * New upstream release [September 2012]
+  * Build without PIE hardening to avoid crash on autocompletion
+    (Closes: #689497).
+  * d/rules to make -dbg package if uncommented in d/control.
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Wed, 03 Oct 2012 21:08:50 +1000
+
 mysql-workbench (5.2.43+dfsg-1~exp0) experimental; urgency=low
 
   * New upstream release [September 2012]
