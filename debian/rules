@@ -13,7 +13,6 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
     endif
 endif
 $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all,-bindnow
 
 # minimise needless linking
 export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
