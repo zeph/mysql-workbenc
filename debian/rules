@@ -71,8 +71,9 @@ override_dh_makeshlibs:
 
 # -dbg package will be over 150 MiB
 override_dh_strip:
-	[ ! -d "$(CURDIR)/debian/$(PACKAGE)-dbg" ] \
-        || dh_strip --dbg-package=$(PACKAGE)-dbg
+	[ -d "$(CURDIR)/debian/$(PACKAGE)-dbg" ] \
+        && dh_strip --dbg-package=$(PACKAGE)-dbg \
+        || dh_strip
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
