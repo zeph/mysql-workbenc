@@ -1,13 +1,14 @@
-mysql-workbench (5.2.40+dfsg-2) UNRELEASED; urgency=low
+mysql-workbench (5.2.40+dfsg-2) unstable; urgency=medium
 
   * Build-Depends on libtinyxml-dev (>= 2.6.2)
     to avoid FTBFS with older versions (Closes: #675336)
+  * new patch to fix freeze on application exit (Closes: #682691).
   * debian/watch update to reflect mirror changes.
   * debian/rules to gracefully handle stripping if -dbg
     package is (un-)commented in debian/control.
   * xz compression for binary packages.
 
- -- Dmitry Smirnov <onlyjob@member.fsf.org>  Thu, 31 May 2012 23:49:30 +1000
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Wed, 10 Oct 2012 00:54:13 +1100
 
 mysql-workbench (5.2.40+dfsg-1) unstable; urgency=low
 
