@@ -6,3 +6,4 @@ unbundle_ctemplate.patch
 unbundle_tinyxml.patch
 unbundle_connector-python.patch
 ##unbundle_cppconn.patch
+fix-app-exit.patch
