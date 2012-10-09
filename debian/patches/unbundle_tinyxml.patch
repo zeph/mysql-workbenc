@@ -1,13 +1,13 @@
-Last-Update: 2012-02-20
+Last-Update: 2012-10-10
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: not-needed
 Description: disable building bundled tinyxml
  To use libtinyxml-dev instead
 
-
 --- a/backend/wbprivate/Makefile.am
 +++ b/backend/wbprivate/Makefile.am
-@@ -14,7 +14,7 @@
+@@ -13,9 +13,9 @@
+   -I$(top_srcdir)/ext/cppconn/ -I$(top_srcdir)/library/dbc/src\
    -I$(top_srcdir)/ext/scintilla/include\
    -I$(top_srcdir)/ext/vsqlite++/include\
    -I$(top_srcdir)/ext/vsqlite\
@@ -16,7 +16,9 @@ Description: disable building bundled tinyxml
  
  libwbprivate_a_SOURCES=\
  	model/canvas_floater.cpp\
-@@ -76,11 +76,7 @@
+ 	model/mini_view.cpp\
+@@ -76,13 +76,9 @@
+   $(top_srcdir)/frontend/common/grt_code_editor.cpp\
    $(top_srcdir)/frontend/common/grt_python_debugger.cpp\
    $(top_srcdir)/frontend/common/plugin_manager_window.cpp\
    $(top_srcdir)/frontend/common/plugin_install_window.cpp\
@@ -29,9 +31,11 @@ Description: disable building bundled tinyxml
  
  #BUILT_SOURCES=stdafx.h.gch
  #stdafx.h.gch: workbench/stdafx.h
+ #	$(CXXCOMPILE) $<
 --- a/configure.in
 +++ b/configure.in
-@@ -101,6 +101,10 @@
+@@ -100,8 +100,12 @@
+     ALL_LINGUAS="ja de pt_BR pl"
      AM_GLIB_GNU_GETTEXT
  fi
  
@@ -42,9 +46,11 @@ Description: disable building bundled tinyxml
  have_zip="no"
  if test x"$ac_libzip_libs" = x"no"; then
      PKG_CHECK_MODULES(ZIP, [libzip])
+     have_zip="yes"
 --- a/library/forms/Makefile.am
 +++ b/library/forms/Makefile.am
-@@ -86,7 +86,7 @@
+@@ -85,9 +85,9 @@
+ -I$(top_srcdir)/library/base\
  -I$(top_srcdir)/ext/vsqlite\
  -I$(top_srcdir)/library/\
  -I$(top_srcdir)/ext\
@@ -53,9 +59,11 @@ Description: disable building bundled tinyxml
  -I$(top_srcdir)/ext/scintilla/include
  
  
+ 
 --- a/modules/wb.mysql.import/Makefile.am
 +++ b/modules/wb.mysql.import/Makefile.am
-@@ -17,7 +17,7 @@
+@@ -16,18 +16,14 @@
+ 	-I$(top_srcdir)/library/sql-parser/source\
  	-I$(top_srcdir)/library/sql-parser/source/linux\
  	-I$(top_srcdir)/ext/vsqlite\
  	-I$(top_srcdir)/ext/vsqlite++/include\
@@ -64,7 +72,8 @@ Description: disable building bundled tinyxml
  	@MYSQL_INCLUDE@ @GRT_CFLAGS@ @GLIB_CFLAGS@ @SIGC_CFLAGS@
  
  
-@@ -26,8 +26,4 @@
+ wb_mysql_import_grt_la_LDFLAGS=-module
+ #wb_mysql_import_grt_la_LIBADD=
  
  wb_mysql_import_grt_la_SOURCES=\
  	src/wb_mysql_import.cpp\
@@ -76,7 +85,8 @@ Description: disable building bundled tinyxml
 +	src/wb_mysql_import_dbd4.cpp
 --- a/frontend/linux/workbench/Makefile.am
 +++ b/frontend/linux/workbench/Makefile.am
-@@ -52,6 +52,7 @@
+@@ -51,8 +51,9 @@
+ 	$(top_srcdir)/ext/scintilla/gtk/libwbscintilla.la\
  	$(top_srcdir)/library/canvas/src/libmdcanvasgtk.la\
  	$(top_srcdir)/library/canvas/src/libmdcanvas.la\
  	@CTEMPLATE_LIBS@\
@@ -84,3 +94,4 @@ Description: disable building bundled tinyxml
  	@GNOME_LIBS@ @GRT_LIBS@ @PCRE_LIBS@ @GLIB_LIBS@ @CAIRO_LIBS@ @ZIP_LIBS@ @MYSQL_LIBS@ @SQLITE3_LIBS@\
  	-lX11
  
+ #precompiled.h.gch: precompiled.h
