@@ -31,7 +31,10 @@ override_dh_auto_configure:
 		--libexecdir=/usr/lib/$(PACKAGE)/bin \
 		--exec-prefix=/usr/lib/$(PACKAGE) \
 		--enable-grt-generation \
-		--enable-dependency-tracking
+		--enable-dependency-tracking \
+		--with-unixodbc \
+		    --with-odbc-cflags=-I/usr/include \
+		    --with-odbc-libs=-lodbc
 		#--with-commondirname
 
 override_dh_auto_build:

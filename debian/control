@@ -16,7 +16,6 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
  ,libglib2.0-dev
  ,libgnome-keyring-dev
  ,libgtkmm-2.4-dev
- ,libiodbc2-dev
  ,liblua5.1-0-dev
  ,libmysqlcppconn-dev (>= 1.1.1)
  ,libpng12-dev
@@ -28,6 +27,7 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
  ,libxml2-dev
  ,libzip-dev
  ,python-all-dev
+ ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
 Standards-Version: 3.9.3

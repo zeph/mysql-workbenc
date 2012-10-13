@@ -1,3 +1,9 @@
+mysql-workbench (5.2.44+dfsg-1~exp1) experimental; urgency=low
+
+  * Build with "unixodbc" instead of "iodbc" (Closes: #690327).
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Sat, 13 Oct 2012 10:11:06 +1100
+
 mysql-workbench (5.2.44+dfsg-1~exp0) experimental; urgency=low
 
   * New upstream release [September 2012]
