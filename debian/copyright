@@ -5,8 +5,8 @@ Copyright: 2000, 2004-2005, 2007-2012 Oracle and/or its affiliates.
 License: GPL-2
 
 Files: debian/*
-Copyright: 2012 Dmitry Smirnov <onlyjob@member.fsf.org>
-           2012 Mateusz Kijowski <mateusz.kijowski@gmail.com>
+Copyright: 2012-2013 Dmitry Smirnov <onlyjob@member.fsf.org>
+           2012      Mateusz Kijowski <mateusz.kijowski@gmail.com>
 License: GPL-2+
 
 Files: *
