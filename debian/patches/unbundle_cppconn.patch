@@ -1,4 +1,4 @@
-Last-Update: 2012-09-13
+Last-Update: 2013-01-06
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: not-needed
 Description: disable building bundled cppconn
@@ -7,7 +7,8 @@ Description: disable building bundled cppconn
 
 --- a/configure.in
 +++ b/configure.in
-@@ -318,6 +318,13 @@
+@@ -317,8 +317,15 @@
+ 
  #AC_CHECK_LIB(GL, glNewList, CAIRO_LIBS="$CAIRO_LIBS -lGL", AC_MSG_ERROR([OpenGL library not found]))
  
  
@@ -21,7 +22,9 @@ Description: disable building bundled cppconn
  # check if ctemplate is installed in system, otherwise use the bundled one
  AC_CHECK_HEADER(ctemplate/template.h, ac_system_ctemplate=yes, ac_system_ctemplate=no)
  
-@@ -491,8 +498,6 @@
+ AC_ARG_WITH(bundled-ctemplate,
+@@ -490,10 +497,8 @@
+ res/mysql.profiles/Makefile
  res/sqlidedata/Makefile
  ext/Makefile
  ext/scintilla/gtk/Makefile
@@ -30,9 +33,11 @@ Description: disable building bundled cppconn
  ext/vsqlite++/Makefile
  ext/vsqlite++/src/sqlite/Makefile
  backend/Makefile
+ backend/wbpublic/Makefile
 --- a/backend/wbprivate/Makefile.am
 +++ b/backend/wbprivate/Makefile.am
-@@ -10,7 +10,8 @@
+@@ -9,9 +9,10 @@
+   -I$(top_srcdir)/modules -I$(top_srcdir)/frontend/common\
    -I$(top_srcdir)/backend/wbpublic -I$(top_srcdir)/generated -I$(top_srcdir)/library/canvas/src\
    -I$(top_srcdir)/backend/wbprivate/workbench \
    -I$(top_srcdir)/backend/wbpublic/grt \
@@ -42,9 +47,11 @@ Description: disable building bundled cppconn
    -I$(top_srcdir)/ext/scintilla/include\
    -I$(top_srcdir)/ext/vsqlite++/include\
    -I$(top_srcdir)/ext/vsqlite\
+   @TINYXML_CFLAGS@
 --- a/frontend/linux/sqlide/Makefile.am
 +++ b/frontend/linux/sqlide/Makefile.am
-@@ -15,7 +15,7 @@
+@@ -14,9 +14,9 @@
+ -I$(top_srcdir)/library/canvas/src\
  -I$(top_srcdir)/library/grt/src\
  -I$(top_srcdir)/library/base\
  -I$(top_srcdir)/library/dbc/src\
@@ -53,9 +60,11 @@ Description: disable building bundled cppconn
  -I$(top_srcdir)/ext/vsqlite++/include\
  -I$(top_srcdir)/ext/scintilla/include\
  @GRT_CFLAGS@ @CAIRO_CFLAGS@ @GLIB_CFLAGS@ @SIGC_CFLAGS@ @GNOME_CFLAGS@
+ 
 --- a/frontend/linux/workbench/Makefile.am
 +++ b/frontend/linux/workbench/Makefile.am
-@@ -38,7 +38,7 @@
+@@ -37,9 +37,9 @@
+ 	-I$(top_srcdir)/generated/grti\
  	-I$(top_srcdir)/modules/wb.model/src\
  	-I$(top_srcdir)/modules/interfaces\
  	-I$(top_srcdir)/ext\
@@ -64,7 +73,9 @@ Description: disable building bundled cppconn
  	-I$(top_srcdir)/modules\
    -I$(top_srcdir)/ext/vsqlite++/include\
    -I$(top_srcdir)/ext/scintilla/include\
-@@ -54,7 +54,7 @@
+ 	-I$(top_srcdir)/library/forms/mforms
+@@ -53,9 +53,9 @@
+ 	$(top_srcdir)/backend/wbpublic/libwbpublic.la\
  	$(top_srcdir)/library/base/libwbbase.la\
  	$(top_srcdir)/library/grt/src/libgrt.la\
  	$(top_srcdir)/library/dbc/libcdbc.la\
@@ -73,9 +84,11 @@ Description: disable building bundled cppconn
  	$(top_srcdir)/ext/scintilla/gtk/libwbscintilla.la\
  	$(top_srcdir)/library/canvas/src/libmdcanvasgtk.la\
  	$(top_srcdir)/library/canvas/src/libmdcanvas.la\
+ 	$(top_srcdir)/library/mysql-parser/libmysqlparser.la\
 --- a/library/dbc/Makefile.am
 +++ b/library/dbc/Makefile.am
-@@ -12,6 +12,6 @@
+@@ -11,7 +11,7 @@
+ -I$(top_srcdir)/generated\
  -I$(top_srcdir)/library/grt/src\
  -I$(top_srcdir)/library/base\
  -I$(top_srcdir)/ext\
@@ -85,7 +98,8 @@ Description: disable building bundled cppconn
  
 --- a/modules/db.mysql.query/Makefile.am
 +++ b/modules/db.mysql.query/Makefile.am
-@@ -6,7 +6,7 @@
+@@ -5,9 +5,9 @@
+ 
  INCLUDES=-I$(top_srcdir)/generated -I$(top_srcdir)/library/grt/src \
    -I$(top_srcdir)/library/base\
    -I$(top_srcdir)/library/dbc/src\
@@ -94,9 +108,11 @@ Description: disable building bundled cppconn
    @GRT_CFLAGS@ @GLIB_CFLAGS@ @SIGC_CFLAGS@
  
  
+ db_mysql_query_grt_la_SOURCES=src/dbquery.cpp
 --- a/plugins/db.mysql.diff.reporting/frontend/Makefile.am
 +++ b/plugins/db.mysql.diff.reporting/frontend/Makefile.am
-@@ -11,7 +11,7 @@
+@@ -10,9 +10,9 @@
+     -I$(top_srcdir)/ext\
      -I$(top_srcdir)/ext/scintilla/include\
      -I$(top_srcdir)/modules/db.mysql/src\
      -I$(top_srcdir)/library/dbc/src\
@@ -105,9 +121,11 @@ Description: disable building bundled cppconn
      -I$(top_srcdir)/modules/interfaces\
      -I$(top_srcdir)/modules/\
      -I$(top_srcdir)/library/grt/src/diff\
+ 	-I$(top_srcdir)/library/forms\
 --- a/plugins/db.mysql/frontend/Makefile.am
 +++ b/plugins/db.mysql/frontend/Makefile.am
-@@ -10,7 +10,7 @@
+@@ -9,9 +9,9 @@
+     -I$(top_srcdir)/backend\
      -I$(top_srcdir)/modules/db.mysql/src\
      -I$(top_srcdir)/library/dbc/src\
      -I$(top_srcdir)/library/forms/mforms\
@@ -116,9 +134,11 @@ Description: disable building bundled cppconn
      -I$(top_srcdir)/modules/interfaces\
      -I$(top_srcdir)/modules/\
      -I$(top_srcdir)/library/grt/src/diff\
+ 		-I$(top_srcdir)/library/sql-parser/include\
 --- a/plugins/wb.model.snippets/Makefile.am
 +++ b/plugins/wb.model.snippets/Makefile.am
-@@ -11,7 +11,7 @@
+@@ -10,9 +10,9 @@
+     -I$(top_srcdir)/ext\
      -I$(top_srcdir)/ext/scintilla/include\
      -I$(top_srcdir)/modules/db.mysql/src\
      -I$(top_srcdir)/library/dbc/src\
@@ -127,9 +147,11 @@ Description: disable building bundled cppconn
      -I$(top_srcdir)/modules/interfaces\
      -I$(top_srcdir)/modules/\
      -I$(top_srcdir)/library/grt/src/diff\
+ 	-I$(top_srcdir)/library/forms\
 --- a/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
 +++ b/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
-@@ -49,7 +49,7 @@
+@@ -48,9 +48,9 @@
+ // TODO: check if this inclusion is still necessary.
  // this doesn't belong here, but there's no other workaround for having access to mysql_info
  // because of that we also need to link wbprivate directly to the connector, making their
  // dynamic loading pretty much useless
@@ -138,9 +160,11 @@ Description: disable building bundled cppconn
  
  #include <boost/foreach.hpp>
  #include <boost/scoped_ptr.hpp>
+ #include <boost/signals2/connection.hpp>
 --- a/ext/Makefile.am
 +++ b/ext/Makefile.am
-@@ -7,7 +7,7 @@
+@@ -6,9 +6,9 @@
+ if BUILD_ANTLR_RUNTIME
  antlr_dirs=antlr-runtime
  endif
  
@@ -149,9 +173,11 @@ Description: disable building bundled cppconn
  
  .PHONY: install-utils
  
+ if BUNDLE_UTILITIES
 --- a/backend/wbpublic/Makefile.am
 +++ b/backend/wbpublic/Makefile.am
-@@ -15,7 +15,7 @@
+@@ -14,9 +14,9 @@
+ 	-I$(top_srcdir)/library/grt/src -I$(top_srcdir)/library/base\
  	-I$(top_srcdir)/library/forms\
  	-I$(top_srcdir)/library/forms/mforms/\
  	-I$(top_srcdir)/library/canvas/src\
@@ -159,8 +185,10 @@ Description: disable building bundled cppconn
 +	@CPPCONN_CFLAGS@\
  	-I$(top_srcdir)/ext/scintilla/include\
  	-I$(top_srcdir)/library/dbc/src\
- 	-I$(top_srcdir)/library/mysql55-parser\
-@@ -167,4 +167,4 @@
+ 	-I$(top_srcdir)/library/mysql-parser\
+ 	-I$(top_srcdir)/ext/vsqlite++/include\
+@@ -166,5 +166,5 @@
+ #BUILT_SOURCES=stdafx.h.gch
  #stdafx.h.gch: stdafx.h
  #	$(CXXCOMPILE) $<
  
@@ -168,7 +196,8 @@ Description: disable building bundled cppconn
 +libwbpublic_la_LIBADD=../../library/canvas/src/libmdcanvas.la ../../library/forms/libmforms.la ../../library/dbc/libcdbc.la ../../ext/vsqlite++/src/sqlite/libvsqlitepp.la ../../ext/scintilla/gtk/libwbscintilla.la @CTEMPLATE_LIBS@ @CPPCONN_LIBS@
 --- a/backend/wbpublic/grtdb/diff_dbobjectmatch.cpp
 +++ b/backend/wbpublic/grtdb/diff_dbobjectmatch.cpp
-@@ -22,7 +22,7 @@
+@@ -21,9 +21,9 @@
+ // TODO: check if this inclusion is still necessary.
  // this doesn't belong here, but there's no other workaround for having access to mysql_info
  // because of that we also need to link wbprivate directly to the connector, making their
  // dynamic loading pretty much useless
@@ -177,3 +206,4 @@ Description: disable building bundled cppconn
  #include <cppconn/metadata.h>
  
  
+ //#include "grtdb/db_object_helpers.h"

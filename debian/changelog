@@ -1,3 +1,10 @@
+mysql-workbench (5.2.45+dfsg-1~exp0) experimental; urgency=low
+
+  * New upstream release [December 2012].
+  * Added lintian-override for "broken symlink" to "libmysqlcppconn.so.6".
+
+ -- Dmitry Smirnov <onlyjob@member.fsf.org>  Sun, 06 Jan 2013 13:41:56 +1100
+
 mysql-workbench (5.2.44+dfsg-1~exp1) experimental; urgency=low
 
   * Build with "unixodbc" instead of "iodbc" (Closes: #690327).
