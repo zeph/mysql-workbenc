@@ -42,8 +42,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
  ,mysql-client
  ,python-mysql.connector
  ,python-paramiko
- ,python-pysqlite2
  ,python-pexpect
+ ,python-pyodbc (>= 2.1.8)
+ ,python-pysqlite2
 Recommends: ttf-bitstream-vera, mysql-utilities
 Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
