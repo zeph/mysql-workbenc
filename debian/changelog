@@ -1,3 +1,13 @@
+mysql-workbench (5.2.47+dfsg-1~exp0) experimental; urgency=low
+
+  * New upstream release [February 2013].
+  * Depends on "python-pyodbc (>= 2.1.8)" that is needed for ODBC
+    database migration to MySQL. Thanks, Laurent Bigonville
+    (Closes: #698969).
+  * Updated my email address.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 30 Mar 2013 01:10:38 +1100
+
 mysql-workbench (5.2.45+dfsg-1~exp0) experimental; urgency=low
 
   * New upstream release [December 2012].
