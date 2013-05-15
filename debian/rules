@@ -4,7 +4,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-PACKAGE := mysql-workbench
+PKD  = $(abspath $(dir $(MAKEFILE_LIST)))
+PKG  = $(word 2,$(shell dpkg-parsechangelog -l$(PKD)/changelog | grep ^Source))
 
 # parallel build by default on linux
 ifeq ($(DEB_HOST_ARCH_OS),linux)
@@ -28,8 +29,8 @@ override_dh_autoreconf:
 
 override_dh_auto_configure:
 	dh_auto_configure -- --libdir=/usr/lib \
-            --libexecdir=/usr/lib/$(PACKAGE)/bin \
-            --exec-prefix=/usr/lib/$(PACKAGE) \
+            --libexecdir=/usr/lib/$(PKG)/bin \
+            --exec-prefix=/usr/lib/$(PKG) \
             --enable-grt-generation \
             --enable-dependency-tracking \
             --with-unixodbc \
@@ -58,12 +59,12 @@ override_dh_auto_install:
 	# remove *.la files
 	find . -name '*.la' -delete -printf 'removing %p\n'
 	# move plugins to "/usr/lib/mysql-workbench" where they can be found by M-W
-	mv $(CURDIR)/debian/tmp/usr/lib/$(PACKAGE)/plugins/* \
-           $(CURDIR)/debian/tmp/usr/lib/$(PACKAGE)/
+	mv $(CURDIR)/debian/tmp/usr/lib/$(PKG)/plugins/* \
+           $(CURDIR)/debian/tmp/usr/lib/$(PKG)/
 	# wipe empty dirs if any
 	find $(CURDIR)/debian/tmp -type d -empty -delete
 	# install link to launcher to /usr/bin/
-	dh_link -p$(PACKAGE) usr/lib/$(PACKAGE)/bin/mysql-workbench \
+	dh_link -p$(PKG) usr/lib/$(PKG)/bin/mysql-workbench \
             usr/bin/mysql-workbench
 
 override_dh_compress:
@@ -74,21 +75,26 @@ override_dh_makeshlibs:
 
 # -dbg package will be over 150 MiB
 override_dh_strip:
-	[ -d "$(CURDIR)/debian/$(PACKAGE)-dbg" ] \
-        && dh_strip --dbg-package=$(PACKAGE)-dbg \
+	[ -d "$(CURDIR)/debian/$(PKG)-dbg" ] \
+        && dh_strip --dbg-package=$(PKG)-dbg \
         || dh_strip
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
 
-VER = $(shell dpkg-parsechangelog | perl -ne 'print $$1 if m/Version:\s*([\d\.]+)/')
-get-orig-source: $(PACKAGE)-$(VER)
+VER ?= $(shell dpkg-parsechangelog -l$(PKD)/changelog | perl -ne 'print $$1 if m{Version:\s*([\d\.]+)}')
+DTYPE := +dfsg
+.PHONY: get-orig-source
+get-orig-source: $(PKG)_$(VER)$(DTYPE).orig.tar.xz
+	@
+
+$(PKG)_$(VER)$(DTYPE).orig.tar.xz: $(PKG)-$(VER)
 	@echo "Clean-up..."
-	find $(PACKAGE)-$(VER) -type f -name '*.cmd' -delete -printf 'removing %p\n'
-	find $(PACKAGE)-$(VER) -type f -name '*.vc*' -delete -printf 'removing %p\n'
-	find $(PACKAGE)-$(VER) -depth -type d -name 'macosx' -exec $(RM) -r {} \; -printf 'removing %p\n'
-	find $(PACKAGE)-$(VER) -depth -type d -name 'windows' -exec $(RM) -r {} \; -printf 'removing %p\n'
-	cd $(PACKAGE)-$(VER) \
+	find $(PKG)-$(VER) -type f -name '*.cmd' -delete -printf 'removing %p\n'
+	find $(PKG)-$(VER) -type f -name '*.vc*' -delete -printf 'removing %p\n'
+	find $(PKG)-$(VER) -depth -type d -name 'macosx' -exec $(RM) -r {} \; -printf 'removing %p\n'
+	find $(PKG)-$(VER) -depth -type d -name 'windows' -exec $(RM) -r {} \; -printf 'removing %p\n'
+	cd $(PKG)-$(VER) \
         && $(RM) -r -v \
              build/msi \
              build/res \
@@ -112,12 +118,13 @@ get-orig-source: $(PACKAGE)-$(VER)
              res/fonts \
              tools/utils_wrapper
 	@echo "Packing..."
-	tar -caf "$(PACKAGE)_$(VER)+dfsg.orig.tar.xz" "$(PACKAGE)-$(VER)" \
-        && $(RM) -r $(PACKAGE)-$(VER)
+	XZ_OPT="-7v" tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.xz" "$(PKG)-$(VER)" --owner=root --group=root --mode=a+rX \
+        && $(RM) -r $(PKG)-$(VER)
 
-$(PACKAGE)-$(VER):
-	uscan --noconf --verbose --force-download --rename --repack --destdir=. --download-version $(VER)
-	mkdir $(PACKAGE)-$(VER) \
-        && tar -xf $(PACKAGE)_$(VER).orig.tar.gz --directory $(PACKAGE)-$(VER) --strip-components 1 \
-        || $(RM) -r $(PACKAGE)-$(VER)
-	#$(RM) $(PACKAGE)_$(VER).orig.tar.gz
+$(PKG)-$(VER):
+	@echo "# Downloading..."
+	uscan --noconf --verbose --rename --repack --destdir=$(CURDIR) --check-dirname-level=0 --force-download --download-version $(VER) $(PKD)
+	mkdir $(PKG)-$(VER) \
+        && tar -xf $(PKG)_$(VER).orig.tar.gz --directory $(PKG)-$(VER) --strip-components 1 \
+        || $(RM) -r $(PKG)-$(VER)
+	#$(RM) $(PKG)_$(VER).orig.tar.gz
