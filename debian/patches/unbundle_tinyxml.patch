@@ -1,4 +1,4 @@
-Last-Update: 2012-10-10
+Last-Update: 2013-01-06
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: not-needed
 Description: disable building bundled tinyxml
@@ -17,7 +17,7 @@ Description: disable building bundled tinyxml
  libwbprivate_a_SOURCES=\
  	model/canvas_floater.cpp\
  	model/mini_view.cpp\
-@@ -76,13 +76,9 @@
+@@ -77,13 +77,9 @@
    $(top_srcdir)/frontend/common/grt_code_editor.cpp\
    $(top_srcdir)/frontend/common/grt_python_debugger.cpp\
    $(top_srcdir)/frontend/common/plugin_manager_window.cpp\
@@ -34,7 +34,7 @@ Description: disable building bundled tinyxml
  #	$(CXXCOMPILE) $<
 --- a/configure.in
 +++ b/configure.in
-@@ -100,8 +100,12 @@
+@@ -98,8 +98,12 @@
      ALL_LINGUAS="ja de pt_BR pl"
      AM_GLIB_GNU_GETTEXT
  fi
@@ -49,7 +49,7 @@ Description: disable building bundled tinyxml
      have_zip="yes"
 --- a/library/forms/Makefile.am
 +++ b/library/forms/Makefile.am
-@@ -85,9 +85,9 @@
+@@ -90,9 +90,9 @@
  -I$(top_srcdir)/library/base\
  -I$(top_srcdir)/ext/vsqlite\
  -I$(top_srcdir)/library/\
@@ -85,10 +85,10 @@ Description: disable building bundled tinyxml
 +	src/wb_mysql_import_dbd4.cpp
 --- a/frontend/linux/workbench/Makefile.am
 +++ b/frontend/linux/workbench/Makefile.am
-@@ -51,8 +51,9 @@
- 	$(top_srcdir)/ext/scintilla/gtk/libwbscintilla.la\
+@@ -59,8 +59,9 @@
  	$(top_srcdir)/library/canvas/src/libmdcanvasgtk.la\
  	$(top_srcdir)/library/canvas/src/libmdcanvas.la\
+ 	$(top_srcdir)/library/mysql-parser/libmysqlparser.la\
  	@CTEMPLATE_LIBS@\
 +	@TINYXML_LIBS@\
  	@GNOME_LIBS@ @GRT_LIBS@ @PCRE_LIBS@ @GLIB_LIBS@ @CAIRO_LIBS@ @ZIP_LIBS@ @MYSQL_LIBS@ @SQLITE3_LIBS@\

@@ -1,15 +1,14 @@
-Last-Update: 2012-03-04
+Last-Update: 2012-09-13
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Forwarded: not-needed
 Description: disable building bundled connector-python
  To use 'python-mysql.connector' instead
 
-
 --- a/ext/Makefile.am
 +++ b/ext/Makefile.am
-@@ -1,14 +1,13 @@
+@@ -9,14 +9,13 @@
  
- SUBDIRS=scintilla/gtk cppconn vsqlite++
+ SUBDIRS=scintilla/gtk cppconn vsqlite++ $(antlr_dirs) $(ctemplate_dirs)
  
 +.PHONY: install-utils
 +

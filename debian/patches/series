@@ -1,9 +1,7 @@
-path_to_ifconfig.patch
-automake-1.11.2.patch
 launcher.patch
-disable_scintillaNET.patch
+path_to_ifconfig.patch
 unbundle_ctemplate.patch
 unbundle_tinyxml.patch
 unbundle_connector-python.patch
-##unbundle_cppconn.patch
-fix-app-exit.patch
+unbundle_cppconn.patch
+#unbindle_antlr.patch

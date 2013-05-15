@@ -1,0 +1,2 @@
+## the following is needed for unbundled cppconn to work:
+/usr/lib/libmysqlcppconn.so.6			/usr/lib/mysql-workbench/mysqlcppconn.so
