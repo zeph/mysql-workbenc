@@ -1,3 +1,10 @@
+mysql-workbench (5.2.47+dfsg-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * get-orig-source improvements.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 15 May 2013 12:21:27 +1000
+
 mysql-workbench (5.2.47+dfsg-1~exp0) experimental; urgency=low
 
   * New upstream release [February 2013].
