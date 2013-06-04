@@ -1,9 +1,20 @@
 mysql-workbench (5.2.47+dfsg-1) unstable; urgency=low
 
   * Upload to unstable.
-  * get-orig-source improvements.
+  * New patch to get libpython flags using `python-config`
+    (Closes: #710627).
+  * Build-Depends:
+    - python-all-dev
+    + python-dev (provides `python-config`)
+    - libboost-dev
+    + libboost1.53-dev | libboost-dev (needed to avoid FTBFS since
+      libmysqlcppconn depends on boost1.53 which conflicts with older
+      boost that is pulled by libboost-dev).
+  * rules: added "-v" to `mv` command (more build-time verbosity).
+  * rules: get-orig-source improvements.
+  * Dropped unused lintian-overrides
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 15 May 2013 12:21:27 +1000
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 05 Jun 2013 09:13:55 +1000
 
 mysql-workbench (5.2.47+dfsg-1~exp0) experimental; urgency=low
 
