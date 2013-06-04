@@ -59,8 +59,8 @@ override_dh_auto_install:
 	# remove *.la files
 	find . -name '*.la' -delete -printf 'removing %p\n'
 	# move plugins to "/usr/lib/mysql-workbench" where they can be found by M-W
-	mv $(CURDIR)/debian/tmp/usr/lib/$(PKG)/plugins/* \
-           $(CURDIR)/debian/tmp/usr/lib/$(PKG)/
+	mv -v $(CURDIR)/debian/tmp/usr/lib/$(PKG)/plugins/* \
+              $(CURDIR)/debian/tmp/usr/lib/$(PKG)/
 	# wipe empty dirs if any
 	find $(CURDIR)/debian/tmp -type d -empty -delete
 	# install link to launcher to /usr/bin/
