@@ -1,4 +1,5 @@
 launcher.patch
+libpython.patch
 path_to_ifconfig.patch
 unbundle_ctemplate.patch
 unbundle_tinyxml.patch

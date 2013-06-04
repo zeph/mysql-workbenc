@@ -26,7 +26,7 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
  ,libtinyxml-dev (>= 2.6.2)
  ,libxml2-dev
  ,libzip-dev
- ,python-all-dev
+ ,python-dev
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
