@@ -1,2 +1,2 @@
 ## Expected as we're linking to another package:
-package-contains-broken-symlink usr/lib/mysql-workbench/mysqlcppconn.so ../libmysqlcppconn.so.6
+package-contains-broken-symlink usr/lib/mysql-workbench/mysqlcppconn.so ../libmysqlcppconn.so.*
