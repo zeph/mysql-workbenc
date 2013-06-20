@@ -102,6 +102,7 @@ $(PKG)_$(VER)$(DTYPE).orig.tar.xz: $(PKG)-$(VER)
              build/zip \
              ext/Aga.Controls \
         0000-ext/antlr-runtime \
+             ext/scintilla/.hgtags \
              ext/scintilla/cocoa \
              ext/scintilla/win32 \
              ext/cppconn \
