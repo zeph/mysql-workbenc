@@ -1,12 +1,12 @@
-Last-Update: 2012-04-07
-Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Last-Update: 2013-06-19
 Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Description: correct path to ifconfig
-
 
 --- a/plugins/wb.admin/backend/wb_server_control.py
 +++ b/plugins/wb.admin/backend/wb_server_control.py
-@@ -32,7 +32,7 @@
+@@ -33,9 +33,9 @@
+ import socket
  
  #-------------------------------------------------------------------------------
  def get_local_ip_list():
@@ -15,3 +15,4 @@ Description: correct path to ifconfig
      regexp = "inet addr:([0-9a-f:\.]+)"
  
      if hasattr(sys, 'getwindowsversion'):
+         cmd    = 'ipconfig'

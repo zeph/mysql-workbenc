@@ -1,0 +1,5 @@
+usr/lib/*
+usr/bin/*               usr/lib/mysql-workbench
+usr/libexec/*           usr/lib/mysql-workbench
+usr/share/applications
+debian/*.xpm            usr/share/pixmaps

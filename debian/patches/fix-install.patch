@@ -1,0 +1,18 @@
+Last-Update: 2013-06-19
+Forwarded: no
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: don't try to install non-existent file (fixes FTBFS).
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -219,9 +219,9 @@
+     install(FILES README INSTALL COPYING DESTINATION ${WB_INSTALL_DOC_DIR})
+     install(FILES build/debian/mysql-workbench-gpl.sharedmimeinfo DESTINATION ${WB_INSTALL_SHARED_DIR}/mime/packages RENAME mysql-workbench.xml)
+     install(FILES build/debian/mysql-workbench-gpl.mime DESTINATION ${WB_INSTALL_SHARED_DIR}/mime-info RENAME mysql-workbench.mime)
+ else ()
+-    install(FILES README LICENSE.mysql DESTINATION ${WB_INSTALL_DOC_DIR})
++    install(FILES README DESTINATION ${WB_INSTALL_DOC_DIR})
+     install(FILES build/debian/mysql-workbench-commercial.sharedmimeinfo DESTINATION ${WB_INSTALL_SHARED_DIR}/mime/packages RENAME mysql-workbench.xml)
+     install(FILES build/debian/mysql-workbench-commercial.mime DESTINATION ${WB_INSTALL_SHARED_DIR}/mime-info RENAME mysql-workbench.mime)
+ endif ()
+ 
