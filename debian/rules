@@ -70,6 +70,17 @@ override_dh_strip:
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
 
+## semi-automated manpage generation (to invoke manually)
+MAN_NAME=mysql-workbench \\- MySQL Database Design, Administration and Development Tool
+mysql-workbench.1:
+	help2man --no-info --manual="mysql-workbench" --name="$(MAN_NAME)" mysql-workbench > $@
+	perl \
+            -E 's{^.*?\s+\\-\s+mysql-workbench.*}{$(MAN_NAME)}; # correcting NAME section'     \
+            -E 's{^\.SH DESCRIPTION}{.SH SYNOPSIS};             # correcting SYNOPSIS section' \
+            -E 's{^mysql\\-workbench\K\\-bin}{};                # correcting executable name'  \
+            -E 's{^Options:}{.SH OPTIONS};                      # create OPTIONS section'      \
+            -pi $@
+
 ## http://wiki.debian.org/onlyjob/get-orig-source
 UVER  = $(shell dpkg-parsechangelog -l$(PKD)/changelog | perl -ne 'print $$1 if m{^Version:\s+(?:\d+:)?(\d.*)(?:\-\d+.*)};')
 DTYPE = +dfsg

@@ -19,6 +19,8 @@ mysql-workbench (6.0.2+dfsg-1) UNRELEASED; urgency=low
     + libtool
     + libvsqlitepp-dev (de-coupled)
   * Reference implementation of get-orig-source and better clean-up.
+  * Updated/corrected man page and introduced target for semi-automated
+    invocation of `help2man`.
 
  -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 19 Jun 2013 12:12:31 +1000
 
