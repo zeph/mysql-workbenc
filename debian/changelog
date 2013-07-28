@@ -1,28 +1,28 @@
-mysql-workbench (6.0.2+dfsg-1) UNRELEASED; urgency=low
+mysql-workbench (6.0.4+dfsg-1) experimental; urgency=low
 
-  * New upstream release [June 2013]
-    This is the first public beta release of 6.0. It is meant for
-    testing purposes, and should not be used in a production
-    environment.
+  * New upstream release [July 2013]
+    > This is the third public beta release of 6.0. It is meant for
+      testing purposes, and should not be used in a production
+      environment.
     https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-2.html
   * Packaging changes to accommodate switch of upstream build system to
     cmake; minor improvements.
+  * Removed symlink to "libmysqlcppconn".
   * Patchworks:
-    + refreshed and simplified "launcher.patch".
     + new "fix-install.patch" to avoid trivial upstream FTBFS.
-    - removed "unbundle_*" and "libpython" patches (no longer needed).
+    - removed "unbundle_*" and "launcher" patches (no longer needed).
   * Build-Depends:
     - dh-autoreconf
     + cmake
     + autoconf
     + automake
     + libtool
-    + libvsqlitepp-dev (de-coupled)
+    + libvsqlitepp-dev (NEW, used to be bundled with mysql-workbench)
   * Reference implementation of get-orig-source and better clean-up.
   * Updated/corrected man page and introduced target for semi-automated
     invocation of `help2man`.
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 19 Jun 2013 12:12:31 +1000
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 28 Jul 2013 17:38:28 +1000
 
 mysql-workbench (5.2.47+dfsg-2) unstable; urgency=low
 
