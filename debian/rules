@@ -61,6 +61,10 @@ override_dh_compress:
 override_dh_makeshlibs:
 	dh_makeshlibs --noscripts
 
+# help `dh_shlibdeps` to find local libraries: 'dpkg-shlibdeps: error: couldn't find library'
+override_dh_shlibdeps:
+	LD_LIBRARY_PATH="debian/$(PKG)/usr/lib/$(PKG):$(LD_LIBRARY_PATH)" dh_shlibdeps
+
 # -dbg package will be over 150 MiB
 override_dh_strip:
 	[ -d "$(CURDIR)/debian/$(PKG)-dbg" ] \
