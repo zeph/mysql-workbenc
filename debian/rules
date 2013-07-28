@@ -53,8 +53,7 @@ override_dh_auto_install:
 	find . -name '*.la' -delete -printf 'removing %p\n'
 	# install link to launcher to /usr/bin/
 	dh_link -p$(PKG) \
-            usr/lib/$(PKG)/mysql-workbench usr/bin/mysql-workbench \
-            usr/lib/$$(readlink /usr/lib/libmysqlcppconn.so) usr/lib/$(PKG)/mysqlcppconn.so
+            usr/lib/$(PKG)/mysql-workbench usr/bin/mysql-workbench
 
 override_dh_compress:
 	dh_compress --exclude=.mwb
