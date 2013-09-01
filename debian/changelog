@@ -1,3 +1,10 @@
+mysql-workbench (5.2.47+dfsg-3) unstable; urgency=low
+
+  * Removed obsolete "libboost1.53-dev" from Build-Depends
+    (Closes: #721503).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 02 Sep 2013 00:28:27 +1000
+
 mysql-workbench (5.2.47+dfsg-2) unstable; urgency=low
 
   * Use `readlink` to find libmysqlcppconn library (Closes: #711687).
