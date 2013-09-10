@@ -116,20 +116,13 @@ $(PKG)_$(VER)$(DTYPE).orig.tar.xz:
              ext/scintilla/.hgtags \
              ext/scintilla/cocoa \
              ext/scintilla/win32 \
-             ext/cppconn \
-             ext/connector-python \
-             ext/ctemplate \
-             ext/tinyxml \
-             ext/python \
              ext/HTMLRenderer \
-             ext/mysql-utilities \
              frontend/mac \
              library/base.windows \
              library/forms/cocoa \
              library/sql-parser/yy_purify-tool/dist/*.jar \
              MySQLWorkbench.xcodeproj \
              res/fonts \
-             tools/utils_wrapper
 	#$(RM) -v $(PKG)_$(VER).orig.tar.*
 	@echo "# Packing..."
 	find -L "$(PKG)-$(VER)" -xdev -type f -print | sort \
