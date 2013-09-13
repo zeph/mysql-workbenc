@@ -1,3 +1,37 @@
+mysql-workbench (6.0.7+dfsg-1) experimental; urgency=low
+
+  * New upstream release [September 2013].
+  * Removed obsolete "libboost1.53-dev" from Build-Depends.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 10 Sep 2013 00:00:55 +1000
+
+mysql-workbench (6.0.6+dfsg-1) experimental; urgency=low
+
+  * New upstream release [August 2013]
+    https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-2.html
+    https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-3.html
+    https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-4.html
+    https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-5.html
+    https://dev.mysql.com/doc/relnotes/workbench/en/wb-news-6-0-6.html
+  * Packaging changes to accommodate switch of upstream build system to
+    cmake; minor improvements.
+  * Removed symlink to "libmysqlcppconn".
+  * Removed "unbundle_*" and "launcher" patches (no longer needed).
+  * New "fix-install.patch" to fix trivial FTBFS.
+  * Build-Depends:
+    - dh-autoreconf
+    + cmake
+    + autoconf
+    + automake
+    + libtool
+    + libvsqlitepp-dev (NEW, used to be bundled with mysql-workbench)
+  * Reference implementation of get-orig-source and better clean-up.
+  * Updated/corrected man page and introduced target for semi-automated
+    invocation of `help2man`.
+  * Updated orig.tar name in "debian/watch".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 25 Aug 2013 06:32:04 +1000
+
 mysql-workbench (5.2.47+dfsg-3) unstable; urgency=low
 
   * Removed obsolete "libboost1.53-dev" from Build-Depends

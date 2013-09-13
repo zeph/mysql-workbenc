@@ -3,7 +3,8 @@ Section: database
 Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
+Build-Depends: debhelper (>= 9), cmake, perl, imagemagick
+ ,autoconf ,automake ,libtool
  ,bison ,flex ,swig
  ,doxygen
  ,gettext
@@ -24,6 +25,7 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, perl, imagemagick
  ,libpixman-1-dev
  ,libsqlite3-dev
  ,libtinyxml-dev (>= 2.6.2)
+ ,libvsqlitepp-dev
  ,libxml2-dev
  ,libzip-dev
  ,python-dev
