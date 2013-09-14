@@ -1,0 +1,5 @@
+mysql-workbench-help (6.0.7+repack-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 10 Sep 2013 00:00:55 +1000

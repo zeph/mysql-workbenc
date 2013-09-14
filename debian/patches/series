@@ -1,3 +1,4 @@
+doclib.patch
 fix-install.patch
 path_to_ifconfig.patch
 pythonlibs.patch

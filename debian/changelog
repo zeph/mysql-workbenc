@@ -1,3 +1,15 @@
+mysql-workbench (6.0.7+dfsg1-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * Dropped non-DFSG compliant help files, see "README.Debian".
+    + added "mysql-workbench-help" source package template and
+      instructions how to manually build binary help package.
+  * "debian/watch": monitor GPL-compliant -nodocs-src tars.
+  * Added "doclib.patch" to force "doclib" module installation.
+  * get-orig-source: remove help files from upstream tarball.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 14 Sep 2013 03:59:41 +1000
+
 mysql-workbench (6.0.7+dfsg-1) experimental; urgency=low
 
   * New upstream release [September 2013].

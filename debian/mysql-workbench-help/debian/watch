@@ -1,0 +1,8 @@
+# uscan(1) configuration file.
+# Use 'debian/rules get-orig-source' command to generate repackaged archive.
+
+version=3
+
+#opts=dversionmangle=s/\+(dfsg\d*|repack\d*)// \
+#http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
+#/mysql-workbench-community-([\d\.]+)-src\.tar\.(?:gz|bz2|xz)
