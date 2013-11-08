@@ -1,3 +1,12 @@
+mysql-workbench (6.0.8+dfsg-1) unstable; urgency=low
+
+  * New upstream release [November 2013].
+    - dropped obsolete "path_to_ifconfig.patch" and "fix-install.patch".
+  * README.Debian: added note about online help availability.
+  * Standards updated to 3.9.5.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 09 Nov 2013 03:03:27 +1100
+
 mysql-workbench (6.0.7+dfsg1-1) unstable; urgency=low
 
   * Upload to unstable.

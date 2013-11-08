@@ -5,7 +5,7 @@ Description: look for libpython2.7 (fixes FTBFS in presence of python3).
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -39,13 +39,17 @@
+@@ -43,13 +43,17 @@
      unset(ANTLR3C_FOUND)
    endif ()
  endif ()

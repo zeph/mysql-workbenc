@@ -90,7 +90,7 @@ mysql-workbench.1:
 
 ## http://wiki.debian.org/onlyjob/get-orig-source
 UVER  = $(shell dpkg-parsechangelog -l$(PKD)/changelog | perl -ne 'print $$1 if m{^Version:\s+(?:\d+:)?(\d.*)(?:\-\d+.*)};')
-DTYPE = +dfsg1
+DTYPE = +dfsg
 VER  ?= $(subst $(DTYPE),,$(UVER))
 .PHONY: get-orig-source
 get-orig-source: $(PKG)_$(VER)$(DTYPE).orig.tar.xz $(info I: $(PKG)_$(VER)$(DTYPE))

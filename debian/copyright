@@ -151,7 +151,7 @@ License: BSD-3-clause
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: ext/scintilla/*
-Copyright: 1998-2011 Neil Hodgson <neilh@scintilla.org>
+Copyright: 1998-2013 Neil Hodgson <neilh@scintilla.org>
            1998-2001 Neil Hodgson <neilh@hare.net.au>
            2003-2005 Angelo Mandato <angelo@spaceblue.com>
            1998-2001 Andre Arpin <arpin@kingston.net>
@@ -166,6 +166,7 @@ Copyright: 1998-2011 Neil Hodgson <neilh@scintilla.org>
            2003      Marius Gheorghe <mgheorghe@cabletest.com>
            2007      Istvan Szollosi <szteven@gmail.com>
            2003      Kein-Hong Man <mkh@pl.jaring.my>
+           2013      OmegaPhil <OmegaPhil+scintilla@gmail.com>
            2005      Pascal Hurni <pascal_hurni@fastmail.fm>
            2003      Patrizio Bekerle (patrizio@bekerle.com)
            2001      Praveen Ambekar <ambekarpraveen@yahoo.com>
@@ -201,7 +202,12 @@ License: License for Scintilla and SciTE
 Files:
  ext/scintilla/lexlib/StyleContext.cxx
  ext/scintilla/lexlib/StyleContext.h
+ ext/scintilla/scripts/Face.py
+ ext/scintilla/scripts/FileGenerator.py
+ ext/scintilla/scripts/LexGen.py
+ ext/scintilla/scripts/ScintillaData.py
  ext/scintilla/src/RESearch.h
+ ext/scintilla/src/UnicodeFromUTF8.h
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public domain
  This file is in the public domain
