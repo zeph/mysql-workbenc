@@ -1,5 +1,5 @@
 Last-Update: 2013-09-14
-Forwarded: not-needed
+Forwarded: http://bugs.mysql.com/bug.php?id=70873
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Description: always install "doclib" module even if no data present
  in order to allow shipping help files in optional package.
