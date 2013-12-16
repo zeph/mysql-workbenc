@@ -1,3 +1,10 @@
+mysql-workbench (6.0.8+dfsg-2) unstable; urgency=low
+
+  * New patch to fix FTBFS "ft2build.h: No such file or directory"
+    (Closes: #732316). Thanks, Roland Stigge.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 17 Dec 2013 07:53:17 +1100
+
 mysql-workbench (6.0.8+dfsg-1) unstable; urgency=low
 
   * New upstream release [November 2013].
