@@ -1,0 +1,64 @@
+Last-Update: 2013-12-17
+Forwarded: http://bugs.mysql.com/bug.php?id=70873
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=732316
+Author: Roland Stigge <stigge@antcom.de>
+Description: fix FTBFS: ft2build.h: No such file or directory
+
+--- a/plugins/db.mysql.editors/linux/CMakeLists.txt
++++ b/plugins/db.mysql.editors/linux/CMakeLists.txt
+@@ -32,8 +32,9 @@
+     ${PROJECT_SOURCE_DIR}/ext/scintilla/include
+     ${VSQLITE_INCLUDE_DIRS}
+     ${PROJECT_SOURCE_DIR}
+     ${GTK2_INCLUDE_DIRS}
++    ${CAIRO_INCLUDE_DIRS}
+     ${SIGC++_INCLUDE_DIRS}
+     ${GRT_INCLUDE_DIRS}
+ )
+ 
+--- a/plugins/wb.printing/linux/CMakeLists.txt
++++ b/plugins/wb.printing/linux/CMakeLists.txt
+@@ -13,8 +13,9 @@
+     ${PROJECT_SOURCE_DIR}/backend/wbpublic
+     ${PROJECT_SOURCE_DIR}/modules
+     ${PROJECT_SOURCE_DIR}
+     ${GTK2_INCLUDE_DIRS}
++    ${CAIRO_INCLUDE_DIRS}
+     ${SIGC++_INCLUDE_DIRS}
+     ${GRT_INCLUDE_DIRS}
+ )
+ 
+--- a/plugins/wb.model.editors/linux/CMakeLists.txt
++++ b/plugins/wb.model.editors/linux/CMakeLists.txt
+@@ -20,8 +20,9 @@
+     ${PROJECT_SOURCE_DIR}/frontend/linux/linux_utilities
+     ${PROJECT_SOURCE_DIR}/modules
+     ${PROJECT_SOURCE_DIR}
+     ${GTK2_INCLUDE_DIRS}
++    ${CAIRO_INCLUDE_DIRS}
+     ${SIGC++_INCLUDE_DIRS}
+     ${GRT_INCLUDE_DIRS}
+ )
+ 
+--- a/plugins/db.search/CMakeLists.txt
++++ b/plugins/db.search/CMakeLists.txt
+@@ -13,8 +13,9 @@
+     ${VSQLITE_INCLUDE_DIRS}
+     ${PROJECT_SOURCE_DIR}
+     ${GRT_INCLUDE_DIRS}
+     ${GTK2_INCLUDE_DIRS}
++    ${CAIRO_INCLUDE_DIRS}
+     ${MYSQLCPPCONN_INCLUDE_DIRS}
+ )
+ 
+ add_library(db.search.wbp MODULE
+--- a/plugins/migration/CMakeLists.txt
++++ b/plugins/migration/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ include_directories(
+     ${GLIB_INCLUDE_DIRS}
++    ${CAIRO_INCLUDE_DIRS}
+     ${ODBC_INCLUDE_DIRS} 
+     ${PYTHON_INCLUDE_DIRS} 
+     ${MYSQL_INCLUDE_DIRS} 
+ )
