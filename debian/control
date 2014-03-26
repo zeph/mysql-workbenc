@@ -41,7 +41,7 @@ Package: mysql-workbench
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
  ,mysql-workbench-data (= ${source:Version})
- ,mysql-client
+ ,mysql-client | mariadb-client
  ,python-mysql.connector
  ,python-paramiko
  ,python-pexpect
