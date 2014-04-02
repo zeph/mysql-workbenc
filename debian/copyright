@@ -5,12 +5,12 @@ Copyright: 2000, 2004-2005, 2007-2013 Oracle and/or its affiliates.
 License: GPL-2
 
 Files: debian/*
-Copyright: 2012-2013 Dmitry Smirnov <onlyjob@debian.org>
+Copyright: 2012-2014 Dmitry Smirnov <onlyjob@debian.org>
            2012      Mateusz Kijowski <mateusz.kijowski@gmail.com>
 License: GPL-2+
 
 Files: *
-Copyright: 2000, 2004-2005, 2007-2013 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2014 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -176,6 +176,7 @@ Copyright: 1998-2013 Neil Hodgson <neilh@scintilla.org>
            1990-2007 Scientific Toolworks, Inc
            2003      Sean O'Dell <sean@celsoft.com>
            2002      Sergey Koshcheyev <sergey.k@seznam.cz>
+           2013      SiegeLord <slabode@aim.com>
            2001      Simon Steele <ss@pnotepad.org>
            2008      Tim Gerundt <tim@gerundt.de>
            2001      Vamsi Potluru <vamsi@who.net>

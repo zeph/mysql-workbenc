@@ -1,3 +1,16 @@
+mysql-workbench (6.1.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release [March 2014].
+    + fixed crash on add table to empty EER diagram (Closes: #726501).
+  * Patces dropped (applied-upstream):
+    - doclib.patch
+    - 732316-fix-ftbfs.patch
+  * Refreshed "pythonlibs.patch".
+  * Added patch to set relative RPATH to `wbcopytables` (Closes: #739515).
+  * Depends: "mariadb-client" added as alternative to "mysql-client".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 02 Apr 2014 17:04:09 +1100
+
 mysql-workbench (6.0.8+dfsg-2) unstable; urgency=low
 
   * New patch to fix FTBFS "ft2build.h: No such file or directory"

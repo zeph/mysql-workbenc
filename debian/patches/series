@@ -1,4 +1,2 @@
-doclib.patch
 pythonlibs.patch
-732316-fix-ftbfs.patch
 wbcopytables-rpath.patch
