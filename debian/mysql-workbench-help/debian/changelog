@@ -1,3 +1,10 @@
+mysql-workbench-help (6.1.4+repack-1) unstable; urgency=low
+
+  * New upstream release.
+  * Standards to 3.9.5.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 02 Apr 2014 21:02:13 +1100
+
 mysql-workbench-help (6.0.8+repack-1) unstable; urgency=low
 
   * New upstream release.
