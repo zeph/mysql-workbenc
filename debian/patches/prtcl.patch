@@ -1,0 +1,52 @@
+Last-Update: 2014-04-05
+Forwarded: not-needed
+Origin: upstream
+From: Alfredo Kojima <alfredo.kengi.kojima@oracle.com>
+Description: fix FTBFS on non-Linux architectures.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -104,8 +104,16 @@
+ 		endif()
+ 	endif()
+ endif()
+ 
++if (UNIX)
++  include (CheckIncludeFiles)
++  CHECK_INCLUDE_FILES ("sys/prctl.h" HAVE_PRCTL)
++  if (HAVE_PRCTL)
++    add_definitions(-DHAVE_PRCTL_H)
++  endif()
++endif()
++
+ include (CheckFunctionExists)
+ check_function_exists (strtol HAVE_STRTOL)
+ check_function_exists (strtoll HAVE_STRTOLL)
+ check_function_exists (strtold HAVE_STRTOLD)
+--- a/library/forms/gtk/src/lf_utilities.cpp
++++ b/library/forms/gtk/src/lf_utilities.cpp
+@@ -26,9 +26,11 @@
+   #define USE_KEYRING 1
+ #endif
+ 
+ #include <glib/gstdio.h>
++#ifdef HAVE_PRCTL_H
+ #include <sys/prctl.h>
++#endif
+ 
+ // this is broken
+ //#undef USE_KEYRING
+ #include "../lf_mforms.h"
+@@ -803,10 +805,12 @@
+ 
+ 
+ void UtilitiesImpl::set_thread_name(const std::string &name)
+ {
++#ifdef HAVE_PRCTL_H 
+   if (!name.empty())
+     prctl(PR_SET_NAME, name.c_str(),0,0,0);
++#endif
+ }
+ 
+ //------------------------------------------------------------------------------
+ 
