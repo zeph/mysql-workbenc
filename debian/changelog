@@ -1,3 +1,10 @@
+mysql-workbench (6.1.4+dfsg-2) unstable; urgency=low
+
+  * New patch to fix FTBFS on non-Linux architectures.
+  * Depend on "virtual-mysql-client" (Closes: #743441).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 06 Apr 2014 13:54:32 +1000
+
 mysql-workbench (6.1.4+dfsg-1) unstable; urgency=low
 
   * New upstream release [March 2014].
