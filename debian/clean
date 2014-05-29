@@ -8,9 +8,11 @@ ext/antlr-runtime/config.log
 ext/antlr-runtime/config.status
 ext/antlr-runtime/config.sub
 ext/antlr-runtime/configure
+ext/antlr-runtime/compile
 ext/antlr-runtime/depcomp
 ext/antlr-runtime/install-sh
 ext/antlr-runtime/libtool
+ext/antlr-runtime/*.la
 ext/antlr-runtime/*.lo
 ext/antlr-runtime/ltmain.sh
 ext/antlr-runtime/m4/*.m4
