@@ -1,3 +1,10 @@
+mysql-workbench (6.1.7+dfsg-1) unstable; urgency=low
+
+  * New upstream release [June 2014].
+  * Added "debian/gbp.conf".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 03 Jul 2014 23:41:54 +1000
+
 mysql-workbench (6.1.6+dfsg-1) unstable; urgency=low
 
   * New upstream release [May 2014].
