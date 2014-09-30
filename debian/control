@@ -32,7 +32,7 @@ Build-Depends: debhelper (>= 9), cmake, perl, imagemagick
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Homepage: http://dev.mysql.com/workbench/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mysql-workbench.git
 Vcs-Git: git://anonscm.debian.org/collab-maint/mysql-workbench.git
