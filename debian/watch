@@ -5,4 +5,4 @@ version=3
 
 opts=dversionmangle=s/\+dfsg\d*// \
 http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
-/mysql-workbench-community-([\d\.]+)-nodocs-src\.tar\.(?:gz|bz2|xz)
+/mysql-workbench-community-([\d\.]+)(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
