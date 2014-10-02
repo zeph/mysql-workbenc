@@ -1,2 +1,0 @@
-debian/vrms/*    usr/share/vrms/reasons
-plugins/wb.doclib/res/DocLibrary/*.sqlite    usr/share/mysql-workbench/modules/data/DocLibrary

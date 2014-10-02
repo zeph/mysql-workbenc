@@ -23,7 +23,6 @@ export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
 override_dh_clean:
 	$(RM) -r CMakeFiles antlr-wb-prefix/tmp ext/antlr-runtime/.libs
-	dh_clean debian/mysql-workbench-help.tar.xz
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
@@ -43,10 +42,7 @@ override_dh_auto_build:
 	# build all the rest
 	dh_auto_build --max-parallel=4
 
-debian/mysql-workbench-help.tar.xz:
-	tar -C debian -caf $@ mysql-workbench-help --owner=root --group=root --mode=a+rX
-
-override_dh_auto_install: debian/mysql-workbench-help.tar.xz
+override_dh_auto_install:
 	dh_auto_install --max-parallel=4 --destdir=$(CURDIR)/debian/tmp
 	# .desktop to unix line endings
 	sed -i 's/\r//g' debian/tmp/usr/share/applications/*.desktop

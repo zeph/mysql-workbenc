@@ -2,30 +2,3 @@ Up-to-date list of changes is available from:
 
   https://dev.mysql.com/doc/workbench/en/wb-change-history.html
 
-
-No help :(
-----------
-
-Oracle released documentation (e.g. help files) under horrible
-non-DFSG license hence it can't be included. Documentation
-is available online; those who need offline docs can build
-"mysql-workbench-help" package using the following steps:
-
- 1. Install required packages:
-
-    sudo apt-get install dpkg-dev sqlite3 wget
-
- 2. From temporary directory run the following commands to download
-    source archive, prepare build directory and build .deb:
-
-    tar -xf /usr/share/mysql-workbench/mysql-workbench-help.tar.*
-    cd mysql-workbench-help
-    debian/rules get-orig-source
-    tar -xf mysql-workbench-help_6.0.7+repack.orig.tar.xz --strip-components 1
-    dpkg-buildpackage -b -uc
-    cd ..
-
- 3. Resulting architecture-independent package
-    can be installed using command:
-
-    sudo dpkg -i mysql-workbench-help_6.0.7+repack-1_all.deb

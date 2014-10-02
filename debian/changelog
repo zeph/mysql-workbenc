@@ -7,6 +7,8 @@ mysql-workbench (6.2.3+dfsg-1) UNRELEASED; urgency=medium
   * get-orig-source: minor update to list of files to clean-up.
   * Minor "debian/watch" update.
   * Minor copyright corrections.
+  * Dropped "mysql-workbench-help": upstream no longer provides offline
+    help files.
 
  -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 01 Oct 2014 06:51:43 +1000
 
