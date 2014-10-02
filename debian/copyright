@@ -81,7 +81,7 @@ Comment:
 
 Files: library/sql-parser/source/mysql_version.h
 Copyright: Abandoned 1996, 1999, 2001, MySQL AB
-License: public domain
+License: public-domain
  This file is public domain and comes with NO WARRANTY of any kind
 
 Files:
@@ -183,7 +183,7 @@ Copyright: 1998-2013 Neil Hodgson <neilh@scintilla.org>
            2010      Xavi <jarabal@gmail.com> (Harbour)
            2006-2007 Yuval Papish <Yuval@YuvCom.com>
            2009      Yuzhou Xin
-License: License for Scintilla and SciTE
+License: Scintilla
  Permission to use, copy, modify, and distribute this software and its
  documentation for any purpose and without fee is hereby granted,
  provided that the above copyright notice appear in all copies and that
@@ -209,7 +209,7 @@ Files:
  ext/scintilla/src/RESearch.h
  ext/scintilla/src/UnicodeFromUTF8.h
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
-License: public domain
+License: public-domain
  This file is in the public domain
 
 License: LGPL-2+
