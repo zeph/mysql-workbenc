@@ -1,3 +1,15 @@
+mysql-workbench (6.2.3+dfsg-1) UNRELEASED; urgency=medium
+
+  * New upstream release [September 2014].
+  * Build-Depends:
+    + libgdal-dev
+  * Standards-Version: 3.9.6.
+  * get-orig-source: minor update to list of files to clean-up.
+  * Minor "debian/watch" update.
+  * Minor copyright corrections.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 01 Oct 2014 06:51:43 +1000
+
 mysql-workbench (6.1.7+dfsg-1) unstable; urgency=low
 
   * New upstream release [June 2014].

@@ -125,6 +125,7 @@ Comment:
  License without this special exception.
 
 Files: ext/antlr-runtime/*
+       library/mysql.parser/MySQL*
 Copyright: 2005-2009 Jim Idle, Temporal Wave LLC
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
