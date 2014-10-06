@@ -1,0 +1,18 @@
+Last-Update: 2014-10-06
+Forwarded: no
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix FTBFS in antlr.
+
+--- a/ext/antlr-runtime/include/antlr3defs.h
++++ b/ext/antlr-runtime/include/antlr3defs.h
+@@ -246,9 +246,9 @@
+ #else
+ 
+ /* Include configure generated header file
+  */
+-#include	<antlr3config.h>
++#include "antlr3config.h"
+ 
+ #include <stdio.h>
+ 
+ #if HAVE_STDINT_H

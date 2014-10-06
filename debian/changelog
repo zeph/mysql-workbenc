@@ -3,6 +3,8 @@ mysql-workbench (6.2.3+dfsg-1) UNRELEASED; urgency=medium
   * New upstream release [September 2014].
   * Build-Depends:
     + libgdal-dev
+    + dh-autoreconf
+  * Use autoreconf on bundled ANTLR; added "antlr.patch".
   * Standards-Version: 3.9.6.
   * get-orig-source: minor update to list of files to clean-up.
   * Minor "debian/watch" update.

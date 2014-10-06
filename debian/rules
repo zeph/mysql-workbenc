@@ -19,7 +19,7 @@ $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
 export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
 %:
-	dh $@ --parallel --max-parallel=4 --with python2
+	dh $@ --parallel --max-parallel=4 --with python2,autoreconf
 
 override_dh_clean:
 	$(RM) -r CMakeFiles antlr-wb-prefix/tmp ext/antlr-runtime/.libs
