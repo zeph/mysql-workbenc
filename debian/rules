@@ -115,6 +115,8 @@ $(PKG)_$(VER)$(DTYPE).orig.tar.xz:
              ext/scintilla/win32 \
              frontend/mac \
              library/base.windows \
+             library/base.wr/resource.h \
+             library/forms/winforms/resource.h \
              library/forms/cocoa \
              library/sql.parser/yy_purify-tool/dist/*.jar \
              library/sql.parser/update-tool/classes/*.class \
