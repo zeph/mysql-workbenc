@@ -29,9 +29,6 @@ Comment:
  Please note that trademark restrictions do apply to selected images.
 
 Files:
- modules/db.checks/*
- library/canvas/src/mdc_pango_text.cpp
- library/canvas/src/mdc_pango_text.h
  plugins/wb.model.editors/backend/wb_editor_layer.h
  plugins/wb.model.tagging/backend/wb_tag_editor.cpp
  plugins/wb.model.tagging/backend/wb_tag_editor.h
@@ -39,17 +36,16 @@ Copyright: 2009 Sun Microsystems Inc.
 License: GPL-2
 
 Files:
- library/sql-parser/include/lex.h
- library/sql-parser/source/myx_unicode_scanner.cpp
- library/sql-parser/yy_gen-tool/yy_gen-tool/parser.yy
- library/canvas/src/mdc_area_group.h
- library/canvas/src/mdc_canvas_view_macosx.cpp
- library/canvas/src/mdc_canvas_view_macosx.h
+ library/sql.parser/include/lex.h
+ library/sql.parser/source/myx_unicode_scanner.cpp
+ library/sql.parser/yy_gen-tool/yy_gen-tool/parser.yy
+ library/mysql.canvas/src/mdc_canvas_view_macosx.cpp
+ library/mysql.canvas/src/mdc_canvas_view_macosx.h
 Copyright: 2000-2007 MySQL AB
 License: GPL-2
 
 Files:
- library/sql-parser/*
+ library/sql.parser/*
  modules/wb.mysql.import/src/stream_conv.h
  modules/wb.mysql.import/src/wb_mysql_import_dbd4.h
 Copyright: 2000-2004      MySQL AB
@@ -59,7 +55,7 @@ Copyright: 2000-2004      MySQL AB
            Abandoned 1997 Zarko Mocnik <zarko.mocnik@dem.si>
 License: GPL-2+
 
-Files: library/sql-parser/source/ctype-tis620.cpp
+Files: library/sql.parser/source/ctype-tis620.cpp
 Copyright: 2000-2003 MySQL AB
            2001      Apisilp Trunganont <apisilp@pantip.inet.co.th>
            2001      Korakot Chaovavanich <korakot@iname.com>
@@ -79,7 +75,7 @@ Comment:
  about the suitability of this software for any purpose.  It is provided
  "as is" without express or implied warranty.
 
-Files: library/sql-parser/source/mysql_version.h
+Files: library/sql.parser/source/mysql_version.h
 Copyright: Abandoned 1996, 1999, 2001, MySQL AB
 License: public-domain
  This file is public domain and comes with NO WARRANTY of any kind
@@ -91,13 +87,13 @@ Copyright: 2010-2012 Oracle and/or its affiliates.
 License: LGPL-2+
 
 Files:
- library/sql-parser/source/ctype-uca.cpp
- library/sql-parser/source/ctype-ucs2.cpp
- library/sql-parser/source/ctype-utf8.cpp
- library/sql-parser/source/strxmov.cpp
- library/sql-parser/source/ctype-eucjpms.cpp
- library/sql-parser/source/ctype-ujis.cpp
- library/sql-parser/source/ctype-bin.cpp
+ library/sql.parser/source/ctype-uca.cpp
+ library/sql.parser/source/ctype-ucs2.cpp
+ library/sql.parser/source/ctype-utf8.cpp
+ library/sql.parser/source/strxmov.cpp
+ library/sql.parser/source/ctype-eucjpms.cpp
+ library/sql.parser/source/ctype-ujis.cpp
+ library/sql.parser/source/ctype-bin.cpp
 Copyright: 2000,2002,2004 MySQL AB
            2002           tommy@valley.ne.jp
 License: LGPL-2+
@@ -109,8 +105,8 @@ Copyright: 2009, Sun Microsystems, Inc
 License: LGPL-2+
 
 Files:
- library/sql-parser/source/linux/myx_sql_parser.cpp
- library/sql-parser/source/linux/myx_sql_parser.tab.hh
+ library/sql.parser/source/linux/myx_sql_parser.cpp
+ library/sql.parser/source/linux/myx_sql_parser.tab.hh
 Copyright: 1984, 1989-1990, 2000-2006 Free Software Foundation, Inc.
 License: GPL-3+ or GPL-2
 Comment:
