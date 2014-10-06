@@ -1,18 +1,20 @@
-mysql-workbench (6.2.3+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (6.2.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release [September 2014].
   * Build-Depends:
     + libgdal-dev
     + dh-autoreconf
   * Use autoreconf on bundled ANTLR; added "antlr.patch".
+  * New "paramiko.patch" to fix SSH tunnels connectivity (Closes: #763971).
   * Standards-Version: 3.9.6.
   * get-orig-source: minor update to list of files to clean-up.
+  * Minor dh_clean update.
   * Minor "debian/watch" update.
   * Minor copyright corrections.
   * Dropped "mysql-workbench-help": upstream no longer provides offline
     help files.
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 01 Oct 2014 06:51:43 +1000
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 07 Oct 2014 10:17:53 +1100
 
 mysql-workbench (6.1.7+dfsg-1) unstable; urgency=low
 
