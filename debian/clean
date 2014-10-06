@@ -26,6 +26,6 @@ library/forms/swig/cairo.py
 library/forms/swig/cairo_wrap.cxx
 library/forms/swig/mforms.py
 library/forms/swig/mforms_wrap.*
-library/sql-parser/yy_gen-tool/yy_gen-tool/parser.lex.*
-library/sql-parser/yy_gen-tool/yy_gen-tool/parser.tab.*
+library/sql.parser/yy_gen-tool/yy_gen-tool/parser.lex.*
+library/sql.parser/yy_gen-tool/yy_gen-tool/parser.tab.*
 MySQLWorkbench.desktop
