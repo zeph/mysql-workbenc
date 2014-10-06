@@ -1,3 +1,4 @@
 antlr.patch
+paramiko.patch
 pythonlibs.patch
 wbcopytables-rpath.patch
