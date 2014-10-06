@@ -3,16 +3,16 @@ Forwarded: no
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Description: fix FTBFS in antlr.
 
---- a/ext/antlr-runtime/include/antlr3defs.h
-+++ b/ext/antlr-runtime/include/antlr3defs.h
-@@ -246,9 +246,9 @@
- #else
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -188,9 +188,9 @@
+   set(ANTLR3C_LIBRARIES "-L${PROJECT_BINARY_DIR}/antlr-wb -lantlr3c_wb")
  
- /* Include configure generated header file
-  */
--#include	<antlr3config.h>
-+#include "antlr3config.h"
- 
- #include <stdio.h>
- 
- #if HAVE_STDINT_H
+   ExternalProject_Add(antlr-wb
+     SOURCE_DIR ${PROJECT_SOURCE_DIR}/ext/antlr-runtime
+-    CONFIGURE_COMMAND autoreconf -i -s && ${PROJECT_SOURCE_DIR}/ext/antlr-runtime/configure
++    CONFIGURE_COMMAND ${PROJECT_SOURCE_DIR}/ext/antlr-runtime/configure
+         --prefix=${PROJECT_BINARY_DIR}/antlr-wb
+         --libdir=${PROJECT_BINARY_DIR}/antlr-wb
+ 	--disable-abiflags
+     BUILD_COMMAND make
