@@ -1,0 +1,50 @@
+Last-Update: 2014-10-09
+Forwarded: yes
+Bug-Upstream: http://bugs.mysql.com/bug.php?id=74241
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix FTBFS multiple architectures [kfreebsd, hurd, ppc64el, s390x].
+
+--- a/backend/wbpublic/grtsqlparser/mysql_parser_services.h
++++ b/backend/wbpublic/grtsqlparser/mysql_parser_services.h
+@@ -23,11 +23,9 @@
+ 
+ #include "mysql-parser-common.h"
+ #include "grtdb/db_helpers.h"
+ 
+-#ifdef __linux__
+-  #include "grts/structs.db.mysql.h"
+-#endif
++#include "grts/structs.db.mysql.h"
+ 
+ class MySQLRecognizer;
+ class MySQLSyntaxChecker;
+ class MySQLScanner;
+--- a/backend/wbprivate/sqlide/execute_routine_wizard.h
++++ b/backend/wbprivate/sqlide/execute_routine_wizard.h
+@@ -20,11 +20,9 @@
+ #pragma  once
+ 
+ #include "mforms/form.h"
+ 
+-#ifdef __linux__
+ #include "grts/structs.db.mysql.h"
+-#endif
+ 
+ namespace mforms {
+   class Button;
+   class TextEntry;
+--- a/modules/db.mysql.parser/src/mysql_parser_module.h
++++ b/modules/db.mysql.parser/src/mysql_parser_module.h
+@@ -31,12 +31,10 @@
+ 
+ #include "grtpp_module_cpp.h"
+ #include "grtsqlparser/mysql_parser_services.h"
+ 
+-#ifdef __linux__
+   #include "grts/structs.db.mysql.h"
+   #include "grts/structs.wrapper.h"
+-#endif
+ 
+ #define DOC_MYSQLPARSERSERVICESIMPL \
+   "Parsing services for MySQL.\n"\
+   "\n"\
