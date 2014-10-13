@@ -1,4 +1,4 @@
-Last-Update: 2014-10-09
+Last-Update: 2014-10-14
 Forwarded: yes
 Bug-Upstream: http://bugs.mysql.com/bug.php?id=74241
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
@@ -48,3 +48,43 @@ Description: fix FTBFS multiple architectures [kfreebsd, hurd, ppc64el, s390x].
  #define DOC_MYSQLPARSERSERVICESIMPL \
    "Parsing services for MySQL.\n"\
    "\n"\
+--- a/library/grt/src/grtpp.h
++++ b/library/grt/src/grtpp.h
+@@ -541,30 +541,26 @@
+   // In Win32 ssize_t and int are the same, so we get a compiler error if we compile functions/c-tors with
+   // those types (redefinition error). Hence we need a check when to exclude them.
+   // A similar problem exists for uint64_t and size_t in Win64.
+ #ifdef _WIN32
+-  #define DEFINE_INT_FUNCTIONS
+-
+   #ifdef _WIN64
+     #define DEFINE_SSIZE_T_FUNCTIONS
+   #else
+     #define DEFINE_UINT64_T_FUNCTIONS
+   #endif
+-#else
+-  #define DEFINE_SSIZE_T_FUNCTIONS
+-
+-  #ifdef __x86_64__
+-  #define DEFINE_INT_FUNCTIONS
+-  #endif
++#endif
+ 
+-  #ifdef __APPLE__
++#ifdef __APPLE__
+     // Probably also depending on 32bit vs 64bit, but for now we compile only 32bit on Mac.
+     #define DEFINE_UINT64_T_FUNCTIONS
+-    #define DEFINE_INT_FUNCTIONS
++#endif
+ 
+-  #endif
++#ifndef DEFINE_UINT64_T_FUNCTIONS
++  #define DEFINE_SSIZE_T_FUNCTIONS
+ #endif
+ 
++  #define DEFINE_INT_FUNCTIONS
++
+   /** Reference object class for integer GRT values (32 or 64bit, depending on compiler architecture).
+    * 
+    * aka IntegerRef
+    * 
