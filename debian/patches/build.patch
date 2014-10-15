@@ -1,6 +1,7 @@
-Last-Update: 2014-10-14
+Last-Update: 2014-10-16
 Forwarded: yes
 Bug-Upstream: http://bugs.mysql.com/bug.php?id=74241
+From: Marcin Szalowicz <marcin.szalowicz@oracle.com>
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Description: fix FTBFS multiple architectures [kfreebsd, hurd, ppc64el, s390x].
 
@@ -50,37 +51,14 @@ Description: fix FTBFS multiple architectures [kfreebsd, hurd, ppc64el, s390x].
    "\n"\
 --- a/library/grt/src/grtpp.h
 +++ b/library/grt/src/grtpp.h
-@@ -548,23 +548,25 @@
-     #define DEFINE_SSIZE_T_FUNCTIONS
-   #else
-     #define DEFINE_UINT64_T_FUNCTIONS
+@@ -551,9 +551,9 @@
    #endif
--#else
--  #define DEFINE_SSIZE_T_FUNCTIONS
--
+ #else
+   #define DEFINE_SSIZE_T_FUNCTIONS
+ 
 -  #ifdef __x86_64__
--  #define DEFINE_INT_FUNCTIONS
--  #endif
-+#endif
++  #if __LP64__
+   #define DEFINE_INT_FUNCTIONS
+   #endif
  
--  #ifdef __APPLE__
-+#ifdef __APPLE__
-     // Probably also depending on 32bit vs 64bit, but for now we compile only 32bit on Mac.
-     #define DEFINE_UINT64_T_FUNCTIONS
-     #define DEFINE_INT_FUNCTIONS
-+#endif
- 
--  #endif
-+#ifdef __x86_64__
-+    #define DEFINE_INT_FUNCTIONS
- #endif
- 
-+#ifndef DEFINE_UINT64_T_FUNCTIONS
-+    #define DEFINE_SSIZE_T_FUNCTIONS
-+#endif
-+
-+
-   /** Reference object class for integer GRT values (32 or 64bit, depending on compiler architecture).
-    * 
-    * aka IntegerRef
-    * 
+   #ifdef __APPLE__
