@@ -1,3 +1,11 @@
+mysql-workbench (6.2.3+dfsg-6) unstable; urgency=high
+
+  * New "libglib2.42.patch" with adaptations for compatibility with
+    libglib_2.42 (Closes: #763356).
+    Thanks, Marcin Szalowicz.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 16 Oct 2014 19:37:13 +1100
+
 mysql-workbench (6.2.3+dfsg-5) unstable; urgency=medium
 
   * Another correction to "build.patch".
