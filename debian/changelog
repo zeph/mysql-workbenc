@@ -1,3 +1,10 @@
+mysql-workbench (6.2.3+dfsg-7) unstable; urgency=low
+
+  * Demoted "virtual-mysql-client" to Recommends; added "mysql-client"
+    as first alternative: "mysql-client | virtual-mysql-client".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 02 Nov 2014 08:07:54 +1100
+
 mysql-workbench (6.2.3+dfsg-6) unstable; urgency=high
 
   * New "libglib2.42.patch" with adaptations for compatibility with
