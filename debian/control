@@ -42,13 +42,13 @@ Package: mysql-workbench
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
  ,mysql-workbench-data (= ${source:Version})
- ,virtual-mysql-client
  ,python-mysql.connector
  ,python-paramiko
  ,python-pexpect
  ,python-pyodbc (>= 2.1.8)
  ,python-pysqlite2
 Recommends: ttf-bitstream-vera, mysql-utilities
+           ,virtual-mysql-client
 Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
  MySQL Workbench is a modeling tool that allow to design
