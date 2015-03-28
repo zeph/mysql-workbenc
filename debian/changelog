@@ -1,3 +1,9 @@
+mysql-workbench (6.3.2+dfsg-1) UNRELEASED; urgency=low
+
+  * New upstream release [March 2015].
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 28 Mar 2015 19:58:16 +1100
+
 mysql-workbench (6.2.3+dfsg-7) unstable; urgency=low
 
   * Demoted "virtual-mysql-client" to Recommends; added "mysql-client"

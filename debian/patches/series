@@ -1,6 +1,3 @@
 antlr.patch
-build.patch
-libglib2.42.patch
-paramiko.patch
 pythonlibs.patch
 wbcopytables-rpath.patch
