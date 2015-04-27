@@ -5,10 +5,6 @@ Source: https://www.mysql.com/downloads/workbench/
 Copyright: 2000, 2004-2005, 2007-2015 Oracle and/or its affiliates.
 License: GPL-2
 
-Files: debian/*
-Copyright: 2012-2015 Dmitry Smirnov <onlyjob@debian.org>
-License: GPL-2+
-
 Files: *
 Copyright: 2000, 2004-2005, 2007-2015 Oracle and/or its affiliates.
 License: GPL-2
@@ -209,6 +205,10 @@ Files:
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public-domain
  This file is in the public domain
+
+Files: debian/*
+Copyright: 2012-2015 Dmitry Smirnov <onlyjob@debian.org>
+License: GPL-2+
 
 License: LGPL-2+
  This library is free software; you can redistribute it and/or
