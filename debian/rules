@@ -127,6 +127,6 @@ $(PKG)_$(VER)$(DTYPE).orig.tar.xz:
              res/fonts \
 	#$(RM) -v $(PKG)_$(VER).orig.tar.*
 	@echo "# Packing..."
-	find -L "$(PKG)-$(VER)" -xdev -type f -print | sort \
+	find -L "$(PKG)-$(VER)" -xdev -type f -print | LC_ALL=C sort \
         | XZ_OPT="-7v" tar -caf "$(PKG)_$(VER)$(DTYPE).orig.tar.xz" -T- --owner=root --group=root --mode=a+rX \
         && $(RM) -r "$(PKG)-$(VER)"
