@@ -33,15 +33,6 @@ Copyright: 2009 Sun Microsystems Inc.
 License: GPL-2
 
 Files:
- library/sql.parser/include/lex.h
- library/sql.parser/source/myx_unicode_scanner.cpp
- library/sql.parser/yy_gen-tool/yy_gen-tool/parser.yy
- library/mysql.canvas/src/mdc_canvas_view_macosx.cpp
- library/mysql.canvas/src/mdc_canvas_view_macosx.h
-Copyright: 2000-2007 MySQL AB
-License: GPL-2
-
-Files:
  library/sql.parser/*
  modules/wb.mysql.import/src/stream_conv.h
  modules/wb.mysql.import/src/wb_mysql_import_dbd4.h
@@ -51,6 +42,15 @@ Copyright: 2000-2004      MySQL AB
            1997-1998,2001 Jan Pazdziora <adelton@fi.muni.cz>
            Abandoned 1997 Zarko Mocnik <zarko.mocnik@dem.si>
 License: GPL-2+
+
+Files:
+ library/sql.parser/include/lex.h
+ library/sql.parser/source/myx_unicode_scanner.cpp
+ library/sql.parser/yy_gen-tool/yy_gen-tool/parser.yy
+ library/mysql.canvas/src/mdc_canvas_view_macosx.cpp
+ library/mysql.canvas/src/mdc_canvas_view_macosx.h
+Copyright: 2000-2007 MySQL AB
+License: GPL-2
 
 Files: library/sql.parser/source/ctype-tis620.cpp
 Copyright: 2000-2003 MySQL AB
