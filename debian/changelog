@@ -1,3 +1,11 @@
+mysql-workbench (6.3.4+dfsg-3) unstable; urgency=medium
+
+  [ Peter Michael Green <plugwash@raspbian.org> ]
+  * Fix build failure on architectures where plain char is unsigned
+    (Closes: #803618).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Nov 2015 14:10:13 +1100
+
 mysql-workbench (6.3.4+dfsg-2) unstable; urgency=medium
 
   * New upstream "gcc5.patch" from Marcin Szalowicz (fixes FTBFS).

@@ -1,4 +1,5 @@
 antlr.patch
 gcc5.patch
 pythonlibs.patch
+specify-char-signedness.patch
 wbcopytables-rpath.patch
