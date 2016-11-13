@@ -1,8 +1,21 @@
-mysql-workbench (6.3.6+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (6.3.6+dfsg-1) unstable; urgency=medium
 
   * New upstream release [December 2015].
+    + fixed "Unhandled exception on Data Export" (Closes: #822413).
+    + fixed "don't open files with same name but difference locations"
+      (Closes: #804774).
+  * Switch to "default-libmysqlclient-dev"
+    (Closes: #840786, #841584, #843457, #843887).
+  * Modernised Vcs URLs; copyright format URL to HTTPS.
+  * Removed traces of -dbg package.
+  * New patches:
+    + gtk.patch (Closes: #839356).
+    + mariadb-build.patch
+    + mariadb-version.patch
+    + no-MYSQL_TYPE_JSON.patch
+  * Removed obsolete "gcc5.patch".
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 12 Feb 2016 21:23:13 +1100
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 14 Nov 2016 01:12:33 +1100
 
 mysql-workbench (6.3.4+dfsg-3) unstable; urgency=medium
 
