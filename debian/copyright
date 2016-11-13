@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: MySQL Workbench
 Upstream-Contact: Alfredo Kojima <alfredo.kengi.kojima@oracle.com>
 Source: https://www.mysql.com/downloads/workbench/
