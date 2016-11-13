@@ -67,19 +67,6 @@ Description: MySQL Workbench -- architecture independent data
  .
  This package provides architecture independent files
 
-#Package: mysql-workbench-dbg
-#Section: debug
-#Priority: extra
-#Architecture: any
-#Depends: mysql-workbench (= ${binary:Version}), ${misc:Depends}
-#Description: MySQL Workbench -- debugging symbols
-# MySQL Workbench is a modeling tool that allow to design
-# and generate MySQL databases graphically. It also has administration
-# and query development modules where you can manage MySQL server instances
-# and execute SQL queries.
-# .
-# This package provides debugging symbols
-
 #Package: mysql-workbench-docs
 #Architecture: all
 #Depends: ${misc:Depends}, libjs-jquery

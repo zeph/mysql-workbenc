@@ -68,15 +68,6 @@ override_dh_makeshlibs:
 override_dh_shlibdeps:
 	LD_LIBRARY_PATH="debian/$(PKG)/usr/lib/$(PKG):$(LD_LIBRARY_PATH)" dh_shlibdeps
 
-# -dbg package will be over 150 MiB
-override_dh_strip:
-	[ -d "$(CURDIR)/debian/$(PKG)-dbg" ] \
-        && dh_strip --dbg-package=$(PKG)-dbg \
-        || dh_strip
-
-override_dh_builddeb:
-	dh_builddeb -- -Zxz
-
 ## semi-automated manpage generation (to invoke manually)
 MAN_NAME=mysql-workbench \\- MySQL Database Design, Administration and Development Tool
 mysql-workbench.1:
