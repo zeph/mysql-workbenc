@@ -35,8 +35,8 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, cmake, perl, imagemagick
  ,xdg-utils
 Standards-Version: 3.9.6
 Homepage: http://dev.mysql.com/workbench/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/mysql-workbench.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/mysql-workbench.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mysql-workbench.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/mysql-workbench.git
 
 Package: mysql-workbench
 Architecture: any
