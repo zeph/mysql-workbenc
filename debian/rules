@@ -15,6 +15,9 @@ ifeq ($(DEB_HOST_ARCH_OS),linux)
 endif
 $(info Info: DEB_BUILD_OPTIONS:$(origin DEB_BUILD_OPTIONS)=$(DEB_BUILD_OPTIONS))
 
+## "bindnow" causes run-time errors:
+#export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
+
 # minimise needless linking
 export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
