@@ -1,7 +1,8 @@
 antlr.patch
 gcc5.patch
 gtk.patch
-mariadb-build.patch
+#mariadb-build.patch
+no-MYSQL_TYPE_JSON.patch
 pythonlibs.patch
 specify-char-signedness.patch
 wbcopytables-rpath.patch
