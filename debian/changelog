@@ -1,6 +1,6 @@
-mysql-workbench (6.3.5+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (6.3.6+dfsg-1) UNRELEASED; urgency=medium
 
-  * New upstream release [October 2015].
+  * New upstream release [December 2015].
 
  -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 12 Feb 2016 21:23:13 +1100
 

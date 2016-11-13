@@ -27,7 +27,7 @@ Description: fix FTBFS with MariaDB.
            bind.buffer_length = (unsigned)col->source_length+1;
  
          bind.length = (unsigned long*)malloc(sizeof(unsigned long));
-@@ -1550,10 +1550,10 @@
+@@ -1524,10 +1524,10 @@
              rowbuffer[index].buffer_type == MYSQL_TYPE_MEDIUM_BLOB ||
              rowbuffer[index].buffer_type == MYSQL_TYPE_LONG_BLOB ||
              rowbuffer[index].buffer_type == MYSQL_TYPE_BLOB ||
@@ -40,7 +40,7 @@ Description: fix FTBFS with MariaDB.
              if (rowbuffer[index].buffer_length)
                free(rowbuffer[index].buffer);
  
-@@ -2356,9 +2356,9 @@
+@@ -2330,9 +2330,9 @@
      case MYSQL_TYPE_VARCHAR:
      case MYSQL_TYPE_STRING:
      case MYSQL_TYPE_ENUM:
@@ -53,7 +53,7 @@ Description: fix FTBFS with MariaDB.
        break;
 --- a/backend/wbpublic/objimpl/db.query/db_query_Resultset.cpp
 +++ b/backend/wbpublic/objimpl/db.query/db_query_Resultset.cpp
-@@ -299,11 +299,11 @@
+@@ -360,11 +360,11 @@
          case sql::DataType::ENUM:
          case sql::DataType::SET:
            type= "string";

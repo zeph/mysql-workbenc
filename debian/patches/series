@@ -1,7 +1,7 @@
 antlr.patch
-gcc5.patch
 gtk.patch
 #mariadb-build.patch
+mariadb-version.patch
 no-MYSQL_TYPE_JSON.patch
 pythonlibs.patch
 specify-char-signedness.patch

@@ -1,4 +1,4 @@
-Last-Update: 2014-04-02
+Last-Update: 2015-12-22
 Forwarded: no
 Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=739515
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
@@ -6,13 +6,13 @@ Description: set relative RPATH for `wbcopytables` executable.
 
 --- a/plugins/migration/CMakeLists.txt
 +++ b/plugins/migration/CMakeLists.txt
-@@ -28,8 +28,9 @@
-       copytable/main.cpp
-       copytable/converter.cpp
-   )
-   
-+  set_target_properties(wbcopytables PROPERTIES INSTALL_RPATH "$ORIGIN")
-   target_link_libraries(wbcopytables wbbase ${MYSQL_LIBRARIES} ${ODBC_LIBRARIES} ${PCRE_LIBRARIES} ${PYTHON_LIBRARIES})
+@@ -38,8 +38,9 @@
+   else()
+     set_target_properties(wbcopytables PROPERTIES COMPILE_FLAGS "-fPIE -pie")
+   endif()
+ 
++   set_target_properties(wbcopytables PROPERTIES INSTALL_RPATH "$ORIGIN")
+    target_link_libraries(wbcopytables wbbase ${MySQL_LIBRARIES} ${ODBC_LIBRARIES} ${PCRE_LIBRARIES} ${PYTHON_LIBRARIES})
    
    install(TARGETS wbcopytables DESTINATION ${WB_INSTALL_BIN_DIR})
  endif()

@@ -121,6 +121,8 @@ $(PKG)_$(VER)$(DTYPE).orig.tar.xz:
              MySQLWorkbench.xcodeproj \
              plugins/wb.doclib/res/DocLibrary/* \
              res/fonts \
+             build/ms \
+             ext/Aga.Controls \
 	#$(RM) -v $(PKG)_$(VER).orig.tar.*
 	@echo "# Packing..."
 	find -L "$(PKG)-$(VER)" -xdev -type f -print | LC_ALL=C sort \

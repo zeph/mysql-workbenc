@@ -1,0 +1,18 @@
+Last-Update: 2016-11-13
+Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix FTBFS with MariaDB.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -100,9 +100,9 @@
+ find_python_module(paramiko 1.15.1 QUIET)
+ if(NOT PY_PARAMIKO)
+   message(WARNING "Paramiko wasn't found, you can still build Workbench, but may not work properly.")
+ endif()
+-find_package(MySQL 5.6.0 REQUIRED)
++find_package(MySQL REQUIRED)
+ if (UNIX)
+ 	set(MYSQL_DEFINITIONS "-DBIG_JOINS=1"  "-fno-strict-aliasing")
+ endif()
+ 
