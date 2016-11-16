@@ -19,7 +19,7 @@ Build-Depends: debhelper (>= 9), dh-autoreconf, cmake, perl, imagemagick
  ,libgnome-keyring-dev
  ,libgtkmm-2.4-dev
  ,liblua5.1-0-dev
- ,libmysqlcppconn-dev (>= 1.1.6)
+ ,libmysqlcppconn-dev (>= 1.1.7-4~)
  ,libpng-dev
  ,default-libmysqlclient-dev
  ,libpcre3-dev
