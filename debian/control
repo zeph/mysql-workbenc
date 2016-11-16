@@ -3,7 +3,7 @@ Section: database
 Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 9), dh-autoreconf, cmake, perl, imagemagick
+Build-Depends: debhelper (>= 10), dh-autoreconf, cmake, perl, imagemagick
  ,autoconf ,automake ,libtool
  ,bison ,flex ,swig
  ,doxygen
