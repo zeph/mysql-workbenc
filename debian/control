@@ -48,7 +48,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
  ,python-pyodbc (>= 2.1.8)
  ,python-pysqlite2
 Recommends: ttf-bitstream-vera, mysql-utilities
-           ,mysql-client | virtual-mysql-client
+           ,default-mysql-client | virtual-mysql-client
 Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
  MySQL Workbench is a modeling tool that allow to design
