@@ -2,6 +2,7 @@ antlr.patch
 mariadb-build.patch
 mariadb-version.patch
 no-MYSQL_TYPE_JSON.patch
+projloc.patch
 pythonlibs.patch
 specify-char-signedness.patch
 wbcopytables-rpath.patch

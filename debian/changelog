@@ -2,6 +2,7 @@ mysql-workbench (6.3.8+dfsg-1) unstable; urgency=medium
 
   * New upstream release [October 2016].
   * Removed obsolete "gtk.patch".
+  * Added new "projloc.patch".
   * debhelper/compat to version 10.
   * Recommends: mysql-client --> default-mysql-client.
   * Standards-Version: 3.9.8;
