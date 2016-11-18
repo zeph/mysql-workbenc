@@ -1,5 +1,4 @@
 CMakeCache.txt
-debian/*.xpm
 ext/antlr-runtime/aclocal.m4
 ext/antlr-runtime/antlr3config.h
 ext/antlr-runtime/antlr3config.h.in

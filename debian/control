@@ -3,7 +3,7 @@ Section: database
 Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 10), dh-autoreconf, cmake, perl, imagemagick
+Build-Depends: debhelper (>= 10), dh-autoreconf, cmake, perl
  ,autoconf ,automake ,libtool
  ,bison ,flex ,swig
  ,doxygen
@@ -33,7 +33,7 @@ Build-Depends: debhelper (>= 10), dh-autoreconf, cmake, perl, imagemagick
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: http://dev.mysql.com/workbench/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mysql-workbench.git
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/mysql-workbench.git

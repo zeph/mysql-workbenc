@@ -41,8 +41,6 @@ override_dh_auto_build:
 	cd library/sql.parser/yy_gen-tool/yy_gen-tool/ \
         && bison -dl parser.yy \
         && flex -B -oparser.lex.cc parser.lex
-	# generate icon
-	convert images/icons/MySQLWorkbench-32.png debian/mysql-workbench.xpm
 	# generate documentation for mysql-workbench-docs package
 	#cd doc && ./DoxygenRun.sh
 	# build all the rest
