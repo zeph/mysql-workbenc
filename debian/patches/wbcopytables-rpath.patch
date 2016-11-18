@@ -6,13 +6,13 @@ Description: set relative RPATH for `wbcopytables` executable.
 
 --- a/plugins/migration/CMakeLists.txt
 +++ b/plugins/migration/CMakeLists.txt
-@@ -38,8 +38,9 @@
+@@ -45,8 +45,9 @@
    else()
      set_target_properties(wbcopytables PROPERTIES COMPILE_FLAGS "-fPIE -pie")
    endif()
  
 +   set_target_properties(wbcopytables PROPERTIES INSTALL_RPATH "$ORIGIN")
     target_link_libraries(wbcopytables wbbase ${MySQL_LIBRARIES} ${ODBC_LIBRARIES} ${PCRE_LIBRARIES} ${PYTHON_LIBRARIES})
-   
-   install(TARGETS wbcopytables DESTINATION ${WB_INSTALL_BIN_DIR})
- endif()
+    if(COMMAND cotire)
+        set_target_properties(wbcopytables PROPERTIES
+            COTIRE_PREFIX_HEADER_IGNORE_PATH "${PRECOMPILED_HEADERS_EXCLUDE_PATHS};/usr/include/unixodbc_conf.h;/usr/include/sql.h;/usr/include/sqltypes.h;/usr/include/sqlext.h;/usr/include/sqlucode.h")

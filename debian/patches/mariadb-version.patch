@@ -5,7 +5,7 @@ Description: fix FTBFS with MariaDB.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -100,9 +100,9 @@
+@@ -104,9 +104,9 @@
  find_python_module(paramiko 1.15.1 QUIET)
  if(NOT PY_PARAMIKO)
    message(WARNING "Paramiko wasn't found, you can still build Workbench, but may not work properly.")
@@ -15,4 +15,4 @@ Description: fix FTBFS with MariaDB.
  if (UNIX)
  	set(MYSQL_DEFINITIONS "-DBIG_JOINS=1"  "-fno-strict-aliasing")
  endif()
- 
+ set(PRECOMPILED_HEADERS_EXCLUDE_PATHS "/usr/include/gdal;/usr/include/arpa;${CMAKE_SOURCE_DIR};${PROJECT_SOURCE_DIR}/ext/antlr-runtime;${PROJECT_BINARY_DIR};${MySQL_INCLUDE_DIRS}")

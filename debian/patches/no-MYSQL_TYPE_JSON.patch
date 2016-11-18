@@ -5,7 +5,7 @@ Description: fix FTBFS with MariaDB.
 
 --- a/plugins/migration/copytable/copytable.cpp
 +++ b/plugins/migration/copytable/copytable.cpp
-@@ -78,9 +78,9 @@
+@@ -85,9 +85,9 @@
      case MYSQL_TYPE_BLOB: return "MYSQL_TYPE_BLOB";
      case MYSQL_TYPE_VAR_STRING: return "MYSQL_TYPE_VAR_STRING";
      case MYSQL_TYPE_STRING: return "MYSQL_TYPE_STRING";
@@ -16,7 +16,7 @@ Description: fix FTBFS with MariaDB.
        return "UNKNOWN";
    }
  }
-@@ -240,9 +240,9 @@
+@@ -247,9 +247,9 @@
        case MYSQL_TYPE_NEWDECIMAL:
        case MYSQL_TYPE_STRING:
        case MYSQL_TYPE_VAR_STRING:
@@ -27,7 +27,7 @@ Description: fix FTBFS with MariaDB.
            bind.buffer_length = (unsigned)col->source_length+1;
  
          bind.length = (unsigned long*)malloc(sizeof(unsigned long));
-@@ -1524,10 +1524,10 @@
+@@ -1469,10 +1469,10 @@
              rowbuffer[index].buffer_type == MYSQL_TYPE_MEDIUM_BLOB ||
              rowbuffer[index].buffer_type == MYSQL_TYPE_LONG_BLOB ||
              rowbuffer[index].buffer_type == MYSQL_TYPE_BLOB ||
@@ -40,7 +40,7 @@ Description: fix FTBFS with MariaDB.
              if (rowbuffer[index].buffer_length)
                free(rowbuffer[index].buffer);
  
-@@ -2330,9 +2330,9 @@
+@@ -2341,9 +2341,9 @@
      case MYSQL_TYPE_VARCHAR:
      case MYSQL_TYPE_STRING:
      case MYSQL_TYPE_ENUM:

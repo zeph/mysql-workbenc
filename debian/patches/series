@@ -1,6 +1,5 @@
 antlr.patch
-gtk.patch
-#mariadb-build.patch
+mariadb-build.patch
 mariadb-version.patch
 no-MYSQL_TYPE_JSON.patch
 pythonlibs.patch
