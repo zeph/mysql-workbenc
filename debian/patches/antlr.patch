@@ -1,11 +1,11 @@
-Last-Update: 2014-10-06
+Last-Update: 2018-03-04
 Forwarded: no
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
 Description: fix FTBFS in antlr.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -232,9 +232,9 @@
+@@ -238,9 +238,9 @@
    set(ANTLR3C_LIBRARIES "-L${PROJECT_BINARY_DIR}/antlr-wb -lantlr3c_wb")
  
    ExternalProject_Add(antlr-wb
@@ -16,3 +16,20 @@ Description: fix FTBFS in antlr.
          --libdir=${PROJECT_BINARY_DIR}/antlr-wb
  	--disable-abiflags
      BUILD_COMMAND make
+--- a/library/parsers/grammars/build-parsers
++++ b/library/parsers/grammars/build-parsers
+@@ -53,10 +53,12 @@
+       exit 1
+     fi
+   fi
+ 
+-  java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
++#  java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
++  antlr3 $SOURCE_FILE -o $TARGET_DIRECTORY
+   if [ -n "$SOURCE_FILE2" ]; then
+-    java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE2 -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
++#    java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE2 -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
++    antlr3 $SOURCE_FILE2 -o $TARGET_DIRECTORY
+   fi
+ fi
+ 

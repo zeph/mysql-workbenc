@@ -23,6 +23,8 @@ export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
 export DEB_CPPFLAGS_MAINT_APPEND= -std=c++11
 
+export ANTLR_JAR_PATH=/usr/share/java/antlr3.jar
+
 %:
 	dh $@ --max-parallel=4 --with python2,autoreconf
 
@@ -109,7 +111,6 @@ $(DEB_SOURCE)_$(VER)$(DTYPE).orig.tar.xz:
              ext/Aga.Controls \
         0000-ext/antlr-runtime \
              ext/antlr-runtime/src/antlr3convertutf.c \
-             ext/cppconn \
              ext/scintilla/.hgtags \
              ext/scintilla/cocoa \
              ext/scintilla/win32 \

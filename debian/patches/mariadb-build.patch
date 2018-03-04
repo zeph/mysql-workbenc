@@ -9,20 +9,20 @@ Description: fix FTBFS with MariaDB.
 
 --- a/plugins/migration/copytable/copytable.cpp
 +++ b/plugins/migration/copytable/copytable.cpp
-@@ -2846,16 +2846,9 @@
+@@ -2610,16 +2610,9 @@
    // This function is used to create a legal SQL string that you can use in an SQL statement
    // This is needed because the escaping depends on the character set in use by the server
    unsigned long ret_length = 0;
-   
--  #if MYSQL_CHECK_VERSION(5, 7, 6)
--    if (_target->is_mysql_version_at_least(5, 7, 6))
--      ret_length += mysql_real_escape_string_quote(_mysql, buffer + length, data, (unsigned long)dlength, '`');
--    else
--      ret_length += mysql_real_escape_string(_mysql, buffer + length, data, (unsigned long)dlength);
--  #else
-     ret_length += mysql_real_escape_string(_mysql, buffer + length, data, (unsigned long)dlength);
--  #endif
  
-   if( ret_length != (unsigned long) -1)
+-#if MYSQL_CHECK_VERSION(5, 7, 6)
+-  if (_target->is_mysql_version_at_least(5, 7, 6))
+-    ret_length += mysql_real_escape_string_quote(_mysql, buffer + length, data, (unsigned long)dlength, '"');
+-  else
+-    ret_length += mysql_real_escape_string(_mysql, buffer + length, data, (unsigned long)dlength);
+-#else
+   ret_length += mysql_real_escape_string(_mysql, buffer + length, data, (unsigned long)dlength);
+-#endif
+ 
+   if (ret_length != (unsigned long)-1)
      length += ret_length;
    else

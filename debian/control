@@ -9,6 +9,7 @@ Build-Depends: debhelper (>= 11~) ,dh-python
  ,bison ,flex ,swig
  ,doxygen
  ,gettext
+ ,antlr3
 # ,libantlr3c-dev
  ,libboost-dev
  ,libcairo2-dev
@@ -18,9 +19,10 @@ Build-Depends: debhelper (>= 11~) ,dh-python
  ,libgl1-mesa-dev
  ,libglib2.0-dev
  ,libgnome-keyring-dev
- ,libgtkmm-2.4-dev
+ ,libgtk-3-dev
+ ,libgtkmm-3.0-dev
  ,liblua5.1-0-dev
- ,libmysqlcppconn-dev (>= 1.1.7-4~)
+ ,libmysqlcppconn-dev (>= 1.1.8~)
  ,libpng-dev
  ,default-libmysqlclient-dev
  ,libpcre3-dev
@@ -31,6 +33,7 @@ Build-Depends: debhelper (>= 11~) ,dh-python
  ,libxml2-dev
  ,libzip-dev
  ,python-dev
+ ,python-paramiko
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils

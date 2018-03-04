@@ -8,7 +8,7 @@ Files-Excluded:
     ext/antlr-runtime/src/antlr3convertutf.c
 
 Files: *
-Copyright: 2000, 2004-2005, 2007-2016 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2017 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -42,8 +42,6 @@ License: GPL-2
 
 Files:
  library/sql.parser/*
- modules/wb.mysql.import/src/stream_conv.h
- modules/wb.mysql.import/src/wb_mysql_import_dbd4.h
 Copyright: 2000-2004      MySQL AB
            2000           MySQL Finland AB
            2000           TCX DataKonsult AB
@@ -125,9 +123,10 @@ Comment:
  Bison output files to be licensed under the GNU General Public
  License without this special exception.
 
-Files: ext/antlr-runtime/*
-       library/mysql.parser/MySQL*
-Copyright: 2005-2009 Jim Idle, Temporal Wave LLC
+Files:
+ ext/antlr-runtime/*
+ library/parsers/grammar-parser/*
+Copyright: 2005-2009 Jim Idle, Temporal Wave LLC (http://www.temporal-wave.com)
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
@@ -157,7 +156,10 @@ Copyright: 1998-2014 Neil Hodgson <neilh@scintilla.org>
            2003-2005 Angelo Mandato <angelo@spaceblue.com>
            1998-2001 Andre Arpin <arpin@kingston.net>
            2009      Andreas Rumpf
+           2013-2014 Andreas Tscharner <andy@vis.ethz.ch>
+           2012      Bruno Barbieri <brunorex@gmail.com>
            2001      Clemens Wyss <wys@helbling.ch>
+           2012      Colomban Wendling <ban@herbesfolles.org>
            2007      Cristian Adam <cristian.adam@gmx.net>
            2006      Fabien Proriol
            2004      Herr Pfarrer <rpfarrer@yahoo.de>
@@ -177,6 +179,7 @@ Copyright: 1998-2014 Neil Hodgson <neilh@scintilla.org>
            1990-2007 Scientific Toolworks, Inc
            2003      Sean O'Dell <sean@celsoft.com>
            2002      Sergey Koshcheyev <sergey.k@seznam.cz>
+           2008-2010 Sergiu Dotenco
            2013      SiegeLord <slabode@aim.com>
            2001      Simon Steele <ss@pnotepad.org>
            2008      Tim Gerundt <tim@gerundt.de>
@@ -210,12 +213,16 @@ Files:
  ext/scintilla/scripts/ScintillaData.py
  ext/scintilla/src/RESearch.h
  ext/scintilla/src/UnicodeFromUTF8.h
+ ext/scintilla/test/examples/perl-test-5220delta.pl
+ ext/scintilla/test/examples/perl-test-5220delta.pl.styled
+ ext/scintilla/test/examples/perl-test-sub-prototypes.pl
+ ext/scintilla/test/examples/perl-test-sub-prototypes.pl.styled
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public-domain
  This file is in the public domain
 
 Files: debian/*
-Copyright: 2012-2015 Dmitry Smirnov <onlyjob@debian.org>
+Copyright: 2012-2018 Dmitry Smirnov <onlyjob@debian.org>
 License: GPL-2+
 
 License: LGPL-2+
