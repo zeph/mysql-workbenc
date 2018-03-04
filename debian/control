@@ -34,7 +34,7 @@ Build-Depends: debhelper (>= 10) ,dh-autoreconf ,dh-python
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
-Standards-Version: 3.9.8
+Standards-Version: 4.1.3
 Homepage: http://dev.mysql.com/workbench/
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mysql-workbench.git
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/mysql-workbench.git
