@@ -4,6 +4,8 @@ Upstream-Contact: Alfredo Kojima <alfredo.kengi.kojima@oracle.com>
 Source: https://www.mysql.com/downloads/workbench/
 Copyright: 2000, 2004-2005, 2007-2015 Oracle and/or its affiliates.
 License: GPL-2
+Files-Excluded:
+    ext/antlr-runtime/src/antlr3convertutf.c
 
 Files: *
 Copyright: 2000, 2004-2005, 2007-2016 Oracle and/or its affiliates.

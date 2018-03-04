@@ -108,6 +108,7 @@ $(DEB_SOURCE)_$(VER)$(DTYPE).orig.tar.xz:
              build/zip \
              ext/Aga.Controls \
         0000-ext/antlr-runtime \
+             ext/antlr-runtime/src/antlr3convertutf.c \
              ext/cppconn \
              ext/scintilla/.hgtags \
              ext/scintilla/cocoa \
