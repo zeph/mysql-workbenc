@@ -1,6 +1,7 @@
 OGRFree.patch
 antlr-dfsg.patch
 antlr.patch
+build-i386-json.patch
 mariadb-build.patch
 mariadb-version.patch
 no-MYSQL_TYPE_JSON.patch

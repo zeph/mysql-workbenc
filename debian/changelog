@@ -1,3 +1,9 @@
+mysql-workbench (6.3.10+dfsg-2) unstable; urgency=medium
+
+  * New patch to fix FTBFS on 32bit architectures.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 11 Mar 2018 19:27:04 +1100
+
 mysql-workbench (6.3.10+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
