@@ -1,11 +1,11 @@
 # uscan(1) configuration file.
-# Use 'debian/rules get-orig-source' command to generate DFSG-repackaged archive.
+version=4
 
-version=3
-
-opts=\
+opts="\
 repacksuffix=+dfsg,\
+repack,compression=xz,\
 pgpsigurlmangle=s{$}{.asc},\
 dversionmangle=s{\+dfsg\d*}{},\
- http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
-/mysql-workbench-community-([\d\.]+)(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
+uversionmangle=s{\-rc}{~rc},\
+" http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools/\
+  mysql-workbench-community-(\d[\d\.]+(?:\-rc\d*)?)(?:-nodocs)?\-src\.tar\.(?:gz|bz2|xz)
