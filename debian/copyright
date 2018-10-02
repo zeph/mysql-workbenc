@@ -14,7 +14,7 @@ Files-Excluded:
     ext/antlr-runtime/src/antlr3convertutf.c
     ext/scintilla/.hgtags
     ext/scintilla/cocoa
-   ~ext/scintilla/win32
+    ext/scintilla/win32
     frontend/mac
     library/base.windows
     library/base.wr/resource.h

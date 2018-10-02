@@ -4,12 +4,13 @@ Priority: optional
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
 Build-Depends: debhelper (>= 11~) ,dh-python
+    ,g++-8
  ,cmake ,perl
  ,autoconf ,automake ,libtool
  ,bison ,flex ,swig
  ,doxygen
  ,gettext
- ,antlr3
+ ,antlr4 (>= 4.6~)
 # ,libantlr3c-dev
  ,libboost-dev
  ,libcairo2-dev
@@ -18,7 +19,11 @@ Build-Depends: debhelper (>= 11~) ,dh-python
  ,libgdal-dev
  ,libgl1-mesa-dev
  ,libglib2.0-dev
- ,libgnome-keyring-dev
+# ,libgnome-keyring-dev
+    ,libsecret-1-dev
+    ,libssh-dev (>= 0.8.1~)
+###    ,libssh2-1-dev (>= 1.8.0~)
+    ,default-jre-headless
  ,libgtk-3-dev
  ,libgtkmm-3.0-dev
  ,liblua5.1-0-dev
@@ -53,7 +58,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
  ,python-pysqlite2
 Recommends: ttf-bitstream-vera, mysql-utilities
            ,default-mysql-client | virtual-mysql-client
-Suggests: gnome-keyring
+#Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
  MySQL Workbench is a modeling tool that allow to design
  and generate MySQL databases graphically. It also has administration

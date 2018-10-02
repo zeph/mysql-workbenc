@@ -29,11 +29,8 @@ library/sql.parser/yy_gen-tool/yy_gen-tool/parser.lex.*
 library/sql.parser/yy_gen-tool/yy_gen-tool/parser.tab.*
 MySQLWorkbench.desktop
 
-library/parsers/grammars/MySQL.tokens
-library/parsers/grammars/MySQLLexer.c
-library/parsers/grammars/MySQLLexer.h
-library/parsers/grammars/MySQLParser.c
-library/parsers/grammars/MySQLParser.h
+library/parsers/mysql/MySQLLexer*
+library/parsers/mysql/MySQLParser*
 
 ## non-DFSG: license-problem-convert-utf-code ext/antlr-runtime/src/antlr3convertutf.c
 ext/antlr-runtime/src/antlr3convertutf.c

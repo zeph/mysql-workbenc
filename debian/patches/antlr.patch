@@ -25,11 +25,11 @@ Description: fix FTBFS in antlr.
  
 -  java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
 +#  java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
-+  antlr3 $SOURCE_FILE -o $TARGET_DIRECTORY
++  antlr4 $SOURCE_FILE -o $TARGET_DIRECTORY
    if [ -n "$SOURCE_FILE2" ]; then
 -    java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE2 -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
 +#    java -Xmx1024m -jar "$ANTLR_JAR_PATH" -make $SOURCE_FILE2 -o $TARGET_DIRECTORY -Xmaxswitchcaselabels 30
-+    antlr3 $SOURCE_FILE2 -o $TARGET_DIRECTORY
++    antlr4 $SOURCE_FILE2 -o $TARGET_DIRECTORY
    fi
  fi
  

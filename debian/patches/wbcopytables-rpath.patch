@@ -6,7 +6,7 @@ Description: set relative RPATH for `wbcopytables` executable.
 
 --- a/plugins/migration/CMakeLists.txt
 +++ b/plugins/migration/CMakeLists.txt
-@@ -53,8 +53,9 @@
+@@ -66,8 +66,9 @@
    else()
      target_compile_options(wbcopytables PUBLIC -fPIE -pie)
    endif()

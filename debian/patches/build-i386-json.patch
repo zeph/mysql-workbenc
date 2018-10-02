@@ -37,7 +37,7 @@ Description: fixes FTBFS on 32bit architectures.
 
 --- a/library/base/jsonparser.cpp
 +++ b/library/base/jsonparser.cpp
-@@ -342,9 +342,9 @@
+@@ -346,9 +346,9 @@
     *         If no such data is present std::out_of_range is thrown.
     */
    JsonValue &JsonArray::at(SizeType pos) {
@@ -48,7 +48,7 @@ Description: fixes FTBFS on 32bit architectures.
    }
  
    //--------------------------------------------------------------------------------------------------
-@@ -357,9 +357,9 @@
+@@ -361,9 +361,9 @@
     *         If no such data is present std::out_of_range is thrown.
     */
    const JsonValue &JsonArray::at(SizeType pos) const {
@@ -59,7 +59,7 @@ Description: fixes FTBFS on 32bit architectures.
    }
  
    //--------------------------------------------------------------------------------------------------
-@@ -1667,14 +1667,16 @@
+@@ -1671,14 +1671,16 @@
          break;
        case VDouble:
          _output += std::to_string((double)value);
@@ -78,7 +78,7 @@ Description: fixes FTBFS on 32bit architectures.
        case VArray:
 --- a/library/forms/jsonview.cpp
 +++ b/library/forms/jsonview.cpp
-@@ -650,10 +650,12 @@
+@@ -663,10 +663,12 @@
    bool setData = false;
    if (data != nullptr) {
      std::stringstream buffer;
@@ -91,7 +91,7 @@ Description: fixes FTBFS on 32bit architectures.
      auto &storedValue = data->getData();
      switch (storedValue.getType()) {
        case VDouble:
-@@ -663,8 +665,9 @@
+@@ -676,8 +678,9 @@
          buffer >> number;
          storedValue = number;
          setData = true;
@@ -101,7 +101,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::is_number(value))
            break;
          buffer << value;
-@@ -679,8 +682,9 @@
+@@ -692,8 +695,9 @@
          buffer >> number3;
          storedValue = number3;
          setData = true;
@@ -111,7 +111,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::isBool(value))
            break;
          buffer << value;
-@@ -1072,16 +1076,18 @@
+@@ -1085,16 +1089,18 @@
      case VDouble:
        node->set_string(1, std::to_string((double)value));
        node->set_string(2, "Double");
@@ -130,7 +130,7 @@ Description: fixes FTBFS on 32bit architectures.
        break;
    }
    node->set_data(new JsonTreeBaseView::JsonValueNodeData(value));
-@@ -1321,10 +1327,12 @@
+@@ -1334,10 +1340,12 @@
    JsonParser::JsonValue &storedValue = (!key.empty() ? ((JsonObject &)data->getData())[key] : data->getData());
    if (data != NULL) {
      std::stringstream buffer;
@@ -143,7 +143,7 @@ Description: fixes FTBFS on 32bit architectures.
      switch (storedValue.getType()) {
        case VDouble:
          if (!base::is_number(value))
-@@ -1334,8 +1342,9 @@
+@@ -1347,8 +1355,9 @@
          storedValue = number;
          node->set_float(column, number);
          _dataChanged(false);
@@ -153,7 +153,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::is_number(value))
            break;
          buffer << value;
-@@ -1352,8 +1361,9 @@
+@@ -1365,8 +1374,9 @@
          storedValue = number3;
          node->set_float(column, (double)number3);
          _dataChanged(false);
@@ -163,7 +163,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::isBool(value))
            break;
          buffer << value;
-@@ -1611,14 +1621,16 @@
+@@ -1624,14 +1634,16 @@
    switch (value.getType()) {
      case VDouble:
        node->set_float(columnId, (double)value);

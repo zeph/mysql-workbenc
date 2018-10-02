@@ -1,3 +1,13 @@
+mysql-workbench (8.0.12+dfsg-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+  [[ TODO ]]
+  * antlr4-C
+  * FTBFS
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Jul 2018 12:50:04 +1000
+
 mysql-workbench (6.3.10+dfsg-3) unstable; urgency=medium
 
   * rules: build with "-Wno-error=deprecated-declarations" (Closes: #896577)
