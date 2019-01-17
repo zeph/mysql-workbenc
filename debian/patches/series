@@ -3,7 +3,6 @@ build-i386-json.patch
 cmake_antlr-jar-filename.patch
 mariadb-build.patch
 mariadb-version.patch
-no-MYSQL_TYPE_JSON.patch
 projloc.patch
 pythonlibs.patch
 specify-char-signedness.patch
