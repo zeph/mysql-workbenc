@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 11~) ,dh-python
  ,doxygen
  ,gettext
  ,antlr4 (>= 4.6~)
-# ,libantlr3c-dev
+ ,libantlr4-runtime-dev
  ,libboost-dev
  ,libcairo2-dev
  ,libctemplate-dev
