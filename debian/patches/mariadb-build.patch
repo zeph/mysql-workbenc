@@ -21,7 +21,17 @@ Description: fix FTBFS with MariaDB.
  
      bind.error = (WB_BOOL *)malloc(sizeof(WB_BOOL));
      if (!bind.error)
-@@ -2646,14 +2642,7 @@
+@@ -2259,6 +2255,9 @@
+                                                      *(*_row_buffer)[col_index].length);
+         _bulk_insert_record.append("')");
+         break;
++      case MAX_NO_FIELD_TYPES:
++        // should not ever occur as is used only to mark the end of enum
++        break;
+     }
+   }
+ 
+@@ -2646,14 +2645,7 @@
  
  
  
