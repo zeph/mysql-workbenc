@@ -9,8 +9,19 @@ Description: fix FTBFS with MariaDB.
 
 --- a/plugins/migration/copytable/copytable.cpp
 +++ b/plugins/migration/copytable/copytable.cpp
-@@ -2647,16 +2647,9 @@
-   unsigned long ret_length = 0;
+@@ -324,11 +324,7 @@
+           base::strfmt("Unhandled MySQL type %i for column '%s'", col->target_type, col->target_name.c_str()));
+     }
+ 
+-#if MYSQL_VERSION_ID >= 80004
+-    typedef bool WB_BOOL;
+-#else
+     typedef my_bool WB_BOOL;
+-#endif
+ 
+     bind.error = (WB_BOOL *)malloc(sizeof(WB_BOOL));
+     if (!bind.error)
+@@ -2646,14 +2642,7 @@
  
  
  
@@ -25,4 +36,3 @@ Description: fix FTBFS with MariaDB.
  
    if (ret_length != (unsigned long)-1)
      length += ret_length;
-   else
