@@ -60,7 +60,7 @@ Recommends: ttf-bitstream-vera, mysql-utilities
            ,default-mysql-client | virtual-mysql-client
 #Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
- MySQL Workbench is a modeling tool that allow to design
+ MySQL Workbench is a modeling tool that allows one to design
  and generate MySQL databases graphically. It also has administration
  and query development modules where you can manage MySQL server instances
  and execute SQL queries.
@@ -69,7 +69,7 @@ Package: mysql-workbench-data
 Architecture: all
 Depends: ${misc:Depends}
 Description: MySQL Workbench -- architecture independent data
- MySQL Workbench is a modeling tool that allow to design
+ MySQL Workbench is a modeling tool that allows one to design
  and generate MySQL databases graphically. It also has administration
  and query development modules where you can manage MySQL server instances
  and execute SQL queries.
