@@ -1,0 +1,2 @@
+# long long is C type name, thus it is intentionally duplicated:
+mysql-workbench source: spelling-error-in-patch-description debian/patches/build-i386-json.patch long long (duplicate word) long
