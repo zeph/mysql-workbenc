@@ -1,12 +1,25 @@
 mysql-workbench (8.0.13+dfsg-1) UNRELEASED; urgency=medium
 
+  [ Dmitry Smirnov ]
   * New upstream release.
 
-  [[ TODO ]]
-  * antlr4-C
-  * FTBFS
+  [ Andrius Merkys ]
+  * antlr-runtime is no longer present in upstream tarball.
+  * debian/rules: disabling parallel builds for now (possible OOM kill on
+    4 core VM).
+  * Ceasing to exclude files under ext/scintilla/win32 as they seem to be
+    required for CMake.
+  * Fixing d/watch to exclude terminal '.' from extracted upstream version.
+  * Extending patch mariadb-build.patch to cover WB_BOOL definition and
+    handle MAX_NO_FIELD_TYPES enum value.
+  * MariaDB now supports MYSQL_TYPE_JSON.
+  * d/mysql-workbench-data.docs: README was renamed to README.md by upstream.
+  * d/control: adding b-dep on libantlr4-runtime-dev (to be uploaded).
+  * Fixing mistakes in descriptions in d/control.
+  * Removing unused lintian override d/mysql-workbench-data.lintian-overrides.
+  * Adding d/s/lintian-overrides to ignore 'duplicate word' warning.
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 01 Jul 2018 12:50:04 +1000
+ -- Andrius Merkys <andrius.merkys@gmail.com>  Fri, 18 Jan 2019 09:22:42 -0500
 
 mysql-workbench (6.3.10+dfsg-3) unstable; urgency=medium
 
