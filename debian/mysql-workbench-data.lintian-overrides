@@ -1,3 +1,0 @@
-# we might not need to install this file at all, so it's OK that
-# it's not executable.
-script-not-executable usr/share/mysql-workbench/extras/build_freetds.sh
