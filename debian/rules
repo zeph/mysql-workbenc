@@ -16,8 +16,10 @@ export DEB_CPPFLAGS_MAINT_APPEND= -std=c++11 -Wno-error=deprecated-declarations
 
 export ANTLR_JAR_PATH=/usr/share/java/antlr4.jar
 
+MAX_PARALLEL=--max-parallel=3
+
 %:
-	dh $@ --no-parallel --with python2
+	dh $@ $(MAX_PARALLEL) --with python2
 
 override_dh_clean:
 	$(RM) -rv CMakeFiles ext/antlr-runtime/.libs
@@ -44,10 +46,10 @@ override_dh_auto_build:
 	# generate documentation for mysql-workbench-docs package
 	#cd doc && ./DoxygenRun.sh
 	# build all the rest
-	dh_auto_build
+	dh_auto_build $(MAX_PARALLEL)
 
 override_dh_auto_install:
-	dh_auto_install --destdir=$(CURDIR)/debian/tmp
+	dh_auto_install $(MAX_PARALLEL) --destdir=$(CURDIR)/debian/tmp
 	# .desktop to unix line endings
 	sed -i 's/\r//g' debian/tmp/usr/share/applications/*.desktop
 	# remove *.la files
