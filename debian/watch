@@ -7,5 +7,5 @@ repack,compression=xz,\
 pgpsigurlmangle=s{$}{.asc},\
 dversionmangle=s{\+dfsg\d*}{},\
 uversionmangle=s{\.?\-rc}{~rc},\
-" http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
+" https://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
   /mysql-workbench-community-([\d\.]+)(?:\-rc\d*)?(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
