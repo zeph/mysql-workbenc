@@ -1,3 +1,8 @@
+Last-Update: 2018-07-01
+Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: Un-hardcode ANTLR JAR name.
+
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -48,20 +48,23 @@
