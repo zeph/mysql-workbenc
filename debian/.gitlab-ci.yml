@@ -10,6 +10,12 @@ variables:
   AUTOCLEANAPTCACHE: "yes"
   USE_PDEBUILD_INTERNAL: "yes"
 
+.origtargz:
+  script: &origtargz |
+    ${ORIGTAR_CMD}
+#    rm -rf .git
+#    debian/unpack-components.sh
+
 .pre_build:
   script: &pre_build |
     uname -a
@@ -22,14 +28,15 @@ stages:
   - check
   - build
 
-yamllint:
+dpkg-control:
   stage: check
   tags:
-    - yamllint
+    - cme
   dependencies: []
   allow_failure: false
-  script: |
-    yamllint -c debian/.yamllint debian/.*.yml
+  script:
+    - wrap-and-sort --keep-first --trailing-comma # terrible way to fix "Cannot parse: ''" in "cme check dpkg-control".
+    - cme check dpkg-control
 
 dpkg-copyright:
   stage: check
@@ -40,17 +47,30 @@ dpkg-copyright:
   script: |
     cme check dpkg-copyright
 
-dpkg-control:
+yamllint:
   stage: check
   tags:
-    - cme
+    - yamllint
   dependencies: []
-  allow_failure: true
-  script:
-    - wrap-and-sort --keep-first --trailing-comma # terrible way to fix "Cannot parse: ''" in "cme check dpkg-control".
-    - cme check dpkg-control
+  allow_failure: false
+  script: |
+    yamllint -c debian/.yamllint debian/.*.yml
 
 ## Build
+
+unstable-binary-indep:
+  stage: build
+  tags:
+    - pbuilder
+    - amd64
+  dependencies: []
+## https://bugs.debian.org/867822
+  allow_failure: false
+  before_script:
+    - *pre_build
+  script:
+    - *origtargz
+    - pdebuild --debbuildopts "-A" --use-pdebuild-internal --buildresult "${PB_RESULT}" --architecture all -- --binary-indep --basetgz /var/cache/pbuilder/unstable-amd64.tgz
 
 testing_unstable-amd64:
   stage: build
@@ -62,7 +82,7 @@ testing_unstable-amd64:
   before_script:
     - *pre_build
   script:
-    - ${ORIGTAR_CMD}
+    - *origtargz
     - ${PDEBUILD_CMD} --architecture amd64 -- --basetgz /var/cache/pbuilder/testing_unstable-amd64.tgz
     - ${LINTIAN_CMD}
 
@@ -76,7 +96,7 @@ unstable-i386:
   before_script:
     - *pre_build
   script:
-    - ${ORIGTAR_CMD}
+    - *origtargz
     - ${PDEBUILD_CMD} --architecture i386 -- --basetgz /var/cache/pbuilder/unstable-i386.tgz
 
 unstable-amd64:
@@ -89,7 +109,7 @@ unstable-amd64:
   before_script:
     - *pre_build
   script:
-    - ${ORIGTAR_CMD}
+    - *origtargz
     - ${PDEBUILD_CMD} --architecture amd64 -- --basetgz /var/cache/pbuilder/unstable-amd64.tgz
     - ${LINTIAN_CMD}
 
@@ -103,6 +123,6 @@ unstable-amd64_twice:
   before_script:
     - *pre_build
   script:
-    - ${ORIGTAR_CMD}
+    - *origtargz
     - ${PDEBUILD_CMD} --architecture amd64 -- --twice --basetgz /var/cache/pbuilder/unstable-amd64.tgz
     - ${LINTIAN_CMD}
