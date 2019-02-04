@@ -78,7 +78,7 @@ Description: fixes FTBFS on 32bit architectures.
        case VArray:
 --- a/library/forms/jsonview.cpp
 +++ b/library/forms/jsonview.cpp
-@@ -663,10 +663,12 @@
+@@ -666,10 +666,12 @@
    bool setData = false;
    if (data != nullptr) {
      std::stringstream buffer;
@@ -91,7 +91,7 @@ Description: fixes FTBFS on 32bit architectures.
      auto &storedValue = data->getData();
      switch (storedValue.getType()) {
        case VDouble:
-@@ -676,8 +678,9 @@
+@@ -679,8 +681,9 @@
          buffer >> number;
          storedValue = number;
          setData = true;
@@ -101,7 +101,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::is_number(value))
            break;
          buffer << value;
-@@ -692,8 +695,9 @@
+@@ -695,8 +698,9 @@
          buffer >> number3;
          storedValue = number3;
          setData = true;
@@ -111,7 +111,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::isBool(value))
            break;
          buffer << value;
-@@ -1085,16 +1089,18 @@
+@@ -1088,16 +1092,18 @@
      case VDouble:
        node->set_string(1, std::to_string((double)value));
        node->set_string(2, "Double");
@@ -130,7 +130,7 @@ Description: fixes FTBFS on 32bit architectures.
        break;
    }
    node->set_data(new JsonTreeBaseView::JsonValueNodeData(value));
-@@ -1334,10 +1340,12 @@
+@@ -1337,10 +1343,12 @@
    JsonParser::JsonValue &storedValue = (!key.empty() ? ((JsonObject &)data->getData())[key] : data->getData());
    if (data != NULL) {
      std::stringstream buffer;
@@ -143,7 +143,7 @@ Description: fixes FTBFS on 32bit architectures.
      switch (storedValue.getType()) {
        case VDouble:
          if (!base::is_number(value))
-@@ -1347,8 +1355,9 @@
+@@ -1350,8 +1358,9 @@
          storedValue = number;
          node->set_float(column, number);
          _dataChanged(false);
@@ -153,7 +153,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::is_number(value))
            break;
          buffer << value;
-@@ -1365,8 +1374,9 @@
+@@ -1368,8 +1377,9 @@
          storedValue = number3;
          node->set_float(column, (double)number3);
          _dataChanged(false);
@@ -163,7 +163,7 @@ Description: fixes FTBFS on 32bit architectures.
          if (!base::isBool(value))
            break;
          buffer << value;
-@@ -1624,14 +1634,16 @@
+@@ -1627,14 +1637,16 @@
    switch (value.getType()) {
      case VDouble:
        node->set_float(columnId, (double)value);
