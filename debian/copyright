@@ -5,16 +5,12 @@ Source: https://www.mysql.com/downloads/workbench/
 Copyright: 2000, 2004-2005, 2007-2015 Oracle and/or its affiliates.
 License: GPL-2
 Files-Excluded:
-    ext/antlr-runtime/src/antlr3convertutf.c
     build/msi
     build/res
     build/zip
     ext/Aga.Controls
-  ~~ext/antlr-runtime
-    ext/antlr-runtime/src/antlr3convertutf.c
     ext/scintilla/.hgtags
     ext/scintilla/cocoa
-    ext/scintilla/win32
     frontend/mac
     library/base.windows
     library/base.wr/resource.h
