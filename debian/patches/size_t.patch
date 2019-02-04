@@ -37,11 +37,11 @@ Description: Use correct format specifier for size_t
 -    logDebug2("SSH readWriteTimeout: %lu\n", readWriteTimeout);
 -    logDebug2("SSH commandTimeout: %lu\n", commandTimeout);
 -    logDebug2("SSH commandRetryCount: %lu\n", commandRetryCount);
-+    logDebug2("SSH bufferSize: %lz\n", bufferSize);
-+    logDebug2("SSH connectTimeout: %lz\n", connectTimeout);
-+    logDebug2("SSH readWriteTimeout: %lz\n", readWriteTimeout);
-+    logDebug2("SSH commandTimeout: %lz\n", commandTimeout);
-+    logDebug2("SSH commandRetryCount: %lz\n", commandRetryCount);
++    logDebug2("SSH bufferSize: %zu\n", bufferSize);
++    logDebug2("SSH connectTimeout: %zu\n", connectTimeout);
++    logDebug2("SSH readWriteTimeout: %zu\n", readWriteTimeout);
++    logDebug2("SSH commandTimeout: %zu\n", commandTimeout);
++    logDebug2("SSH commandRetryCount: %zu\n", commandRetryCount);
      logDebug2("SSH optionsDir: %s\n", optionsDir.c_str());
      logDebug2("SSH known hosts file: %s\n", knownHostsFile.c_str());
      logDebug2("SSH local host: %s\n", localhost.c_str());
@@ -50,7 +50,7 @@ Description: Use correct format specifier for size_t
      logDebug2("SSH remote port: %d\n", remoteport);
      logDebug2("SSH remote ssh host: %s\n", remoteSSHhost.c_str());
 -    logDebug2("SSH remote ssh port: %lu\n", remoteSSHport);
-+    logDebug2("SSH remote ssh port: %lz\n", remoteSSHport);
++    logDebug2("SSH remote ssh port: %zu\n", remoteSSHport);
      logDebug2("SSH strict host key check: %s\n", strictHostKeyCheck ? "yes" : "no");
    }
  
