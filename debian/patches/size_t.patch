@@ -1,0 +1,57 @@
+Last-Update: 2019-02-05
+Forwarded: no
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: Use correct format specifier for size_t
+
+%zu instead of %lu, otherwise on 32 bit:
+~~~~
+ library/ssh/SSHCommon.cpp:171:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'ssize_t' {aka 'int'} [-Werror=format=]
+     logDebug2("SSH bufferSize: %lu\n", bufferSize);
+               ^~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~
+ library/ssh/SSHCommon.cpp:172:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug2("SSH connectTimeout: %lu\n", connectTimeout);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~
+ library/ssh/SSHCommon.cpp:173:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug2("SSH readWriteTimeout: %lu\n", readWriteTimeout);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~
+ library/ssh/SSHCommon.cpp:174:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug2("SSH commandTimeout: %lu\n", commandTimeout);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~
+ library/ssh/SSHCommon.cpp:175:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug2("SSH commandRetryCount: %lu\n", commandRetryCount);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~
+ library/ssh/SSHCommon.cpp:183:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug2("SSH remote ssh port: %lu\n", remoteSSHport);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~
+~~~~
+
+--- a/library/ssh/SSHCommon.cpp
++++ b/library/ssh/SSHCommon.cpp
+@@ -167,21 +167,21 @@
+   }
+ 
+   void SSHConnectionConfig::dumpConfig() const {
+     logDebug2("SSH Connection config info:\n");
+-    logDebug2("SSH bufferSize: %lu\n", bufferSize);
+-    logDebug2("SSH connectTimeout: %lu\n", connectTimeout);
+-    logDebug2("SSH readWriteTimeout: %lu\n", readWriteTimeout);
+-    logDebug2("SSH commandTimeout: %lu\n", commandTimeout);
+-    logDebug2("SSH commandRetryCount: %lu\n", commandRetryCount);
++    logDebug2("SSH bufferSize: %lz\n", bufferSize);
++    logDebug2("SSH connectTimeout: %lz\n", connectTimeout);
++    logDebug2("SSH readWriteTimeout: %lz\n", readWriteTimeout);
++    logDebug2("SSH commandTimeout: %lz\n", commandTimeout);
++    logDebug2("SSH commandRetryCount: %lz\n", commandRetryCount);
+     logDebug2("SSH optionsDir: %s\n", optionsDir.c_str());
+     logDebug2("SSH known hosts file: %s\n", knownHostsFile.c_str());
+     logDebug2("SSH local host: %s\n", localhost.c_str());
+     logDebug2("SSH local port: %d\n", localport);
+     logDebug2("SSH remote host: %s\n", remotehost.c_str());
+     logDebug2("SSH remote port: %d\n", remoteport);
+     logDebug2("SSH remote ssh host: %s\n", remoteSSHhost.c_str());
+-    logDebug2("SSH remote ssh port: %lu\n", remoteSSHport);
++    logDebug2("SSH remote ssh port: %lz\n", remoteSSHport);
+     logDebug2("SSH strict host key check: %s\n", strictHostKeyCheck ? "yes" : "no");
+   }
+ 
+   bool operator==(const SSHConnectionConfig &tun1, const SSHConnectionConfig &tun2) {
