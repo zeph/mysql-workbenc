@@ -35,6 +35,10 @@ Description: Use correct format specifier for size_t
  library/ssh/SSHSession.cpp:482:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
      logDebug3("Bytes read: %lu\n", bytesRead);
                ^~~~~~~~~~~~~~~~~~~  ~~~~~~~~~
+
+ backend/wbprivate/sqlide/wb_sql_editor_form.cpp:1880:17: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'unsigned int' [-Werror=format=]
+       logDebug3("Executing statement range: %lu, %lu...\n", statement_range.first, statement_range.second);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~
 ~~~~
 
 --- a/library/ssh/SSHCommon.cpp
@@ -102,3 +106,16 @@ Description: Use correct format specifier for size_t
    }
  
    void SSHSession::reconnect() {
+--- a/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
++++ b/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
+@@ -1876,9 +1876,9 @@
+     ssize_t total_result_count = (editor != nullptr) ? editor->resultset_count() : 0; // Consider pinned result sets.
+ 
+     bool results_left = false;
+     for (auto &statement_range : statement_ranges) {
+-      logDebug3("Executing statement range: %lu, %lu...\n", statement_range.first, statement_range.second);
++      logDebug3("Executing statement range: %zu, %zu...\n", statement_range.first, statement_range.second);
+ 
+       statement = sql->substr(statement_range.first, statement_range.second);
+       std::list<std::string> sub_statements;
+       sql_facade->splitSqlScript(statement, sub_statements);
