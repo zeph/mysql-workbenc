@@ -23,6 +23,18 @@ Description: Use correct format specifier for size_t
  library/ssh/SSHCommon.cpp:183:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
      logDebug2("SSH remote ssh port: %lu\n", remoteSSHport);
                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~
+
+ library/ssh/SSHSession.cpp:150:16: error: format '%lu' expects argument of type 'long unsigned int', but argument 5 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+       logError("Unable to connect: %s:%lu\nError was: %s\n", config.remoteSSHhost.c_str(), config.remoteSSHport,
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                ~~~~~~~~~~~~~~~~~~~~
+ library/ssh/SSHSession.cpp: In member function 'std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> ssh::SSHSession::execCmd(std::__cxx11::string, std::size_t)':
+ library/ssh/SSHSession.cpp:363:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug3("Bytes read: %lu\n", bytesRead);
+               ^~~~~~~~~~~~~~~~~~~  ~~~~~~~~~
+ library/ssh/SSHSession.cpp: In member function 'std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int> ssh::SSHSession::execCmdSudo(std::__cxx11::string, std::__cxx11::string, std::__cxx11::string, std::size_t)':
+ library/ssh/SSHSession.cpp:482:15: error: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'std::size_t' {aka 'unsigned int'} [-Werror=format=]
+     logDebug3("Bytes read: %lu\n", bytesRead);
+               ^~~~~~~~~~~~~~~~~~~  ~~~~~~~~~
 ~~~~
 
 --- a/library/ssh/SSHCommon.cpp
@@ -55,3 +67,38 @@ Description: Use correct format specifier for size_t
    }
  
    bool operator==(const SSHConnectionConfig &tun1, const SSHConnectionConfig &tun2) {
+--- a/library/ssh/SSHSession.cpp
++++ b/library/ssh/SSHSession.cpp
+@@ -146,9 +146,9 @@
+ 
+     try {
+       _session->connect();
+     } catch (ssh::SshException &exc) {
+-      logError("Unable to connect: %s:%lu\nError was: %s\n", config.remoteSSHhost.c_str(), config.remoteSSHport,
++      logError("Unable to connect: %s:%zu\nError was: %s\n", config.remoteSSHhost.c_str(), config.remoteSSHport,
+                exc.getError().c_str());
+       return std::make_tuple(SSHReturnType::CONNECTION_FAILURE, exc.getError());
+     }
+ 
+@@ -359,9 +359,9 @@
+         throw SSHTunnelException("Too much data to read, limit is: " + std::to_string(logSize) + ". You can change the limit in the Workbench Preferences.");
+       }
+     } while (true);
+ 
+-    logDebug3("Bytes read: %lu\n", bytesRead);
++    logDebug3("Bytes read: %zu\n", bytesRead);
+     return std::make_tuple(so.str(), retError, channel->getExitStatus());
+   }
+ 
+   /**
+@@ -478,9 +478,9 @@
+         throw SSHTunnelException("Too much data to read, limit is: " + std::to_string(logSize) + ". You can change the limit in the Workbench Preferences.");
+       }
+     } while (true);
+ 
+-    logDebug3("Bytes read: %lu\n", bytesRead);
++    logDebug3("Bytes read: %zu\n", bytesRead);
+     return std::make_tuple(so.str(), retError, channel->getExitStatus());
+   }
+ 
+   void SSHSession::reconnect() {
