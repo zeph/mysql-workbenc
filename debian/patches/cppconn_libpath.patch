@@ -1,0 +1,18 @@
+Last-Update: 2019-08-02
+Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix FTBFS; mysql-connector-c++ v8 moved header(s) to "jdbc".
+
+--- a/build/cmake/Modules/FindMySQLCppConn.cmake
++++ b/build/cmake/Modules/FindMySQLCppConn.cmake
+@@ -26,9 +26,9 @@
+   # Already in cache, be silent
+   set(MySQLCppConn_FIND_QUIETLY TRUE)
+ endif ()
+ 
+-find_path(MySQLCppConn_INCLUDE_DIR NAMES mysql_connection.h PATHS /usr/include /usr/local/include)
++find_path(MySQLCppConn_INCLUDE_DIR NAMES mysql_connection.h PATHS /usr/include /usr/include/jdbc /usr/local/include)
+ 
+ SET(MySQLCppConn_NAMES mysqlcppconn)
+ 
+ if(MySQLCppConn_LIBRARIES)

@@ -1,4 +1,4 @@
-mysql-workbench (8.0.15+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (8.0.17+dfsg-1) UNRELEASED; urgency=medium
 
   [ Dmitry Smirnov ]
   * New upstream release.
@@ -10,6 +10,7 @@ mysql-workbench (8.0.15+dfsg-1) UNRELEASED; urgency=medium
     + "Alter table crashes Workbench" (Closes: #871775).
   * New patch to fix FTBFS on x86_32.
   * Standards-Version: 4.4.0.
+  * debhelper & compat to version 12
   * Build-Depends:
     - libgnome-keyring-dev
     + libsecret-1-dev

@@ -13,6 +13,8 @@ include /usr/share/dpkg/pkg-info.mk
 export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
 export DEB_CPPFLAGS_MAINT_APPEND= -std=c++11 -Wno-error=deprecated-declarations
+# -std=c++11
+# -Wno-deprecated-copy
 
 export ANTLR_JAR_PATH=/usr/share/java/antlr4.jar
 
@@ -69,7 +71,7 @@ override_dh_makeshlibs:
 
 # help `dh_shlibdeps` to find local libraries: 'dpkg-shlibdeps: error: couldn't find library'
 override_dh_shlibdeps:
-	LD_LIBRARY_PATH="debian/$(DEB_SOURCE)/usr/lib/$(DEB_SOURCE):$(LD_LIBRARY_PATH)" dh_shlibdeps
+	dh_shlibdeps -l /usr/lib/$(DEB_SOURCE):/usr/lib/$(DEB_SOURCE)/plugins:$(LD_LIBRARY_PATH)
 
 ## semi-automated manpage generation (to invoke manually)
 MAN_NAME=mysql-workbench \\- MySQL Database Design, Administration and Development Tool

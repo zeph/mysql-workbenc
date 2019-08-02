@@ -108,7 +108,7 @@ Description: Use correct format specifier for size_t
    void SSHSession::reconnect() {
 --- a/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
 +++ b/backend/wbprivate/sqlide/wb_sql_editor_form.cpp
-@@ -1876,9 +1876,9 @@
+@@ -1873,9 +1873,9 @@
      ssize_t total_result_count = (editor != nullptr) ? editor->resultset_count() : 0; // Consider pinned result sets.
  
      bool results_left = false;

@@ -6,13 +6,13 @@ Description: set relative RPATH for `wbcopytables` executable.
 
 --- a/plugins/migration/CMakeLists.txt
 +++ b/plugins/migration/CMakeLists.txt
-@@ -66,8 +66,9 @@
-   else()
-     target_compile_options(wbcopytables PUBLIC -fPIE -pie)
-   endif()
- 
-+   set_target_properties(wbcopytables PROPERTIES INSTALL_RPATH "$ORIGIN")
-    target_link_libraries(wbcopytables wbbase ${MySQL_LIBRARIES} ${ODBC_LIBRARIES} ${PCRE_LIBRARIES} ${PYTHON_LIBRARIES})
-    if(BUILD_FOR_TESTS)
-     target_link_libraries(wbcopytables gcov)
+@@ -87,8 +87,9 @@
+       ${LIBZIP_LIBRARIES}
+   )
+    
+    if(BUILD_FOR_GCOV)
++    set_target_properties(wbcopytables PROPERTIES INSTALL_RPATH "$ORIGIN")
+     target_link_libraries(wbcopytables PRIVATE gcov)
     endif()
+    if(COMMAND cotire)
+        set_target_properties(wbcopytables PROPERTIES

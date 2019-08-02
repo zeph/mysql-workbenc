@@ -1,0 +1,18 @@
+Last-Update: 2019-08-02
+Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix FTBFS due to unsupported option.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -206,9 +206,9 @@
+ endif()
+ 
+ 
+ 
+-set(WB_CXXFLAGS -Werror -Wall -Wextra -Wno-unused-parameter -Wno-deprecated -Wno-deprecated-copy)
++set(WB_CXXFLAGS -Werror -Wall -Wextra -Wno-unused-parameter -Wno-deprecated)
+ set(WB_CFLAGS -Werror -Wall -Wextra -Wno-unused-parameter -Wno-deprecated -Wno-deprecated-copy)
+ 
+ if(BUILD_FOR_GCOV)
+     message ("Enable GCOV due to BUILD_FOR_GCOV")

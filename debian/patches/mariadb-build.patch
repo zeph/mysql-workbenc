@@ -23,7 +23,7 @@ Description: fix FTBFS with MariaDB.
      bind.error = (WB_BOOL *)malloc(sizeof(WB_BOOL));
      if (!bind.error)
        throw std::runtime_error("Could not allocate memory for row buffer");
-@@ -2263,8 +2259,11 @@
+@@ -2266,8 +2262,11 @@
          ret_val = _bulk_insert_record.append_escaped((char *)(*_row_buffer)[col_index].buffer,
                                                       *(*_row_buffer)[col_index].length);
          _bulk_insert_record.append("')");
@@ -35,7 +35,7 @@ Description: fix FTBFS with MariaDB.
    }
  
    return ret_val;
-@@ -2650,16 +2649,9 @@
+@@ -2653,16 +2652,9 @@
    unsigned long ret_length = 0;
  
  

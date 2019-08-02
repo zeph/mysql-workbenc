@@ -1,10 +1,13 @@
 #antlr.patch
 build-i386-json.patch
 cmake_antlr-jar-filename.patch
+cppconn_libpath.patch
+flags.patch
 mariadb-build.patch
 mariadb-version.patch
 projloc.patch
 pythonlibs.patch
 size_t.patch
 specify-char-signedness.patch
-wbcopytables-rpath.patch
+un-mysql.patch
+#~wbcopytables-rpath.patch

@@ -5,14 +5,14 @@ Description: fix FTBFS with MariaDB.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -104,9 +104,9 @@
- 
- FIND_PROGRAM(PYTHON_EXEC "python2")
+@@ -70,9 +70,9 @@
+ # We need to be able to detect python module versions and packages hence this function
+ find_program(PYTHON_EXEC "python2")
  include(FindPackageHandleStandardArgs)
  
 -find_package(MySQL 5.6.0 REQUIRED)
 +find_package(MySQL REQUIRED)
- if (UNIX)
- 	set(MYSQL_DEFINITIONS "-DBIG_JOINS=1"  "-fno-strict-aliasing")
- endif()
- 
+ find_package(LibXml2 REQUIRED)
+ #set(OpenGL_GL_PREFERENCE "LEGACY")
+ find_package(OpenGL REQUIRED)
+ find_package(MySQLCppConn 1.1.8 REQUIRED)

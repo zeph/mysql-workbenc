@@ -5,18 +5,13 @@ Description: Un-hardcode ANTLR JAR name.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -48,20 +48,23 @@
- find_package(Java QUIET)
- find_package(X11)
+@@ -135,19 +135,12 @@
+ check_function_exists (strtoull HAVE_STRTOULL)
+ check_function_exists (strtoimax HAVE_STRTOIMAX)
+ check_function_exists (strtoumax HAVE_STRTOUMAX)
  
- 
--
 -set(ANTLR_JAR_FILENAME "antlr-4.7.1-complete.jar")
 +set(ANTLR_JAR_PATH $ENV{ANTLR_JAR_PATH})
-+#set(ANTLR_JAR_FILENAME $ENV{ANTLR_JAR_PATH})
-+#if(NOT ANTLR_JAR_FILENAME)
-+#set(ANTLR_JAR_FILENAME "antlr-4.7.1-complete.jar")
-+#endif()
  get_filename_component(SOURCE_PARENT_DIR ${CMAKE_SOURCE_DIR} DIRECTORY)
  set(LINUX_RES_BIN_DIR ${SOURCE_PARENT_DIR}/linux-res/bin)
 -if(WITH_ANTLR_JAR)
@@ -25,15 +20,8 @@ Description: Un-hardcode ANTLR JAR name.
 -else(WITH_ANTLR_JAR)
 -  find_path(ANTLR_JAR_PATH ${ANTLR_JAR_FILENAME} ${LINUX_RES_BIN_DIR})
 -endif(WITH_ANTLR_JAR)
-+#if(WITH_ANTLR_JAR)
-+#  get_filename_component(ANTLR_JAR_USER_DIR ${WITH_ANTLR_JAR} DIRECTORY)
-+#  find_path(ANTLR_JAR_PATH ${ANTLR_JAR_FILENAME} ${LINUX_RES_BIN_DIR} ${ANTLR_JAR_USER_DIR})
-+#else(WITH_ANTLR_JAR)
-+#  find_path(ANTLR_JAR_PATH ${ANTLR_JAR_FILENAME} ${LINUX_RES_BIN_DIR})
-+#endif(WITH_ANTLR_JAR)
  if(ANTLR_JAR_PATH AND Java_JAVA_EXECUTABLE) 
 -  set(ANTLR_JAR_PATH ${ANTLR_JAR_PATH}/${ANTLR_JAR_FILENAME})
-+#  set(ANTLR_JAR_PATH ${ANTLR_JAR_PATH}/${ANTLR_JAR_FILENAME})
    message(STATUS "ANTLR jar: " ${ANTLR_JAR_PATH})
  else()
    message(WARNING ${ANTLR_JAR_FILENAME} " or java runtime wasn't found which is required if you'd like to rebuild Lexer and Parser files")

@@ -5,10 +5,10 @@ Description: look for libpython2.7 (fixes FTBFS in presence of python3).
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -92,8 +92,11 @@
- include(${SWIG_USE_FILE})
- 
- find_package(ANTLR4 REQUIRED)
+@@ -59,8 +59,11 @@
+ if (USE_BUNDLED_MYSQLDUMP)
+   set(USE_BUNDLED_MYSQLDUMP -DHAVE_BUNDLED_MYSQLDUMP=1)
+ endif ()
  
 +set(Python_ADDITIONAL_VERSIONS "2.7")
 +#include(FindPythonLibs)
