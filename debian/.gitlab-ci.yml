@@ -13,7 +13,7 @@ variables:
 .origtargz:
   script: &origtargz |
     ${ORIGTAR_CMD}
-#    rm -rf .git
+    rm -rf .git
 #    debian/unpack-components.sh
 
 .pre_build:
@@ -125,4 +125,17 @@ unstable-amd64_twice:
   script:
     - *origtargz
     - ${PDEBUILD_CMD} --architecture amd64 -- --twice --basetgz /var/cache/pbuilder/unstable-amd64.tgz
-    - ${LINTIAN_CMD}
+
+buster-amd64:
+  stage: build
+  tags:
+    - pbuilder
+    - amd64
+  dependencies: []
+  allow_failure: false
+  before_script:
+    - *pre_build
+  script:
+    - *origtargz
+    - ${PDEBUILD_CMD} --architecture amd64 -- --basetgz /var/cache/pbuilder/buster-amd64.tgz
+
