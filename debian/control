@@ -1,7 +1,7 @@
 Source: mysql-workbench
 Section: database
 Priority: optional
-Standards-Version: 4.3.0
+Standards-Version: 4.4.0
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
 Build-Depends: debhelper (>= 12~) ,dh-python

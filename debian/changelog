@@ -9,7 +9,7 @@ mysql-workbench (8.0.15+dfsg-1) UNRELEASED; urgency=medium
       Thanks, Andrius Merkys.
     + "Alter table crashes Workbench" (Closes: #871775).
   * New patch to fix FTBFS on x86_32.
-  * Standards-Version: 4.3.0.
+  * Standards-Version: 4.4.0.
   * Build-Depends:
     - libgnome-keyring-dev
     + libsecret-1-dev
