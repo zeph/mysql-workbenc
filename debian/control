@@ -4,7 +4,7 @@ Priority: optional
 Standards-Version: 4.3.0
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 11~) ,dh-python
+Build-Depends: debhelper (>= 12~) ,dh-python
     ,g++-8
  ,cmake ,perl
  ,autoconf ,automake ,libtool
