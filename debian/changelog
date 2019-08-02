@@ -1,8 +1,5 @@
 mysql-workbench (8.0.15+dfsg-1) UNRELEASED; urgency=medium
 
-  FIXME:
-    + "Unsupported option provided to mysql_options()" (##917083).
-
   [ Dmitry Smirnov ]
   * New upstream release.
   * Fixed:
