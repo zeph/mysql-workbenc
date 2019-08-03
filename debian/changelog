@@ -1,13 +1,14 @@
-mysql-workbench (8.0.17+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (8.0.17+dfsg-1) unstable; urgency=medium
 
   [ Dmitry Smirnov ]
   * New upstream release.
   * Fixed:
     + CVE-2018-2598 (Closes: #904112).
     + gnome-keyring --> libsecret (Closes: #867943, #769393).
-    + FTBFS (Closes: #910052).
+    + FTBFS (Closes: #910052, #914761).
       Thanks, Andrius Merkys.
     + "Alter table crashes Workbench" (Closes: #871775).
+    + "Cannot satisfy the gdal-abi-2-3-0 dependency" (Closes: #923729).
   * New patch to fix FTBFS on x86_32.
   * Standards-Version: 4.4.0.
   * debhelper & compat to version 12
@@ -34,7 +35,7 @@ mysql-workbench (8.0.17+dfsg-1) UNRELEASED; urgency=medium
   * Removing unused lintian override d/mysql-workbench-data.lintian-overrides.
   * Adding d/s/lintian-overrides to ignore 'duplicate word' warning.
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 04 Feb 2019 23:25:21 +1100
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 03 Aug 2019 13:22:16 +1000
 
 mysql-workbench (6.3.10+dfsg-3) unstable; urgency=medium
 
