@@ -13,8 +13,8 @@ include /usr/share/dpkg/pkg-info.mk
 export DEB_LDFLAGS_MAINT_APPEND= -Wl,--as-needed
 
 export DEB_CPPFLAGS_MAINT_APPEND= -std=c++11 -Wno-error=deprecated-declarations
+# -Wno-error=deprecated-copy -Wno-error=format-overflow=
 # -std=c++11
-# -Wno-deprecated-copy
 
 export ANTLR_JAR_PATH=/usr/share/java/antlr4.jar
 
