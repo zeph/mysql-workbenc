@@ -1,3 +1,10 @@
+mysql-workbench (8.0.17+dfsg-2) unstable; urgency=medium
+
+  * Removed "-Werror" flag to avoid FTBFS on GCC updates (Closes: #939891).
+    Thanks, Bas Couwenberg.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 01 Oct 2019 11:14:02 +1000
+
 mysql-workbench (8.0.17+dfsg-1) unstable; urgency=medium
 
   [ Dmitry Smirnov ]
