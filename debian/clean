@@ -1,6 +1,5 @@
 ## Debian CI:
 debian/.gitlab-ci.yml
-debian/.yamllint
 
 CMakeCache.txt
 ext/antlr-runtime/aclocal.m4
