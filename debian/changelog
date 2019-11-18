@@ -1,3 +1,11 @@
+mysql-workbench (8.0.18+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.4.1.
+  * Build-Depends += "rapidjson-dev".
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 18 Nov 2019 12:00:15 +1100
+
 mysql-workbench (8.0.17+dfsg-2) unstable; urgency=medium
 
   * Removed "-Werror" flag to avoid FTBFS on GCC updates (Closes: #939891).

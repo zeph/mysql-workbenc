@@ -40,6 +40,7 @@ Build-Depends: debhelper (>= 12~) ,dh-python
  ,libzip-dev
  ,python-dev
  ,python-paramiko
+ ,rapidjson-dev
  ,unixodbc-dev
  ,uuid-dev
  ,xdg-utils
