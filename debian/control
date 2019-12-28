@@ -15,7 +15,6 @@ Build-Depends: debhelper (>= 12~) ,dh-python
  ,libantlr4-runtime-dev
  ,libboost-dev
  ,libcairo2-dev
- ,libctemplate-dev
  ,libfreetype6-dev
  ,libgdal-dev
  ,libgl1-mesa-dev
