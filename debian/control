@@ -4,7 +4,7 @@ Priority: optional
 Standards-Version: 4.4.1
 Maintainer: Dmitry Smirnov <onlyjob@debian.org>
 Uploaders: Mateusz Kijowski <mateusz.kijowski@gmail.com>
-Build-Depends: debhelper (>= 12~) ,dh-python
+Build-Depends: debhelper-compat (= 12) ,dh-python
     ,g++-8
  ,cmake ,perl
  ,autoconf ,automake ,libtool
