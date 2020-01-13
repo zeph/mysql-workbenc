@@ -3,6 +3,8 @@ mysql-workbench (8.0.19+dfsg-1) unstable; urgency=medium
   * New upstream release.
   * Build-Depends += "libproj-dev".
   * Re-named: "debian/TODO.Debian" --> "debian/TODO".
+  * Removed "libctemplate-dev" from Build-Depends (Closes: #947602).
+    Thanks, Pino Toscano.
 
  -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 13 Jan 2020 13:37:10 +1100
 
