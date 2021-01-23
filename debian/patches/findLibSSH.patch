@@ -1,0 +1,18 @@
+Last-Update: 2021-01-23
+Forwarded: no
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: assist with finding libssh-dev >= 0.9.5
+
+--- a/build/cmake/Modules/FindLibSSH.cmake
++++ b/build/cmake/Modules/FindLibSSH.cmake
+@@ -50,9 +50,9 @@
+ else()
+   find_library(LibSSH_LIBRARY NAMES ${LibSSH_NAMES})
+ endif()
+ 
+-set(LibSSH_HEADER_FILE ${LibSSH_INCLUDE_DIR}/libssh/libssh.h)
++set(LibSSH_HEADER_FILE ${LibSSH_INCLUDE_DIR}/libssh/libssh_version.h)
+ file(STRINGS ${LibSSH_HEADER_FILE} LibSSH_VERSION_LINE_MAJOR REGEX "#define LIBSSH_VERSION_MAJOR[ ]+[0-9]+")
+ if (LibSSH_VERSION_LINE_MAJOR)
+   file(STRINGS ${LibSSH_HEADER_FILE} LibSSH_VERSION_LINE_MINOR REGEX "#define LIBSSH_VERSION_MINOR[ ]+[0-9]+")
+   file(STRINGS ${LibSSH_HEADER_FILE} LibSSH_VERSION_LINE_MICRO REGEX "#define LIBSSH_VERSION_MICRO[ ]+[0-9]+")

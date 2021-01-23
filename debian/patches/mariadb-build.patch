@@ -9,7 +9,7 @@ Description: fix FTBFS with MariaDB.
 
 --- a/plugins/migration/copytable/copytable.cpp
 +++ b/plugins/migration/copytable/copytable.cpp
-@@ -323,13 +323,9 @@
+@@ -338,13 +338,9 @@
          throw std::logic_error(
            base::strfmt("Unhandled MySQL type %i for column '%s'", col->target_type, col->target_name.c_str()));
      }
@@ -23,7 +23,7 @@ Description: fix FTBFS with MariaDB.
      bind.error = (WB_BOOL *)malloc(sizeof(WB_BOOL));
      if (!bind.error)
        throw std::runtime_error("Could not allocate memory for row buffer");
-@@ -2269,8 +2265,11 @@
+@@ -2289,8 +2285,11 @@
          ret_val = _bulk_insert_record.append_escaped((char *)(*_row_buffer)[col_index].buffer,
                                                       *(*_row_buffer)[col_index].length);
          _bulk_insert_record.append("')");
@@ -31,11 +31,11 @@ Description: fix FTBFS with MariaDB.
 +      case MAX_NO_FIELD_TYPES:
 +        // should not ever occur as is used only to mark the end of enum
 +        break;
-     }
-   }
- 
-   return ret_val;
-@@ -2656,16 +2655,9 @@
+ #if MYSQL_VERSION_ID > 80021
+       case MYSQL_TYPE_INVALID:
+         // TODO: added to fix the build. Need to check how to handle this.
+         break;
+@@ -2685,16 +2684,9 @@
    unsigned long ret_length = 0;
  
  

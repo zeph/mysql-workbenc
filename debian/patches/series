@@ -1,10 +1,11 @@
 #antlr.patch
+findLibSSH.patch
 cmake_antlr-jar-filename.patch
 cppconn_libpath.patch
 mariadb-build.patch
 mariadb-version.patch
 projloc.patch
-pythonlibs.patch
+#pythonlibs.patch
 size_t.patch
 specify-char-signedness.patch
 un-mysql.patch

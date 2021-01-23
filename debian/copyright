@@ -10,8 +10,8 @@ Files-Excluded:
     build/res
     build/zip
     ext/Aga.Controls
-    ext/scintilla/.hgtags
-    ext/scintilla/cocoa
+    ext/scintilla*/.hgtags
+    ext/scintilla*/cocoa
     frontend/mac
     library/base.windows
     library/base.wr/resource.h
@@ -29,7 +29,7 @@ Files-Excluded:
     */*/windows
 
 Files: *
-Copyright: 2000, 2004-2005, 2007-2019 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2021 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -144,7 +144,7 @@ Comment:
  Bison output files to be licensed under the GNU General Public
  License without this special exception.
 
-Files: ext/scintilla/*
+Files: ext/scintilla*/*
 Copyright: 1998-2014 Neil Hodgson <neilh@scintilla.org>
            1998-2001 Neil Hodgson <neilh@hare.net.au>
            2003-2005 Angelo Mandato <angelo@spaceblue.com>
@@ -199,17 +199,17 @@ License: Scintilla
  OR PERFORMANCE OF THIS SOFTWARE.
 
 Files:
- ext/scintilla/lexlib/StyleContext.cxx
- ext/scintilla/lexlib/StyleContext.h
- ext/scintilla/scripts/Face.py
- ext/scintilla/scripts/FileGenerator.py
- ext/scintilla/scripts/LexGen.py
- ext/scintilla/scripts/ScintillaData.py
- ext/scintilla/src/RESearch.h
- ext/scintilla/test/examples/perl-test-5220delta.pl
- ext/scintilla/test/examples/perl-test-5220delta.pl.styled
- ext/scintilla/test/examples/perl-test-sub-prototypes.pl
- ext/scintilla/test/examples/perl-test-sub-prototypes.pl.styled
+ ext/scintilla*/lexlib/StyleContext.cxx
+ ext/scintilla*/lexlib/StyleContext.h
+ ext/scintilla*/scripts/Face.py
+ ext/scintilla*/scripts/FileGenerator.py
+ ext/scintilla*/scripts/LexGen.py
+ ext/scintilla*/scripts/ScintillaData.py
+ ext/scintilla*/src/RESearch.h
+ ext/scintilla*/test/examples/perl-test-5220delta.pl
+ ext/scintilla*/test/examples/perl-test-5220delta.pl.styled
+ ext/scintilla*/test/examples/perl-test-sub-prototypes.pl
+ ext/scintilla*/test/examples/perl-test-sub-prototypes.pl.styled
 Copyright: 1998-2004 Neil Hodgson <neilh@scintilla.org>
 License: public-domain
  This file is in the public domain
@@ -226,7 +226,7 @@ Copyright: 2014-2015 Steven G. Johnson, Jiahao Chen, Tony Kelman, Jonas Fonseca
 License: Expat
 
 Files: debian/*
-Copyright: 2012-2020 Dmitry Smirnov <onlyjob@debian.org>
+Copyright: 2012-2021 Dmitry Smirnov <onlyjob@debian.org>
 License: GPL-2+
 
 License: LGPL-2+

@@ -5,15 +5,13 @@ Description: look for libpython2.7 (fixes FTBFS in presence of python3).
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -59,8 +59,11 @@
- if (USE_BUNDLED_MYSQLDUMP)
-   set(USE_BUNDLED_MYSQLDUMP -DHAVE_BUNDLED_MYSQLDUMP=1)
+@@ -61,8 +61,9 @@
  endif ()
  
-+set(Python_ADDITIONAL_VERSIONS "2.7")
+ set(Python_ADDITIONAL_VERSIONS 3.8)
+ find_package(PythonLibs 3.7 REQUIRED)
 +#include(FindPythonLibs)
-+
- # In Ubuntu 13.04, the built-in check for python fails.. so we have to resort to the check with pkg-config (which doesn't work in many distros)
- find_package(PythonLibs 2.6)
- if (NOT PYTHONLIBS_FOUND)
-     pkg_check_modules(PYTHON REQUIRED python)
+ 
+ # We need to be able to detect python module versions and packages hence this function
+ find_program(PYTHON_EXEC "python3")
+ include(FindPackageHandleStandardArgs)

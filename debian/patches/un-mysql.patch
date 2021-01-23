@@ -5,7 +5,7 @@ Description: fix FTBFS with MariaDB.
 
 --- a/plugins/migration/copytable/copytable.cpp
 +++ b/plugins/migration/copytable/copytable.cpp
-@@ -2251,9 +2251,9 @@
+@@ -2271,9 +2271,9 @@
        case MYSQL_TYPE_DATETIME2:
        case MYSQL_TYPE_TIME2:
  #endif
