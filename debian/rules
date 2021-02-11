@@ -13,6 +13,10 @@ export DEB_CPPFLAGS_MAINT_APPEND= -Wno-error=deprecated-declarations
 # -Wno-error=deprecated-copy -Wno-error=format-overflow=
 # -std=c++11
 
+## Under fakeroot ccache fails because
+## CCACHE_TEMPDIR=="/run/user/0/ccache-tmp" fails due to lack of permission.
+export CCACHE_TEMPDIR:=/tmp/ccache-tmp
+
 export ANTLR_JAR_PATH=/usr/share/java/antlr4.jar
 
 MAX_PARALLEL=--max-parallel=3
