@@ -1,14 +1,13 @@
-mysql-workbench (8.0.23+dfsg-1) UNRELEASED; urgency=medium
-
-  FIXME: FTBFS [please help]
+mysql-workbench (8.0.26+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
-    + transitioned to Python3 (Closes: #937102, #953138).
+    + transitioned to Python3 (Closes: #937102, #953138, #937102).
   * Removed dependency on "g++-8" (Closes: #944177).
   * Build-Depends:
     = libssh-dev (>= 0.9.5~)
+    = libantlr4-runtime-dev (>= 4.9+dfsg-1.1~)
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Sat, 23 Jan 2021 11:38:43 +1100
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 26 Jul 2021 12:38:20 +1000
 
 mysql-workbench (8.0.19+dfsg-1) unstable; urgency=medium
 

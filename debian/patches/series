@@ -1,5 +1,5 @@
 #antlr.patch
-findLibSSH.patch
+#findLibSSH.patch
 cmake_antlr-jar-filename.patch
 cppconn_libpath.patch
 mariadb-build.patch

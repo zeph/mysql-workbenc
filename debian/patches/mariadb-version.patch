@@ -5,7 +5,7 @@ Description: fix FTBFS with MariaDB.
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -66,9 +66,9 @@
+@@ -75,9 +75,9 @@
  # We need to be able to detect python module versions and packages hence this function
  find_program(PYTHON_EXEC "python3")
  include(FindPackageHandleStandardArgs)
@@ -13,6 +13,6 @@ Description: fix FTBFS with MariaDB.
 -find_package(MySQL 5.6.0 REQUIRED)
 +find_package(MySQL REQUIRED)
  find_package(LibXml2 REQUIRED)
- #set(OpenGL_GL_PREFERENCE "LEGACY")
+ 
+ 
  find_package(OpenGL REQUIRED)
- find_package(MySQLCppConn 1.1.8 REQUIRED)

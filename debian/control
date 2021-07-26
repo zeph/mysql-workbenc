@@ -11,7 +11,7 @@ Build-Depends: debhelper-compat (= 12) ,dh-python
  ,doxygen
  ,gettext
  ,antlr4 (>= 4.6~)
- ,libantlr4-runtime-dev
+ ,libantlr4-runtime-dev (>= 4.9+dfsg-1.1~)
  ,libboost-dev
  ,libcairo2-dev
  ,libfreetype6-dev

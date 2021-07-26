@@ -1,4 +1,4 @@
-Last-Update: 2016-11-16
+Last-Update: 2021-07-26
 Forwarded: not-needed
 Origin: https://packages.altlinux.org/en/p8/srpms/mysql-workbench-community/patches/mysql-workbench-mariadb-build.patch
 Author: Dmitry Smirnov <onlyjob@member.fsf.org>
@@ -23,19 +23,26 @@ Description: fix FTBFS with MariaDB.
      bind.error = (WB_BOOL *)malloc(sizeof(WB_BOOL));
      if (!bind.error)
        throw std::runtime_error("Could not allocate memory for row buffer");
-@@ -2289,8 +2285,11 @@
+@@ -2289,16 +2285,11 @@
          ret_val = _bulk_insert_record.append_escaped((char *)(*_row_buffer)[col_index].buffer,
                                                       *(*_row_buffer)[col_index].length);
          _bulk_insert_record.append("')");
          break;
+-#if MYSQL_VERSION_ID > 80021
+-      case MYSQL_TYPE_INVALID:
+-        // TODO: added to fix the build. Need to check how to handle this.
+-        break;
+-      case MYSQL_TYPE_BOOL:
+-        // TODO: added to fix the build. Need to check how to handle this. In the current version this is just a placeholder.
 +      case MAX_NO_FIELD_TYPES:
 +        // should not ever occur as is used only to mark the end of enum
-+        break;
- #if MYSQL_VERSION_ID > 80021
-       case MYSQL_TYPE_INVALID:
-         // TODO: added to fix the build. Need to check how to handle this.
          break;
-@@ -2685,16 +2684,9 @@
+-#endif
+       
+     }
+   }
+ 
+@@ -2685,16 +2676,9 @@
    unsigned long ret_length = 0;
  
  
