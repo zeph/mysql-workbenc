@@ -55,7 +55,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}
  ,python3-paramiko
  ,python3-pexpect
  ,python3-pyodbc (>= 2.1.8)
-Recommends: ttf-bitstream-vera, mysql-utilities
+Recommends: ttf-bitstream-vera
            ,default-mysql-client | virtual-mysql-client
 #Suggests: gnome-keyring
 Description: MySQL Workbench - a visual database modeling, administration and queuing tool
