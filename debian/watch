@@ -1,11 +1,37 @@
 # uscan(1) configuration file.
 version=4
 
+## WTF, Oracle? :: https://bugs.mysql.com/bug.php?id=109160
+## Latest release:
 opts="\
 repacksuffix=+dfsg,\
 repack,compression=xz,\
-pgpsigurlmangle=s{$}{.asc},\
 dversionmangle=s{\+dfsg\d*}{},\
 uversionmangle=s{\.?\-rc}{~rc},\
-" https://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
-  /mysql-workbench-community-([\d\.]+)(?:\-rc\d*)?(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
+downloadurlmangle=s{/downloads/gpg/\?file=}{/get/Downloads/MySQLGUITools/};s{\&p=8\Z}{},\
+filenamemangle=s{\&p=8|\?file=}{}g,\
+pgpmode=mangle,pgpsigurlmangle=s{$}{&p=8};s{/get/Downloads/MySQLGUITools/}{/downloads/gpg/?file=},\
+" https://dev.mysql.com/downloads/workbench/?tpl=files&os=src \
+ .*/?file=mysql-workbench-community-([\d\.]+)(?:\-rc\d*)?(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)&p=8
+
+
+## Archives (previous releases except the latest one):
+opts="\
+repacksuffix=+dfsg,\
+repack,compression=xz,\
+pgpsigurlmangle=s{(.*)/get/p/8/file/(.*)$}{$1/gpg/?file=$2&p=8},\
+dversionmangle=s{\+dfsg\d*}{},\
+uversionmangle=s{\.?\-rc}{~rc},\
+" https://downloads.mysql.com/archives/workbench/?tpl=files&os=src \
+ .*/mysql-workbench-community-([\d\.]+)(?:\-rc\d*)?(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
+
+
+## Legacy releases:
+#opts="\
+#repacksuffix=+dfsg,\
+#repack,compression=xz,\
+#pgpsigurlmangle=s{$}{.asc},\
+#dversionmangle=s{\+dfsg\d*}{},\
+#uversionmangle=s{\.?\-rc}{~rc},\
+#" https://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQLGUITools\
+#  /mysql-workbench-community-([\d\.]+)(?:\-rc\d*)?(?:-nodocs)?-src\.tar\.(?:gz|bz2|xz)
