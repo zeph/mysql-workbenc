@@ -5,6 +5,7 @@ Source: https://www.mysql.com/downloads/workbench/
 Copyright: 2000, 2004-2005, 2007-2019 Oracle and/or its affiliates.
 License: GPL-2
 Files-Excluded:
+    build/CMakeCache.txt
     build/commercial.*
     build/msi
     build/res
@@ -29,7 +30,7 @@ Files-Excluded:
     */*/windows
 
 Files: *
-Copyright: 2000, 2004-2005, 2007-2021 Oracle and/or its affiliates.
+Copyright: 2000, 2004-2005, 2007-2022 Oracle and/or its affiliates.
 License: GPL-2
 Comment:
  All files without explicit license header are assumed to
@@ -226,7 +227,7 @@ Copyright: 2014-2015 Steven G. Johnson, Jiahao Chen, Tony Kelman, Jonas Fonseca
 License: Expat
 
 Files: debian/*
-Copyright: 2012-2021 Dmitry Smirnov <onlyjob@debian.org>
+Copyright: 2012-2022 Dmitry Smirnov <onlyjob@debian.org>
 License: GPL-2+
 
 License: LGPL-2+
