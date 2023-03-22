@@ -1,12 +1,11 @@
-mysql-workbench (8.0.30+dfsg-1) UNRELEASED; urgency=medium
+mysql-workbench (8.0.32+dfsg-1) unstable; urgency=medium
 
-  * FIXME: https://bugs.mysql.com/bug.php?id=106899
   * New upstream release.
   * Fixed "non-installable" bug (Closes: #1009657).
   * Standards-Version: 4.6.1.
   * Updated watch file.
 
- -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 22 Nov 2022 21:47:39 +1100
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 22 Mar 2023 14:10:41 +1100
 
 mysql-workbench (8.0.26+dfsg-1) unstable; urgency=medium
 
