@@ -1,0 +1,72 @@
+Last-Update: 2023-11-24
+Forwarded: not-needed
+Author: Bas Couwenberg <sebastic@debian.org>
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1051433
+Description: Include <cstdint> for int64_t.
+ Per https://gcc.gnu.org/gcc-13/porting_to.html
+
+--- a/library/base/base/util_functions.h
++++ b/library/base/base/util_functions.h
+@@ -53,6 +53,8 @@
+ #define BASE_PATH_SEPARATOR_STR "/"
+ #endif
+ 
++#include <cstdint>
++
+ #define BASE_ORDPTR(value) ((void *)(unsigned long)(value))
+ 
+ // TODO: move Windows specific stuff to base.windows library.
+--- a/library/cdbc/src/driver_manager.h
++++ b/library/cdbc/src/driver_manager.h
+@@ -33,6 +33,8 @@
+ #include "grts/structs.db.mgmt.h"
+ #include <cppconn/connection.h>
+ 
++#include <cstdint>
++
+ namespace wb {
+   class SSHTunnel;
+ }
+--- a/library/base/base/string_utilities.h
++++ b/library/base/base/string_utilities.h
+@@ -43,6 +43,8 @@
+ #include <memory>
+ #include <iomanip>
+ 
++#include <cstdint>
++
+ #define _(s) s // TODO: replace with localization code.
+ 
+ using std::int64_t;
+--- a/library/base/base/utf8string.h
++++ b/library/base/base/utf8string.h
+@@ -30,6 +30,7 @@
+ #include <glib.h>
+ #include <vector>
+ #include <cstring>
++#include <cstdint>
+ 
+ namespace base {
+   /**
+--- a/library/forms/mforms/treeview.h
++++ b/library/forms/mforms/treeview.h
+@@ -25,6 +25,8 @@
+ 
+ #include <mforms/view.h>
+ 
++#include <cstdint>
++
+ /**
+  * Implementation of a control class for a treeview control based on node objects.
+  */
+--- a/backend/wbpublic/sqlide/sqlide_generics_private.h
++++ b/backend/wbpublic/sqlide/sqlide_generics_private.h
+@@ -31,6 +31,8 @@
+ #include <sqlite/execute.hpp>
+ #include <ctime>
+ 
++#include <cstdint>
++
+ namespace sqlide {
+ 
+   using namespace sqlite;

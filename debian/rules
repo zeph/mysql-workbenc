@@ -9,7 +9,7 @@ include /usr/share/dpkg/pkg-info.mk
 ## "bindnow" causes run-time errors:
 #export DEB_BUILD_MAINT_OPTIONS=hardening=+bindnow
 
-export DEB_CPPFLAGS_MAINT_APPEND= -Wno-error=deprecated-declarations -Wno-error=maybe-uninitialized
+export DEB_CPPFLAGS_MAINT_APPEND= -Wno-error=deprecated-declarations -Wno-error=maybe-uninitialized -Wno-error=c++20-compat -Wno-error=overloaded-virtual=
 # -Wno-error=deprecated-copy -Wno-error=format-overflow=
 # -std=c++11
 

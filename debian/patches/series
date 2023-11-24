@@ -2,6 +2,7 @@
 #findLibSSH.patch
 cmake_antlr-jar-filename.patch
 cppconn_libpath.patch
+gcc-13.patch
 mariadb-build.patch
 mariadb-version.patch
 projloc.patch
