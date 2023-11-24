@@ -13,6 +13,7 @@ Files-Excluded:
     ext/Aga.Controls
     ext/scintilla*/.hgtags
     ext/scintilla*/cocoa
+    ext/licenses/*/*.tar.*
     frontend/mac
     library/base.windows
     library/base.wr/resource.h
@@ -227,7 +228,7 @@ Copyright: 2014-2015 Steven G. Johnson, Jiahao Chen, Tony Kelman, Jonas Fonseca
 License: Expat
 
 Files: debian/*
-Copyright: 2012-2022 Dmitry Smirnov <onlyjob@debian.org>
+Copyright: 2012-2023 Dmitry Smirnov <onlyjob@debian.org>
 License: GPL-2+
 
 License: LGPL-2+
