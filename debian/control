@@ -31,7 +31,6 @@ Build-Depends: debhelper-compat (= 12) ,dh-python
  ,libpcre3-dev
  ,libpixman-1-dev
  ,libpng-dev
- ,libproj-dev
  ,libsqlite3-dev
  ,libtinyxml-dev (>= 2.6.2)
  ,libvsqlitepp-dev
